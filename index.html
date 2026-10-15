@@ -357,9 +357,10 @@ main p a:not(.pill), .ans a { text-decoration-style: dashed; text-underline-offs
 .venue svg { width: 17px; height: 17px; fill: none; stroke: var(--rouge); stroke-width: 2; flex: none; }
 
 /* fun fact typing line */
-.fact { min-height: 4.2em; max-width: 30rem; margin: .3em 0 0 auto; font-family: var(--f-serif); font-size: clamp(1.05rem, .95rem + .45vw, 1.35rem); line-height: 1.3; color: var(--ivory); text-align: right; }
+.fact { min-height: 4.2em; max-width: 30rem; margin: .3em 0 0 auto; font-family: var(--f-serif); font-size: clamp(1.05rem, .95rem + .45vw, 1.35rem); line-height: 1.3; color: var(--ivory); text-align: left; }
 .fact-l { font-style: italic; color: var(--rouge); margin-right: .15em; }
-.caret { display: inline-block; width: 2px; height: 1.05em; margin-left: 2px; background: var(--rouge); vertical-align: -.15em; animation: blink 1s steps(1) infinite; }
+.caret { display: inline-block; width: 0; height: 1.05em; border-left: 2px solid var(--rouge); margin-right: -2px; vertical-align: -.15em; animation: blink 1s steps(1) infinite; }
+.fact-rest { visibility: hidden; }
 @keyframes blink { 50% { opacity: 0; } }
 .fact-src { margin-left: .55em; font-family: var(--f-body); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--mint); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 860px) { .fact { margin-left: 0; text-align: left; } }
@@ -601,6 +602,9 @@ html.still .hero-photo { animation: none; }
 .air a { grid-template-columns: 2.7em 1fr; gap: 8px; }
 .air b { font-size: 1.2rem; }
 .air span { font-size: .88rem; }
+
+/* fun fact: fixed-width clock column so the left edge never drifts between facts */
+@media (min-width: 861px) { .clock { width: min(30rem, 100%); } }
 </style>
 </head>
 <body>
@@ -648,7 +652,7 @@ html.still .hero-photo { animation: none; }
       <div class="label" id="debt-label">U.S. national debt, live estimate</div>
       <p class="cut-quip" aria-hidden="true">(If only it were that easy.)</p>
       <output id="debt" aria-labelledby="debt-label">$40,301,480,531,899</output>
-      <p class="fact" id="fact"><span class="fact-l">Fun fact:</span> <span id="fact-t" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span><span class="sr-only" id="fact-sr"></span></p>
+      <p class="fact" id="fact"><span class="fact-l">Fun fact:</span> <span id="fact-t" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span><span id="fact-rest" class="fact-rest" aria-hidden="true"></span><span class="sr-only" id="fact-sr"></span></p>
     </div>
   </div>
   <div class="bars" aria-hidden="true"><svg id="bars" preserveAspectRatio="none"></svg></div>
@@ -1057,19 +1061,36 @@ html.still .hero-photo { animation: none; }
   const heroEl = document.querySelector('.hero');
 
   /* ---- Fun fact typing (facts: brand/fun_facts.json, each with a source) ---- */
-  const factT = document.getElementById('fact-t'), factSr = document.getElementById('fact-sr');
+  const factT = document.getElementById('fact-t'), factRest = document.getElementById('fact-rest'), factSr = document.getElementById('fact-sr'), factBox = document.getElementById('fact');
+  // the full fact is laid out (invisibly) before it types, so words never jump lines; the box reserves the tallest fact's height
+  const setTyped = (txt, c) => { factT.textContent = txt.slice(0, c); factRest.textContent = txt.slice(c); };
+  let factList = [];
+  const reserveHeight = () => {
+    if (!factList.length) return;
+    const probe = factBox.cloneNode(true); probe.querySelector('#fact-t').textContent = ''; probe.removeAttribute('id'); probe.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
+    Object.assign(probe.style, { position: 'absolute', visibility: 'hidden', left: '-9999px', top: '0', minHeight: '0', width: factBox.getBoundingClientRect().width + 'px', margin: '0' });
+    factBox.parentNode.appendChild(probe);
+    const span = probe.querySelector('.fact-rest'); probe.querySelectorAll('.sr-only').forEach(n => n.remove());
+    let max = 0; for (const f of factList) { span.textContent = f.text; max = Math.max(max, probe.getBoundingClientRect().height); }
+    probe.remove(); factBox.style.minHeight = Math.ceil(max) + 'px';
+  };
+  let rzT; addEventListener('resize', () => { clearTimeout(rzT); rzT = setTimeout(reserveHeight, 150); });
+  document.fonts && document.fonts.ready.then(reserveHeight);
   const FALLBACK = [{ text: 'At the end of 2000, total public debt was $5.66 trillion.', source: 'U.S. Treasury, Debt to the Penny', url: 'https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/' }];
   const sleep = ms => new Promise(r => setTimeout(r, ms));
   const waitPlay = async () => { while (paused) await sleep(250); };
   const showFact = f => { factSr.textContent = 'Fun fact: ' + f.text; };
   async function typeFacts(list) {
     for (let i = list.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [list[i], list[j]] = [list[j], list[i]]; }
-    if (reduce || qs.get('t') !== null) { factT.textContent = list[0].text; showFact(list[0]); return; }
+    factList = list; reserveHeight();
+    if (reduce || qs.get('t') !== null) { setTyped(list[0].text, list[0].text.length); showFact(list[0]); return; }
     for (let k = 0; ; k = (k + 1) % list.length) {
       const f = list[k];
-      for (let c = 1; c <= f.text.length; c++) { await waitPlay(); factT.textContent = f.text.slice(0, c); await sleep(f.text[c - 1] === ' ' ? 18 : 28 + Math.random() * 26); }
+      setTyped(f.text, 0);
+      for (let c = 1; c <= f.text.length; c++) { await waitPlay(); setTyped(f.text, c); await sleep(f.text[c - 1] === ' ' ? 18 : 28 + Math.random() * 26); }
       showFact(f); await sleep(5600); await waitPlay();
-      for (let c = f.text.length; c >= 0; c -= 2) { factT.textContent = f.text.slice(0, c); await sleep(9); }
+      for (let c = f.text.length; c >= 0; c -= 2) { setTyped(f.text, Math.max(c, 0)); await sleep(9); }
+      setTyped('', 0);
       await sleep(380);
     }
   }
