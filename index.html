@@ -364,18 +364,11 @@ main p a:not(.pill), .ans a { text-decoration-style: dashed; text-underline-offs
 .fact-src { margin-left: .55em; font-family: var(--f-body); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--mint); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 860px) { .fact { margin-left: 0; text-align: left; } }
 
-/* hero background options (mockup switcher) */
-.hero-photo { position: absolute; inset: 0; z-index: -2; display: none; left: 18%; right: -4%; background: url(img/stock/capitol2/c4.webp) 50% 42% / cover no-repeat; opacity: .85; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%); mask-image: linear-gradient(90deg, transparent 0%, #000 30%); mix-blend-mode: luminosity; animation: kb 40s var(--ease-wave) infinite alternate; }
+/* hero background: gold dome, navy night sky */
+.hero-photo { position: absolute; inset: 0; z-index: -2; display: block; left: 18%; right: -4%; background: url(img/stock/capitol2/c1.webp) 50% 28% / auto 160% no-repeat; opacity: .78; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%); mask-image: linear-gradient(90deg, transparent 0%, #000 30%); mix-blend-mode: normal; animation: kb 40s var(--ease-wave) infinite alternate; }
 .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--admiral-night) 0%, color-mix(in oklab, var(--admiral-night) 50%, transparent) 55%, transparent 100%), linear-gradient(0deg, var(--admiral-night) 0%, transparent 40%); }
 @keyframes kb { from { transform: scale(1.04); } to { transform: scale(1.14) translate(-1.5%, -1%); } }
-.bg-capitol .hero-photo, .bg-both .hero-photo { display: block; }
-.bg-capitol #flag { display: none; }
-.bg-both #flag { opacity: .6; }
-.bgpick { position: fixed; z-index: 45; left: 14px; bottom: 14px; display: flex; align-items: center; gap: 4px; padding: 5px; border-radius: 999px; background: color-mix(in oklab, var(--admiral-night) 82%, transparent); backdrop-filter: blur(10px); border: 1px solid color-mix(in oklab, var(--ivory) 30%, transparent); font: 600 .74rem/1 var(--f-body); color: var(--ivory); }
-.bgpick span { padding: 0 8px; opacity: .7; }
-.bgpick a { text-decoration: none; padding: 7px 11px; border-radius: 999px; }
-.bgpick a[aria-current="true"] { background: var(--ivory); color: var(--admiral); }
-@media (max-width: 520px) { .bgpick span { display: none; } }
+#flag { display: none; }
 
 /* pricing: Concord cards with the Minuteman */
 .tier { background: var(--admiral); color: var(--ivory); box-shadow: 0 34px 70px -40px rgba(15,61,95,.85); min-height: 360px; }
@@ -505,9 +498,6 @@ html.still .hero-photo { animation: none; }
 .card-d.hotel .tbd { color: var(--admiral); background: color-mix(in oklab, var(--rouge) 38%, var(--ivory)); }
 .days3 li .tbd { margin-top: 6px; }
 
-/* switcher */
-.bgpick b { width: 1px; align-self: stretch; margin: 4px 2px; background: color-mix(in oklab, var(--ivory) 30%, transparent); }
-.bgpick a { cursor: pointer; }
 .hero-photo { transition: opacity .6s; }
 .quote { position: relative; z-index: 3; }
 .agenda3 { z-index: 2; }
@@ -611,8 +601,6 @@ html.still .hero-photo { animation: none; }
 .air a { grid-template-columns: 2.7em 1fr; gap: 8px; }
 .air b { font-size: 1.2rem; }
 .air span { font-size: .88rem; }
-/* mockup switcher on phones: scroll instead of colliding with the pause button */
-@media (max-width: 700px) { .bgpick { max-width: calc(100% - 150px); overflow-x: auto; scrollbar-width: none; } .bgpick span { display: none; } }
 </style>
 </head>
 <body>
@@ -971,7 +959,6 @@ html.still .hero-photo { animation: none; }
   </div>
 </footer>
 
-<div class="bgpick" role="group" aria-label="Mockup only: hero background"><span>Hero</span><a data-bg="c4">Moon</a><a data-bg="c1">Gold</a><a data-bg="c2">Amber</a><a data-bg="c3">Trails</a><a data-bg="c5">Dawn</a><a data-bg="none">No photo</a><b></b><a data-flag>Flag</a></div>
 <button class="motion" id="motion" type="button" aria-pressed="false">Pause motion</button>
 
 <script>
@@ -1046,7 +1033,6 @@ html.still .hero-photo { animation: none; }
     return k >= 1 ? 0 : 1 - (k < .5 ? 2 * k * k : 1 - (-2 * k + 2) ** 2 / 2);
   };
   function frame(now) {
-    if (heroVisible && bg !== 'capitol') render(now / 1000);
     const k = Math.min(1, (now - t0) / Math.max(intro, 1)), e = 1 - Math.pow(1 - k, 3);
     if (dipAt >= 0) { cutOffset = DIP * dipEnvelope(Math.max(0, now - dipAt)); if (now - dipAt >= DIP_END) { dipAt = -1; cutOffset = 0; } }
     out.textContent = fmt((k < 1 ? 5.66e12 + (live() - 5.66e12) * e : live()) - cutOffset);
@@ -1068,24 +1054,7 @@ html.still .hero-photo { animation: none; }
   }
 
 
-  /* ---- hero background (mockup switcher): each Capitol photo framed at its best crop ---- */
-  const BG = {
-    c4: { pos: '50% 42%', size: 'cover', op: .85, blend: 'normal' },          // lit dome, full moon, black sky
-    c1: { pos: '50% 28%', size: 'auto 160%', op: .78, blend: 'normal' },      // gold dome, navy night sky
-    c2: { pos: '64% 35%', size: 'auto 200%', op: .7, blend: 'normal' },      // dome down the Mall, amber cloud ceiling
-    c3: { pos: '62% 7%', size: 'auto 190%', op: .78, blend: 'normal' },       // blue hour, light trails
-    c5: { pos: '56% 0%', size: 'auto 170%', op: .62, blend: 'luminosity' }    // dawn reflection, toned to navy
-  };
-  const bgKey = Object.prototype.hasOwnProperty.call(BG, qs.get('bg')) || qs.get('bg') === 'none' ? qs.get('bg') : 'c1';
-  const flagOn = qs.get('flag') === '1';
-  const bg = bgKey === 'none' ? 'flag' : (flagOn ? 'both' : 'capitol');
-  const heroEl = document.querySelector('.hero'), hp = document.querySelector('.hero-photo');
-  heroEl.classList.add('bg-' + bg);
-  if (bgKey !== 'none') { const c = BG[bgKey]; Object.assign(hp.style, { backgroundImage: `url(img/stock/capitol2/${bgKey}.webp)`, backgroundPosition: c.pos, backgroundSize: c.size, opacity: c.op, mixBlendMode: c.blend }); }
-  const linkFor = (b, f) => { const u = new URLSearchParams(location.search); u.set('bg', b); f ? u.set('flag', '1') : u.delete('flag'); return '?' + u.toString(); };
-  document.querySelectorAll('.bgpick a[data-bg]').forEach(a => { a.href = linkFor(a.dataset.bg, flagOn || a.dataset.bg === 'none'); if (a.dataset.bg === bgKey) a.setAttribute('aria-current', 'true'); });
-  const fl = document.querySelector('.bgpick a[data-flag]');
-  if (bgKey === 'none') { fl.hidden = true; } else { fl.href = linkFor(bgKey, !flagOn); fl.textContent = flagOn ? 'Flag: on' : 'Flag: off'; if (flagOn) fl.setAttribute('aria-current', 'true'); }
+  const heroEl = document.querySelector('.hero');
 
   /* ---- Fun fact typing (facts: brand/fun_facts.json, each with a source) ---- */
   const factT = document.getElementById('fact-t'), factSr = document.getElementById('fact-sr');
