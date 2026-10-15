@@ -1,0 +1,1371 @@
+<!doctype html>
+<html lang="en" class="ofl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027 National Citizens Debt Summit | Concord Action (mockup v5)</title>
+<meta name="description" content="Join Concord Action advocates in Washington, D.C., March 2-4, 2027, to send a message to Congress: cut the debt and save America's future.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="brand/tokens.css">
+<style>
+/* ============ base ============ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { margin: 0; background: var(--ivory); color: var(--admiral); font-family: var(--f-body); font-size: var(--t-body); line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+p { margin: 0 0 1em; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: fixed; left: 12px; top: -80px; z-index: 100; background: var(--ivory); color: var(--admiral); padding: 10px 14px; border-radius: 8px; font-weight: 700; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+.tbd { display: inline-block; font: 700 .72rem/1 var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--cardinal); border: 1.5px dashed var(--cardinal); border-radius: 999px; padding: .35em .7em; vertical-align: middle; background: color-mix(in oklab, var(--ivory) 85%, transparent); }
+.on-dark .tbd { color: var(--ivory); border-color: var(--rouge); background: transparent; }
+
+/* type */
+.kicker { display: inline-flex; align-items: center; gap: 10px; font: 700 .82rem/1 var(--f-body); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 18px; }
+.kicker::after { content: ""; width: 44px; height: 2px; background: var(--cardinal); }
+.h2 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: var(--t-h2); line-height: .9; margin: 0 0 .35em; letter-spacing: -.005em; word-spacing: .08em; text-wrap: balance; }
+.hero h1, .day h3, .spk h3, .mini h3, .card-d h3 { word-spacing: .08em; }
+.lede { font-family: var(--f-serif); font-size: clamp(1.4rem, 1.05rem + 1.2vw, 2.15rem); line-height: 1.15; margin: 0 0 .8em; }
+.serif { font-family: var(--f-serif); }
+
+/* buttons */
+.pill { display: inline-flex; align-items: center; justify-content: center; gap: .5em; padding: .78em 1.3em; border-radius: 999px; font-weight: 700; text-decoration: none; font-family: var(--f-body); line-height: 1.1; transition: background .2s, color .2s, border-color .2s, transform .2s; }
+.pill:hover { transform: translateY(-1px); }
+.pill--red { background: var(--cardinal); color: var(--ivory); box-shadow: 0 12px 30px -14px color-mix(in oklab, var(--cardinal) 85%, transparent); }
+.pill--red:hover { background: color-mix(in oklab, var(--cardinal) 86%, #000); }
+.pill--ghost { border: 1.5px solid color-mix(in oklab, var(--ivory) 55%, transparent); color: var(--ivory); background: color-mix(in oklab, var(--admiral) 30%, transparent); backdrop-filter: blur(10px); }
+.pill--ghost:hover { border-color: var(--ivory); }
+.pill--line { border: 1.5px solid var(--admiral); color: var(--admiral); }
+.pill--line:hover { background: var(--admiral); color: var(--ivory); }
+
+/* ============ nav ============ */
+.nav { position: fixed; z-index: 40; inset: 0 0 auto 0; transition: background .35s, box-shadow .35s, padding .35s; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 18px; padding-bottom: 18px; transition: padding .35s; }
+.nav.solid { background: color-mix(in oklab, var(--admiral-night) 82%, transparent); backdrop-filter: blur(14px) saturate(1.2); box-shadow: 0 10px 30px -20px rgba(0,0,0,.6); }
+.nav.solid .wrap { padding-top: 10px; padding-bottom: 10px; }
+.brand img { width: clamp(100px, 9vw, 132px); height: auto; }
+.nav ul { display: flex; gap: clamp(12px, 2vw, 30px); list-style: none; margin: 0; padding: 0; align-items: center; color: var(--ivory); }
+.nav a:not(.pill) { text-decoration: none; font-size: .95rem; }
+.nav a:not(.pill):hover { text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--cardinal); text-decoration-thickness: 2px; }
+@media (max-width: 900px) { .nav li:not(:last-child) { display: none; } }
+
+/* ============ hero (Direction A) ============ */
+.hero { position: relative; min-height: 100svh; overflow: hidden; isolation: isolate; color: var(--ivory);
+  background:
+    radial-gradient(120% 80% at 85% 115%, color-mix(in oklab, var(--cardinal) 42%, transparent) 0%, transparent 55%),
+    radial-gradient(90% 70% at 10% -10%, color-mix(in oklab, var(--money) 35%, transparent) 0%, transparent 60%),
+    linear-gradient(170deg, var(--admiral) 0%, var(--admiral-deep) 55%, var(--admiral-night) 100%); }
+.glow { position: absolute; inset: -20%; z-index: -2; pointer-events: none; background: radial-gradient(40% 35% at 70% 75%, color-mix(in oklab, var(--rouge) 26%, transparent), transparent 70%); animation: breathe 9s var(--ease-wave) infinite alternate; }
+@keyframes breathe { from { opacity: .55; transform: translate3d(-2%, 2%, 0) scale(1); } to { opacity: 1; transform: translate3d(2%, -1%, 0) scale(1.08); } }
+#flag { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.grain { position: absolute; inset: 0; z-index: 3; pointer-events: none; opacity: .09; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.stage { position: relative; z-index: 5; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 32px; padding-top: clamp(110px, 17vh, 170px); padding-bottom: 120px; }
+.eyebrow { font-family: var(--f-serif); font-style: italic; font-size: var(--t-lead); line-height: 1.05; margin: 0 0 .35em; color: var(--rouge); }
+.eyebrow span { color: var(--ivory); font-style: normal; }
+.hero h1 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(3.1rem, .8rem + 7.2vw, 8.4rem); line-height: .86; letter-spacing: -.005em; margin: 0; white-space: nowrap; }
+.hero h1 .line { display: block; overflow: hidden; padding-bottom: .02em; }
+.hero h1 .line > span { display: inline-block; transform: translateY(105%); animation: rise 1.1s var(--ease-out) forwards; }
+.hero h1 .line:nth-child(2) > span { animation-delay: .12s; }
+.hero h1 .line:nth-child(3) > span { animation-delay: .24s; }
+@keyframes rise { to { transform: none; } }
+.cut { position: relative; display: inline-block; }
+.cut::after { content: ""; position: absolute; left: -3%; right: -3%; top: 46%; height: .055em; background: var(--cardinal); transform-origin: left center; transform: rotate(14deg) scaleX(0); border-radius: 2px; animation: slash .55s 1.35s var(--ease-out) forwards; box-shadow: 0 0 0 .02em var(--admiral-night); }
+@keyframes slash { to { transform: rotate(14deg) scaleX(1); } }
+.tag { display: flex; align-items: center; gap: 14px; margin: 22px 0 0; font-size: clamp(1rem, .9rem + .4vw, 1.25rem); }
+.tag::before, .tag::after { content: ""; height: 2px; width: 34px; background: var(--cardinal); }
+.meta { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 34px 0 28px; padding: 0; list-style: none; }
+.meta li { display: grid; gap: 2px; }
+.meta b { font-family: var(--f-serif); font-weight: 400; font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.3rem); line-height: 1; }
+.meta small { font-size: var(--t-small); opacity: .8; letter-spacing: .04em; text-transform: uppercase; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.fade-in { opacity: 0; animation: fade .9s .7s var(--ease-out) forwards; }
+@keyframes fade { to { opacity: 1; } }
+.clock { align-self: start; justify-self: end; text-align: right; margin-top: clamp(8px, 4vh, 48px); max-width: 30rem; }
+.clock .label { font-size: var(--t-small); letter-spacing: .08em; text-transform: uppercase; opacity: .82; }
+.clock output { display: block; font-family: var(--f-serif); font-size: clamp(2rem, 1rem + 3.4vw, 4.4rem); line-height: 1; font-variant-numeric: tabular-nums; margin: .15em 0 .2em; white-space: nowrap; }
+.story { min-height: 1.6em; font-family: var(--f-serif); font-style: italic; font-size: clamp(1.1rem, 1rem + .6vw, 1.5rem); color: var(--rouge); transition: opacity .5s; }
+.bars { position: absolute; left: 44%; right: 0; bottom: 0; height: min(60vh, 600px); z-index: 1; pointer-events: none; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 45%); mask-image: linear-gradient(to bottom, transparent 0%, #000 45%); opacity: .62; }
+.bars svg { width: 100%; height: 100%; display: block; }
+.bars .grid line { stroke: var(--gold); stroke-opacity: .32; stroke-dasharray: 6 8; stroke-width: 1; }
+.bars rect { fill: var(--gold); transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); animation: grow .9s var(--ease-out) forwards; }
+@keyframes grow { to { transform: scaleY(1); } }
+.bars-note { position: absolute; z-index: 6; left: var(--gutter); bottom: 18px; font-size: .74rem; opacity: .72; max-width: 46ch; margin: 0; }
+.scroll-cue { position: absolute; z-index: 6; left: 50%; bottom: 18px; transform: translateX(-50%); width: 26px; height: 42px; border: 2px solid color-mix(in oklab, var(--ivory) 60%, transparent); border-radius: 14px; }
+.scroll-cue::after { content: ""; position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--ivory); animation: cue 1.8s var(--ease-wave) infinite; }
+@keyframes cue { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(14px); opacity: 0; } 100% { opacity: 0; } }
+
+/* ============ wave edges between sections (organic, not boxy) ============ */
+:root { --edge: clamp(40px, 6vw, 90px); }
+.edge { position: relative; z-index: 2; display: block; width: 100%; height: var(--edge); margin-top: calc(1px - var(--edge)); pointer-events: none; }
+.edge.bottom { margin-top: 0; margin-bottom: calc(1px - var(--edge)); transform: scaleY(-1); }
+.edge path { fill: currentColor; }
+.quote, .river, .travel, .final { display: flow-root; }
+
+/* ============ paper sections (Direction B) ============ */
+.paper { position: relative; isolation: isolate; }
+.paper::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .32; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .06 0 0 0 0 .24 0 0 0 0 .37 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+section { position: relative; }
+.pad { padding: clamp(64px, 10vw, 140px) 0; }
+
+/* hand-drawn marks */
+.mark-word { position: relative; display: inline-block; white-space: nowrap; }
+.mark-word svg { position: absolute; left: -3%; width: 106%; bottom: -.12em; height: .32em; overflow: visible; pointer-events: none; }
+.mark-word path { fill: none; stroke: var(--cardinal); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 1000; stroke-dashoffset: 1000; transition: stroke-dashoffset 1.1s .35s var(--ease-out); filter: url(#rough); }
+.in .mark-word path, .mark-word.in path { stroke-dashoffset: 0; }
+
+/* blobs */
+.blob { position: relative; overflow: hidden; margin: 0; box-shadow: 0 30px 60px -32px rgba(15,61,95,.5); animation: morph 16s var(--ease-wave) infinite alternate; border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+.blob img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); animation: drift 22s var(--ease-wave) infinite alternate; }
+@keyframes morph { 0% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 33% { border-radius: 40% 60% 70% 30% / 50% 60% 40% 50%; } 66% { border-radius: 55% 45% 35% 65% / 65% 35% 60% 40%; } 100% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; } }
+@keyframes drift { from { transform: scale(1.06) translate(0, 0); } to { transform: scale(1.12) translate(-2%, -1.5%); } }
+.cap { font-family: var(--f-serif); font-style: italic; font-size: .98rem; line-height: 1.2; margin-top: 12px; }
+
+/* reveal on scroll */
+[data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+[data-reveal].in { opacity: 1; transform: none; }
+[data-reveal="2"] { transition-delay: .12s; } [data-reveal="3"] { transition-delay: .24s; } [data-reveal="4"] { transition-delay: .36s; }
+
+/* ============ about ============ */
+.about { background: radial-gradient(50% 45% at 92% 18%, color-mix(in oklab, var(--rouge) 26%, transparent), transparent 70%), radial-gradient(40% 40% at 0% 100%, color-mix(in oklab, var(--mint) 40%, transparent), transparent 70%), var(--ivory); }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
+.about .blob { aspect-ratio: 4 / 4.3; }
+.about-body { columns: 1; max-width: 62ch; }
+.will { margin-top: clamp(48px, 7vw, 96px); }
+.will h3 { font: 700 1rem/1.2 var(--f-body); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 22px; }
+.steps { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); list-style: none; margin: 0; padding: 0; }
+.steps svg.arcs { position: absolute; left: 0; right: 0; top: 0; width: 100%; height: 60px; overflow: visible; pointer-events: none; }
+.steps svg.arcs path { fill: none; stroke: var(--admiral); stroke-width: 1.2; stroke-dasharray: 4 6; opacity: .5; }
+.steps li { position: relative; padding-top: 74px; }
+.steps .num { position: absolute; top: 0; left: 0; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--ivory); border: 1.5px solid var(--admiral); font-family: var(--f-serif); font-size: 1.7rem; line-height: 1; }
+.steps li:nth-of-type(3) .num { background: var(--cardinal); border-color: var(--cardinal); color: var(--ivory); }
+.steps p { margin: 0; }
+
+/* ============ quote band ============ */
+.quote { background: var(--rouge); color: var(--admiral); }
+.quote .edge { color: var(--rouge); }
+.quote blockquote { margin: 0 auto; max-width: 30ch; text-align: center; font-family: var(--f-serif); font-size: clamp(1.7rem, 1.1rem + 2.4vw, 3.4rem); line-height: 1.12; padding: clamp(28px, 4vw, 56px) 0 clamp(20px, 3vw, 40px); }
+.quote blockquote::before { content: "\201C"; display: block; font-size: 2.2em; line-height: .6; color: var(--cardinal); }
+.quote figcaption { text-align: center; font-size: .98rem; padding-bottom: clamp(28px, 4vw, 56px); }
+.quote figcaption b { display: block; font-weight: 700; }
+
+/* ============ agenda ============ */
+.agenda-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 30px; margin-bottom: clamp(28px, 4vw, 56px); }
+.agenda-head p { margin: 0; max-width: 42ch; }
+.agenda-head .dome { margin: 0; width: clamp(130px, 13vw, 190px); }
+.agenda-head .dome .blob { aspect-ratio: 3 / 4; animation-duration: 13s; }
+@media (max-width: 700px) { .agenda-head .dome { display: none; } }
+.days { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.6vw, 36px); align-items: start; }
+.days > svg { position: absolute; left: 0; right: 0; top: 30px; width: 100%; height: 40px; overflow: visible; pointer-events: none; z-index: 0; }
+.days > svg path { fill: none; stroke: var(--cardinal); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2000; stroke-dashoffset: 2000; transition: stroke-dashoffset 2.2s .2s var(--ease-out); filter: url(#rough); }
+.days.in > svg path { stroke-dashoffset: 0; }
+.day { position: relative; z-index: 1; background: #fff; border-radius: var(--radius-lg); padding: 26px clamp(18px, 2vw, 28px) 22px; box-shadow: 0 24px 50px -36px rgba(15,61,95,.55); }
+.day:nth-child(3) { transform: rotate(-.6deg); }
+.day:nth-child(4) { transform: rotate(.5deg); }
+.day header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.day .dot { width: 20px; height: 20px; border-radius: 50%; background: var(--cardinal); flex: none; transform: translateY(-2px); box-shadow: 0 0 0 6px #fff, 0 0 0 7.5px color-mix(in oklab, var(--cardinal) 40%, transparent); }
+.day h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(1.8rem, 1.2rem + 1.4vw, 2.6rem); line-height: .9; margin: 0; }
+.day h3 small { display: block; font-family: var(--f-serif); text-transform: none; font-size: .5em; color: var(--cardinal); margin-top: 4px; }
+.day ol { list-style: none; margin: 0; padding: 0; }
+.day li { display: grid; grid-template-columns: 5.4em 1fr; gap: 10px; padding: 11px 0; border-top: 1px dashed color-mix(in oklab, var(--admiral) 25%, transparent); }
+.day li.notime { grid-template-columns: 1fr; }
+.day time { font-family: var(--f-serif); font-size: 1.15rem; line-height: 1.2; white-space: nowrap; }
+.day li.hi { background: linear-gradient(90deg, color-mix(in oklab, var(--mint) 45%, transparent), transparent 85%); margin: 0 -12px; padding-left: 12px; padding-right: 12px; border-radius: 10px; border-top-color: transparent; }
+.day li .who { display: block; font-size: .9rem; opacity: .85; }
+.where { margin-top: 26px; font-size: .98rem; }
+
+/* ============ speakers ============ */
+.speakers { background: radial-gradient(45% 50% at 100% 50%, color-mix(in oklab, var(--mint) 38%, transparent), transparent 70%), var(--ivory); }
+.spk-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 40px); align-items: stretch; }
+.spk { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(18px, 2.5vw, 34px); align-items: center; background: var(--admiral); color: var(--ivory); border-radius: 28px; padding: clamp(20px, 2.6vw, 34px); position: relative; overflow: hidden; }
+.spk .ph { aspect-ratio: 1; border-radius: 48% 52% 41% 59% / 55% 39% 61% 45%; background: radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--admiral) 70%, var(--ivory)), var(--admiral-deep)); position: relative; display: grid; place-items: end center; animation: morph 14s var(--ease-wave) infinite alternate; }
+.spk .ph::before { content: ""; position: absolute; inset: 14% 22% 0; background: var(--ivory); opacity: .14; -webkit-mask: url(assets/brand/logomark-action.svg) center bottom / contain no-repeat; mask: url(assets/brand/logomark-action.svg) center bottom / contain no-repeat; }
+.spk .ph .tbd { position: relative; margin-bottom: 14%; }
+.spk .role { font: 700 .8rem/1.2 var(--f-body); letter-spacing: .12em; text-transform: uppercase; color: var(--rouge); margin: 0 0 8px; }
+.spk h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2rem, 1.2rem + 2.2vw, 3.4rem); line-height: .9; margin: 0 0 6px; }
+.spk .title { font-family: var(--f-serif); font-size: 1.25rem; line-height: 1.2; margin: 0 0 16px; }
+.spk .session { border-left: 3px solid var(--cardinal); padding-left: 14px; margin-bottom: 14px; }
+.spk .session b { display: block; font-family: var(--f-serif); font-weight: 400; font-size: 1.35rem; line-height: 1.15; }
+.spk .src { font-size: .78rem; opacity: .75; margin: 0; }
+.spk-side { display: grid; gap: clamp(16px, 2vw, 24px); align-content: start; }
+.mini { background: #fff; border-radius: 24px; padding: 24px 26px; box-shadow: 0 24px 50px -36px rgba(15,61,95,.55); }
+.mini .role { font: 700 .78rem/1.2 var(--f-body); letter-spacing: .12em; text-transform: uppercase; color: var(--cardinal); margin: 0 0 6px; }
+.mini h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(1.6rem, 1.1rem + 1.2vw, 2.2rem); line-height: .92; margin: 0 0 10px; }
+.mini p { margin: 0 0 10px; }
+
+/* ============ photo river ============ */
+.river { background: var(--admiral); color: var(--ivory); overflow-x: clip; }
+.river .edge { color: var(--admiral); }
+.river-head { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px 60px; align-items: end; padding-top: clamp(24px, 4vw, 50px); }
+.river-head p { margin: 0; }
+.strip { display: flex; gap: clamp(16px, 2vw, 28px); width: max-content; padding: clamp(36px, 5vw, 64px) 0 clamp(36px, 5vw, 70px); animation: flow 60s linear infinite; }
+.strip:hover { animation-play-state: paused; }
+.strip figure { margin: 0; width: clamp(220px, 22vw, 330px); flex: none; }
+.strip figure:nth-child(odd) { margin-top: 46px; }
+.strip .blob { aspect-ratio: 4 / 5; box-shadow: none; }
+.strip figure:nth-child(3n+2) .blob { aspect-ratio: 1; animation-duration: 19s; animation-delay: -5s; }
+.strip figure:nth-child(3n) .blob { animation-duration: 13s; animation-delay: -9s; }
+.strip figcaption { font-family: var(--f-serif); font-style: italic; font-size: .98rem; line-height: 1.25; margin-top: 12px; opacity: .92; }
+@keyframes flow { to { transform: translateX(-50%); } }
+
+/* ============ register ============ */
+.reg-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 2.6vw, 34px); margin-top: clamp(26px, 4vw, 48px); }
+.tier { position: relative; border-radius: 30px; padding: clamp(24px, 3vw, 40px); background: #fff; box-shadow: 0 30px 60px -40px rgba(15,61,95,.6); overflow: hidden; }
+.tier::after { content: ""; position: absolute; right: -60px; bottom: -70px; width: 220px; height: 220px; border-radius: 41% 59% 52% 48% / 56% 38% 62% 44%; background: color-mix(in oklab, var(--mint) 55%, transparent); z-index: 0; animation: morph 18s var(--ease-wave) infinite alternate; }
+.tier.gen::after { background: color-mix(in oklab, var(--rouge) 45%, transparent); }
+.tier > * { position: relative; z-index: 1; }
+.tier .role { font: 700 .82rem/1.2 var(--f-body); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 10px; }
+.price { font-family: var(--f-serif); font-size: clamp(4rem, 2.4rem + 5vw, 7rem); line-height: .9; margin: 0 0 6px; }
+.price sup { font-size: .45em; vertical-align: .9em; margin-right: .05em; }
+.tier .early { font-size: .92rem; margin: 0 0 16px; }
+.tier .incl { margin: 0 0 22px; max-width: 34ch; }
+.help { margin-top: clamp(22px, 3vw, 36px); display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; background: color-mix(in oklab, var(--money) 10%, var(--ivory)); border: 1.5px solid color-mix(in oklab, var(--money) 35%, transparent); border-radius: 22px; padding: 20px 24px; }
+.help .icon { width: 50px; height: 50px; border-radius: 50%; background: var(--money); color: var(--ivory); display: grid; place-items: center; font-family: var(--f-serif); font-size: 1.6rem; }
+.help p { margin: 0; }
+
+/* ============ travel ============ */
+.travel { background: var(--money); color: var(--ivory); }
+.travel .edge { color: var(--money); }
+.travel .kicker::after { background: var(--mint); }
+.trav-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: clamp(16px, 2.4vw, 30px); margin-top: clamp(26px, 4vw, 44px); }
+.card-d { border-radius: 26px; padding: clamp(22px, 2.6vw, 32px); background: color-mix(in oklab, var(--money) 70%, #000); border: 1px solid color-mix(in oklab, var(--mint) 30%, transparent); }
+.card-d.hotel { background: var(--ivory); color: var(--admiral); border: 0; }
+.card-d h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(1.6rem, 1.1rem + 1.2vw, 2.3rem); line-height: .92; margin: 0 0 12px; }
+.card-d ul { list-style: none; margin: 0; padding: 0; }
+.card-d li { padding: 10px 0; border-top: 1px dashed color-mix(in oklab, var(--mint) 40%, transparent); }
+.card-d li:first-child { border-top: 0; }
+.card-d address { font-style: normal; font-family: var(--f-serif); font-size: 1.3rem; line-height: 1.2; margin: 0 0 18px; }
+.card-d .small { font-size: .9rem; margin: 14px 0 0; }
+.capitol { margin-top: 18px; aspect-ratio: 16 / 10; border-radius: 41% 59% 52% 48% / 56% 38% 62% 44%; }
+.capitol img { object-position: 55% 40%; }
+
+/* ============ faq ============ */
+.faq-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(24px, 5vw, 80px); align-items: start; }
+details { border-top: 1.5px solid color-mix(in oklab, var(--admiral) 22%, transparent); }
+details:last-of-type { border-bottom: 1.5px solid color-mix(in oklab, var(--admiral) 22%, transparent); }
+summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; font-family: var(--f-serif); font-size: clamp(1.35rem, 1.1rem + .8vw, 1.9rem); line-height: 1.15; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: ""; flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--admiral); background: linear-gradient(var(--admiral), var(--admiral)) center / 12px 2px no-repeat, linear-gradient(var(--admiral), var(--admiral)) center / 2px 12px no-repeat; transition: transform .35s var(--ease-out), background-color .2s; }
+details[open] summary::after { transform: rotate(45deg); background-color: var(--mint); }
+.ans { padding: 0 0 22px; max-width: 64ch; }
+.ans ul { margin: 0; padding-left: 1.1em; }
+.ans li + li { margin-top: 8px; }
+
+/* ============ final cta ============ */
+.final { position: relative; overflow-x: clip; color: var(--ivory); text-align: center; isolation: isolate;
+  background: radial-gradient(80% 90% at 50% 120%, color-mix(in oklab, var(--cardinal) 45%, transparent), transparent 60%), linear-gradient(180deg, var(--admiral), var(--admiral-night)); }
+.final .edge { color: var(--admiral); }
+.final .photo { position: absolute; inset: 0; z-index: -2; background: url(img/stock/capitol2/c4.webp) 50% 38% / cover no-repeat; opacity: .9; }
+.final .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--admiral) 0%, color-mix(in oklab, var(--admiral) 30%, transparent) 32%, transparent 60%, var(--admiral-night) 100%); }
+.final .stripes { position: absolute; inset: 0; z-index: -1; opacity: .07; pointer-events: none; }
+.final .stripes path { fill: none; stroke: var(--ivory); stroke-width: 26; }
+.final .h2 { font-size: clamp(3rem, 1rem + 7vw, 8rem); margin: 0; }
+.final .lede { margin: 18px auto 30px; }
+.final .ctas { justify-content: center; }
+
+/* ============ footer ============ */
+footer { background: var(--admiral-night); color: var(--ivory); padding: 56px 0 90px; font-size: .92rem; }
+.foot { display: grid; grid-template-columns: auto 1fr auto; gap: 30px 50px; align-items: start; }
+.foot img { width: 130px; }
+.foot address { font-style: normal; line-height: 1.6; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.legal { margin-top: 34px; padding-top: 22px; border-top: 1px solid color-mix(in oklab, var(--ivory) 18%, transparent); font-size: .74rem; letter-spacing: .03em; opacity: .75; }
+.mocknote { margin-top: 14px; font-size: .8rem; color: var(--rouge); }
+
+/* motion toggle (WCAG 2.2.2) */
+.motion { position: fixed; z-index: 45; right: 14px; bottom: 14px; font: 600 .8rem/1 var(--f-body); color: var(--ivory); background: color-mix(in oklab, var(--admiral-night) 80%, transparent); backdrop-filter: blur(10px); border: 1px solid color-mix(in oklab, var(--ivory) 35%, transparent); border-radius: 999px; padding: 9px 14px; cursor: pointer; }
+
+/* ============ responsive ============ */
+@media (max-width: 1000px) {
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 34px; }
+  .steps svg.arcs { display: none; }
+  .days { grid-template-columns: 1fr; }
+  .days > svg { display: none; }
+  .day:nth-child(n) { transform: none; }
+  .spk-grid, .trav-grid, .faq-grid, .river-head { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .stage { grid-template-columns: 1fr; padding-top: 96px; padding-bottom: calc(min(30vh, 240px) + 40px); }
+  .hero h1 { white-space: normal; }
+  .clock { justify-self: start; text-align: left; margin: 10px 0 0; }
+  .bars { left: 0; height: min(30vh, 240px); }
+  .scroll-cue { display: none; }
+  .bars-note { bottom: 10px; }
+  .about-grid, .reg-grid { grid-template-columns: 1fr; }
+  .about .blob { max-width: 420px; }
+  .spk { grid-template-columns: 1fr; }
+  .spk .ph { max-width: 220px; }
+  .foot { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .steps { grid-template-columns: 1fr; }
+  .day li { grid-template-columns: 4.8em 1fr; }
+  .help { grid-template-columns: 1fr; }
+}
+
+/* ============ reduced motion / paused / still ============ */
+@media (prefers-reduced-motion: reduce) {
+  .glow, .blob, .blob img, .spk .ph, .tier::after, .strip, .scroll-cue::after { animation: none !important; }
+  .hero h1 .line > span, .fade-in { transform: none; opacity: 1; animation: none; }
+  .cut::after { transform: rotate(14deg) scaleX(1); animation: none; }
+  .bars rect { transform: none; animation: none; }
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .mark-word path, .days > svg path { stroke-dashoffset: 0; transition: none; }
+  .strip { width: auto; flex-wrap: wrap; justify-content: center; }
+  .strip figure.dupe { display: none; }
+  html { scroll-behavior: auto; }
+}
+html.paused *, html.paused *::before, html.paused *::after { animation-play-state: paused !important; }
+html.still .glow, html.still .blob, html.still .blob img, html.still .spk .ph, html.still .tier::after, html.still .strip { animation: none !important; }
+html.still .hero h1 .line > span, html.still .fade-in { transform: none; opacity: 1; animation: none; }
+html.still .cut::after { transform: rotate(14deg) scaleX(1); animation: none; }
+html.still .bars rect { transform: none; animation: none; }
+html.still [data-reveal] { opacity: 1; transform: none; transition: none; }
+html.still .mark-word path, html.still .days > svg path { stroke-dashoffset: 0; transition: none; }
+
+/* ================= v2 ================= */
+/* Ruder Plakat breathing room (feedback: "crushed") */
+.hero h1 { line-height: .95; letter-spacing: .012em; word-spacing: .05em; }
+.h2 { line-height: .95; letter-spacing: .018em; word-spacing: .16em; margin-bottom: .18em; }
+.day h3, .spk h3, .mini h3, .card-d h3 { letter-spacing: .015em; word-spacing: .14em; line-height: .98; }
+.sub { font-family: var(--f-serif); font-size: clamp(1.6rem, 1.15rem + 1.5vw, 2.6rem); line-height: 1.1; margin: 0 0 .7em; }
+.travel .sub { color: var(--mint); }
+.river .sub { color: var(--rouge); }
+
+/* buttons, Concord style: pills in a heavy sans, sentence case, the theme's lift-and-skew hover;
+   big calls to action switch to the display face like the live site's .button.large */
+.pill { border-width: 1.7px; font-weight: 700; letter-spacing: -.005em; }
+.pill:hover { transform: scale(1.007) skew(-.3deg) translateY(-1px); filter: brightness(110%); box-shadow: 0 14px 30px -16px rgba(0,0,0,.45); }
+.pill--line:hover { filter: none; }
+.pill--ivory { background: var(--ivory); color: var(--admiral); }
+.pill--big { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; letter-spacing: .03em; word-spacing: .12em; font-size: clamp(1.15rem, 1rem + .5vw, 1.45rem); border-radius: 1.1rem; padding: .78em 1.5em .7em; }
+a:not(.pill):not(.brand) { text-decoration-color: var(--gold); }
+main p a:not(.pill), .ans a { text-decoration-style: dashed; text-underline-offset: .2em; text-decoration-thickness: 1.5px; }
+
+/* date and venue */
+.when { display: flex; align-items: center; gap: clamp(16px, 2vw, 26px); margin: 32px 0 28px; }
+.cal { display: grid; text-align: center; min-width: 108px; border-radius: 14px; overflow: hidden; background: color-mix(in oklab, var(--ivory) 8%, transparent); border: 1.5px solid color-mix(in oklab, var(--ivory) 35%, transparent); backdrop-filter: blur(8px); }
+.cal .m { background: var(--cardinal); font: 700 .74rem/1 var(--f-body); letter-spacing: .2em; text-transform: uppercase; padding: 7px 10px 6px; }
+.cal .d { font-family: var(--f-display); font-size: 2.7rem; line-height: 1; letter-spacing: .03em; padding: 10px 12px 2px; }
+.cal .y { font-family: var(--f-serif); font-style: italic; font-size: 1rem; padding: 0 0 9px; opacity: .85; }
+.venue b { display: block; font-family: var(--f-serif); font-weight: 400; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); line-height: 1; margin-bottom: 8px; }
+.venue span { display: flex; align-items: center; gap: 7px; font-size: .95rem; opacity: .88; }
+.venue svg { width: 17px; height: 17px; fill: none; stroke: var(--rouge); stroke-width: 2; flex: none; }
+
+/* fun fact typing line */
+.fact { min-height: 4.2em; max-width: 30rem; margin: .3em 0 0 auto; font-family: var(--f-serif); font-size: clamp(1.05rem, .95rem + .45vw, 1.35rem); line-height: 1.3; color: var(--ivory); text-align: right; }
+.fact-l { font-style: italic; color: var(--rouge); margin-right: .15em; }
+.caret { display: inline-block; width: 2px; height: 1.05em; margin-left: 2px; background: var(--rouge); vertical-align: -.15em; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.fact-src { margin-left: .55em; font-family: var(--f-body); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--mint); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 860px) { .fact { margin-left: 0; text-align: left; } }
+
+/* hero background options (mockup switcher) */
+.hero-photo { position: absolute; inset: 0; z-index: -2; display: none; left: 18%; right: -4%; background: url(img/stock/capitol2/c4.webp) 50% 42% / cover no-repeat; opacity: .85; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%); mask-image: linear-gradient(90deg, transparent 0%, #000 30%); mix-blend-mode: luminosity; animation: kb 40s var(--ease-wave) infinite alternate; }
+.hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--admiral-night) 0%, color-mix(in oklab, var(--admiral-night) 50%, transparent) 55%, transparent 100%), linear-gradient(0deg, var(--admiral-night) 0%, transparent 40%); }
+@keyframes kb { from { transform: scale(1.04); } to { transform: scale(1.14) translate(-1.5%, -1%); } }
+.bg-capitol .hero-photo, .bg-both .hero-photo { display: block; }
+.bg-capitol #flag { display: none; }
+.bg-both #flag { opacity: .6; }
+.bgpick { position: fixed; z-index: 45; left: 14px; bottom: 14px; display: flex; align-items: center; gap: 4px; padding: 5px; border-radius: 999px; background: color-mix(in oklab, var(--admiral-night) 82%, transparent); backdrop-filter: blur(10px); border: 1px solid color-mix(in oklab, var(--ivory) 30%, transparent); font: 600 .74rem/1 var(--f-body); color: var(--ivory); }
+.bgpick span { padding: 0 8px; opacity: .7; }
+.bgpick a { text-decoration: none; padding: 7px 11px; border-radius: 999px; }
+.bgpick a[aria-current="true"] { background: var(--ivory); color: var(--admiral); }
+@media (max-width: 520px) { .bgpick span { display: none; } }
+
+/* pricing: Concord cards with the Minuteman */
+.tier { background: var(--admiral); color: var(--ivory); box-shadow: 0 34px 70px -40px rgba(15,61,95,.85); min-height: 360px; }
+.tier.stu { background: var(--money); }
+.tier::after { right: -4%; bottom: -16%; width: 60%; height: 125%; border-radius: 0; background: var(--ivory); opacity: .1; animation: none;
+  -webkit-mask: url(assets/brand/logomark-action.svg) right bottom / contain no-repeat; mask: url(assets/brand/logomark-action.svg) right bottom / contain no-repeat; transition: transform .9s var(--ease-out), opacity .9s; }
+.tier.gen::after { background: var(--ivory); }
+.tier:hover::after { transform: translate(-12px, -10px) scale(1.05); opacity: .17; }
+.tier .role { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.5rem, 1.1rem + 1vw, 2rem); text-transform: uppercase; letter-spacing: .02em; word-spacing: .14em; margin: 0 0 10px; }
+.tier .rule { width: 48px; height: 2px; background: var(--cardinal); margin: 0 0 14px; }
+.tier.stu .rule { background: var(--mint); }
+.tier .price { color: var(--ivory); }
+.tier .early { color: var(--rouge); }
+.tier.stu .early { color: var(--mint); }
+.tier .tbd { color: var(--ivory); border-color: var(--mint); background: transparent; }
+
+/* advocates in action: Minuteman-O reveal shuffle */
+.shuffle { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.6vw, 40px); padding-top: clamp(36px, 5vw, 64px); padding-bottom: clamp(48px, 6vw, 84px); }
+.frame { margin: 0; }
+.frame:nth-child(2) { margin-top: 56px; }
+.frame .pic { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; animation: morph 16s var(--ease-wave) infinite alternate; background: var(--admiral-night); }
+.frame:nth-child(2) .pic { animation-duration: 19s; animation-delay: -6s; }
+.frame:nth-child(3) .pic { animation-duration: 13s; animation-delay: -3s; }
+.frame .pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.frame img.m { z-index: 1; -webkit-mask: url(assets/brand/logomark-action.svg) 50% 50% / 0% no-repeat; mask: url(assets/brand/logomark-action.svg) 50% 50% / 0% no-repeat; }
+.frame img.u { z-index: 1; opacity: 0; }
+.frame.reveal img.m { animation: iris 2.1s var(--ease-out) forwards; }
+.frame.reveal img.u { animation: unveil 2.1s ease forwards, kbs 9s 1s linear forwards; }
+@keyframes iris { 0% { -webkit-mask-size: 0%; mask-size: 0%; } 32% { -webkit-mask-size: 48%; mask-size: 48%; } 100% { -webkit-mask-size: 440%; mask-size: 440%; } }
+@keyframes unveil { 0%, 44% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes kbs { from { transform: scale(1); } to { transform: scale(1.07); } }
+.frame .veil { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; opacity: 1; transition: opacity 1.25s var(--ease-wave);
+  background: radial-gradient(110% 80% at 30% 8%, color-mix(in oklab, var(--cardinal) 78%, var(--admiral)) 0%, color-mix(in oklab, var(--admiral) 82%, var(--cardinal)) 46%, var(--admiral-night) 100%); }
+.frame .veil .o { width: 36%; aspect-ratio: 172 / 314; background: var(--ivory); opacity: .24; -webkit-mask: url(assets/brand/logomark-action.svg) center / contain no-repeat; mask: url(assets/brand/logomark-action.svg) center / contain no-repeat; }
+.frame.reveal .veil { opacity: 0; transition: opacity 1.5s .6s var(--ease-wave); }
+.frame.reveal.cover .veil { opacity: 1; transition: opacity 1.25s var(--ease-wave); }
+.frame figcaption { font-family: var(--f-serif); font-style: italic; font-size: 1.02rem; line-height: 1.25; margin-top: 14px; min-height: 2.5em; transition: opacity .6s; }
+.frame.cover figcaption { opacity: 0; }
+@media (max-width: 860px) { .shuffle { grid-template-columns: 1fr 1fr; } .frame:nth-child(3) { display: none; } .frame:nth-child(2) { margin-top: 36px; } }
+@media (prefers-reduced-motion: reduce) {
+  .frame img.m { -webkit-mask: none; mask: none; } .frame .veil { opacity: 0 !important; } .frame img.u { opacity: 1; animation: none !important; }
+  .frame.cover figcaption { opacity: 1; } .hero-photo { animation: none; } .caret { animation: none; }
+}
+html.still .frame img.m { -webkit-mask: none; mask: none; }
+html.still .frame .veil { opacity: 0 !important; }
+html.still .frame img.u { opacity: 1; animation: none !important; }
+html.still .frame.cover figcaption { opacity: 1; }
+html.still .hero-photo { animation: none; }
+
+/* ================= v3 ================= */
+/* hero date: one clean line */
+.when3 { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 30px 0 28px; font-family: var(--f-serif); font-size: clamp(1.6rem, 1.15rem + 1.6vw, 2.5rem); line-height: 1; }
+.when3 i { width: 34px; height: 2px; background: var(--cardinal); }
+@media (max-width: 560px) { .when3 { flex-direction: column; align-items: flex-start; gap: 6px; } .when3 i { order: 3; width: 34px; } }
+
+/* Event Details, after Brand Guide p. 13: big Cardinal Ruder head, Admiral serif subhead, hairlines, Old gold numerals */
+.about3 { background: var(--ivory); }
+.about3 .h2 { color: var(--cardinal); font-size: clamp(3.6rem, 1.2rem + 7.4vw, 8.6rem); margin-bottom: .12em; }
+.lead3 { font-family: var(--f-serif); font-size: clamp(1.5rem, 1.1rem + 1.45vw, 2.45rem); line-height: 1.14; max-width: 36ch; margin: 0; }
+.hair { border: 0; border-top: 1px solid color-mix(in oklab, var(--admiral) 60%, transparent); margin: clamp(30px, 4.5vw, 56px) 0; }
+.eras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(22px, 3.4vw, 54px); }
+.eras p { margin: 0; font-size: 1rem; line-height: 1.6; max-width: 40ch; }
+.eras .yr { font-family: var(--f-serif); color: var(--gold); font-size: clamp(3.6rem, 2rem + 4.4vw, 6.4rem); line-height: .9; margin: 0 0 .22em; letter-spacing: -.01em; }
+.sub2 { font-family: var(--f-body); font-weight: 400; font-size: clamp(1.5rem, 1.15rem + .9vw, 2.1rem); line-height: 1.1; margin: 0 0 24px; }
+.four { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(18px, 2.4vw, 36px); counter-reset: none; }
+.four li { border-top: 1px solid var(--admiral); padding-top: 16px; font-size: 1rem; line-height: 1.55; }
+.four .n { display: block; font-family: var(--f-serif); font-size: clamp(2.2rem, 1.6rem + 1.4vw, 3.2rem); line-height: 1; color: var(--cardinal); margin-bottom: 12px; }
+@media (max-width: 1000px) { .four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .eras, .four { grid-template-columns: 1fr; } }
+
+/* Agenda, after the brand's sample slide (p. 31): hairline arcs between dated nodes on Admiral, enlarged logomark */
+.agenda3 { position: relative; display: flow-root; background: var(--admiral); color: var(--ivory); overflow-x: clip; isolation: isolate; }
+.agenda3 .edge { color: var(--admiral); }
+.agenda3::before { content: ""; position: absolute; z-index: -1; right: -6%; bottom: -4%; width: min(46vw, 620px); height: 100%; background: var(--ivory); opacity: .06;
+  -webkit-mask: url(assets/brand/logomark-action.svg) right bottom / contain no-repeat; mask: url(assets/brand/logomark-action.svg) right bottom / contain no-repeat; }
+.ag-wrap { padding-top: clamp(40px, 6vw, 80px); padding-bottom: clamp(50px, 7vw, 96px); }
+.agenda3 .h2 { color: var(--ivory); }
+.agenda3 .sub { color: var(--rouge); }
+.timeline { position: relative; margin-top: clamp(30px, 4vw, 50px); }
+.arcs3 { display: block; width: 100%; height: clamp(54px, 7vw, 96px); overflow: visible; }
+.arcs3 path { fill: none; stroke: var(--ivory); stroke-opacity: .55; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.nodes { position: relative; height: 0; }
+.nodes i { position: absolute; top: -6px; width: 12px; height: 12px; border-radius: 50%; background: var(--ivory); }
+.nodes i:nth-child(1) { left: 0; } .nodes i:nth-child(2) { left: calc(33.33% - 6px); } .nodes i:nth-child(3) { left: calc(66.17% - 6px); }
+.days3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(20px, 3vw, 44px); padding-top: 26px; }
+.days3 article { padding-right: clamp(8px, 2vw, 30px); }
+.days3 .date { font-family: var(--f-serif); font-size: 1.15rem; margin: 0; color: var(--rouge); }
+.days3 .date span { font-size: clamp(3rem, 2rem + 2.8vw, 4.6rem); line-height: .9; color: var(--ivory); margin-right: .08em; }
+.days3 h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; letter-spacing: .02em; font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem); line-height: 1; margin: 8px 0 14px; }
+.days3 ol { list-style: none; margin: 0; padding: 0; }
+.days3 li { padding: 11px 0; border-top: 1px solid color-mix(in oklab, var(--ivory) 22%, transparent); line-height: 1.35; }
+.days3 time { display: block; font-family: var(--f-serif); font-size: 1.05rem; color: var(--mint); margin-bottom: 2px; }
+.days3 li small { display: block; font-size: .88rem; opacity: .8; margin-top: 2px; }
+.days3 li.hi { color: var(--ivory); font-weight: 700; }
+.days3 li.hi time::after { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--rouge); margin-left: 8px; vertical-align: .15em; }
+.where3 { margin: clamp(28px, 4vw, 44px) 0 0; font-size: .95rem; opacity: .85; }
+@media (max-width: 860px) {
+  .arcs3, .nodes { display: none; }
+  .days3 { grid-template-columns: 1fr; gap: 30px; padding-top: 0; }
+  .days3 article { border-left: 1px solid color-mix(in oklab, var(--ivory) 45%, transparent); padding-left: 18px; position: relative; }
+  .days3 article::before { content: ""; position: absolute; left: -6.5px; top: 18px; width: 12px; height: 12px; border-radius: 50%; background: var(--ivory); }
+}
+
+/* pricing: identical structure, buttons pinned to the same spot */
+.tier { display: flex; flex-direction: column; min-height: 330px; }
+.tier .early { margin-bottom: 26px; }
+.tier .pill { margin-top: auto; align-self: flex-start; }
+.incl-link { margin-top: 14px; font-size: .9rem; color: var(--ivory); text-decoration: underline dashed; text-decoration-color: color-mix(in oklab, var(--ivory) 60%, transparent); text-underline-offset: .25em; align-self: flex-start; }
+.incl-link:hover { text-decoration-color: var(--ivory); }
+
+/* ================= v4 ================= */
+/* hero date: plain serif line, no rules */
+.when4 { margin: 26px 0 30px; font-family: var(--f-serif); font-size: clamp(1.6rem, 1.15rem + 1.6vw, 2.5rem); line-height: 1.05; }
+.when4 span { color: var(--rouge); margin: 0 .2em; }
+
+/* speakers: labels in the brand's role-label manner (serif label, hairline running out) */
+.spk .role, .mini .role { display: flex; align-items: center; gap: 14px; font: 400 clamp(1.15rem, 1rem + .4vw, 1.4rem)/1.1 var(--f-serif); letter-spacing: 0; text-transform: none; margin: 0 0 12px; }
+.spk .role { color: var(--rouge); }
+.mini .role { color: var(--cardinal); }
+.spk .role::after, .mini .role::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: .45; }
+
+/* "to be announced" markers: Concord swatch-pill style (Campaign Style Guide), solid, no dashes */
+.tbd { display: inline-flex; align-items: center; gap: .5em; border: 0; border-radius: 999px; padding: .5em .95em .5em .8em; font: 700 .78rem/1.1 var(--f-body); letter-spacing: .01em; text-transform: none; color: var(--admiral); background: color-mix(in oklab, var(--rouge) 38%, var(--ivory)); vertical-align: middle; }
+.tbd::before { content: ""; width: .5em; height: .5em; border-radius: 50%; background: var(--cardinal); flex: none; }
+.on-dark .tbd, .agenda3 .tbd, .spk .tbd, .tier .tbd { color: var(--ivory); background: color-mix(in oklab, var(--ivory) 14%, transparent); border: 0; }
+.on-dark .tbd::before, .agenda3 .tbd::before, .spk .tbd::before, .tier .tbd::before { background: var(--rouge); }
+.card-d.hotel .tbd { color: var(--admiral); background: color-mix(in oklab, var(--rouge) 38%, var(--ivory)); }
+.days3 li .tbd { margin-top: 6px; }
+
+/* switcher */
+.bgpick b { width: 1px; align-self: stretch; margin: 4px 2px; background: color-mix(in oklab, var(--ivory) 30%, transparent); }
+.bgpick a { cursor: pointer; }
+.hero-photo { transition: opacity .6s; }
+.quote { position: relative; z-index: 3; }
+.agenda3 { z-index: 2; }
+
+/* accommodations v4: hotel photo, map, linked options */
+.trav4 { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(16px, 2.4vw, 30px); margin-top: clamp(26px, 4vw, 44px); align-items: start; }
+.hotel4 { background: var(--ivory); color: var(--admiral); border-radius: 22px; overflow: hidden; }
+.hotel4 figure { margin: 0; aspect-ratio: 16 / 9; overflow: hidden; }
+.hotel4 img { width: 100%; height: 100%; object-fit: cover; object-position: 66% 50%; }
+.hotel4-body { padding: clamp(20px, 2.4vw, 30px); }
+.hotel4 h3, .card4 h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; letter-spacing: .015em; word-spacing: .14em; font-size: clamp(1.6rem, 1.1rem + 1.2vw, 2.3rem); line-height: .98; margin: 0 0 10px; }
+.hotel4 address { font-style: normal; font-family: var(--f-serif); font-size: 1.3rem; line-height: 1.2; margin: 0 0 10px; }
+.hotel4 .near { font-size: .95rem; margin: 0 0 18px; }
+.hotel4-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-bottom: 14px; }
+.hotel4 .small { font-size: .9rem; margin: 0; }
+.go { font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: .4em; }
+.go::after { content: ""; width: .5em; height: .5em; border-top: 2px solid currentColor; border-right: 2px solid currentColor; transform: rotate(45deg); transition: transform .25s var(--ease-out); }
+.go:hover { text-decoration: underline; text-decoration-style: dashed; text-decoration-color: var(--gold); text-underline-offset: .22em; }
+.go:hover::after { transform: translateX(3px) rotate(45deg); }
+.trav4-side { display: grid; gap: clamp(16px, 2vw, 24px); }
+.map4 { margin: 0; border-radius: 22px; overflow: hidden; background: color-mix(in oklab, var(--money) 70%, #000); }
+.map4 iframe { display: block; width: 100%; aspect-ratio: 16 / 10; border: 0; filter: grayscale(1) contrast(1.05) brightness(.97) sepia(.18); }
+.map4 figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 18px; font-size: .85rem; }
+.map4 figcaption span { opacity: .8; }
+.trav4-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(16px, 2vw, 24px); }
+.card4 { border-radius: 22px; padding: clamp(20px, 2.2vw, 26px); background: color-mix(in oklab, var(--money) 70%, #000); border: 1px solid color-mix(in oklab, var(--mint) 28%, transparent); }
+.card4 ul { list-style: none; margin: 0; padding: 0; }
+.card4 li { padding: 10px 0; border-top: 1px solid color-mix(in oklab, var(--mint) 30%, transparent); }
+.card4 li:first-child { border-top: 0; padding-top: 2px; }
+.card4 .go { line-height: 1.3; }
+.air a { display: grid; grid-template-columns: 3.1em 1fr; gap: 10px; align-items: baseline; text-decoration: none; }
+.air b { font-family: var(--f-display); font-weight: 400; font-size: 1.35rem; letter-spacing: .03em; color: var(--mint); }
+.air span { font-size: .92rem; line-height: 1.3; }
+.air em { font-family: var(--f-serif); }
+.air a:hover span { text-decoration: underline dashed; text-decoration-color: var(--gold); text-underline-offset: .2em; }
+.travel .hotel4 .tbd { color: var(--admiral); background: color-mix(in oklab, var(--rouge) 38%, var(--ivory)); }
+.travel .hotel4 .tbd::before { background: var(--cardinal); }
+@media (max-width: 1000px) { .trav4 { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .trav4-pair { grid-template-columns: 1fr; } }
+
+/* ================= v5 ================= */
+/* Cut the debt: one-click snip (scissors option 3). DEBT in the h1 and the round button both trigger it;
+   the scissors ride the existing load-time slash, the top of DEBT slides off, the clock flinches, then it heals. */
+.hero .cut { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 240 240'%3E%3Cg transform='rotate(-35 120 120) translate(0 60)' stroke-linejoin='round'%3E%3Cg transform='rotate(16 120 60)'%3E%3Cpath d='M116 58 L75 39.5' stroke='%23CA2D2D' stroke-width='15' stroke-linecap='round'/%3E%3Cellipse cx='54' cy='30' rx='23' ry='15' transform='rotate(24.4 54 30)' stroke='%23CA2D2D' stroke-width='13' fill='none'/%3E%3Cpath d='M106 58.5 L231 59.4 C216 64.5 174 71.2 136 72.4 C119 72.9 107 69 106 58.5 Z' fill='%23F8F1E9' stroke='%230B2236' stroke-width='6'/%3E%3C/g%3E%3Cg transform='rotate(-16 120 60)'%3E%3Cpath d='M116 62 L74 80.6' stroke='%23CA2D2D' stroke-width='15' stroke-linecap='round'/%3E%3Cellipse cx='48' cy='92' rx='28' ry='17' transform='rotate(-24 48 92)' stroke='%23CA2D2D' stroke-width='13' fill='none'/%3E%3Cpath d='M106 61.5 L231 60.6 C216 55.5 174 48.8 136 47.6 C119 47.1 107 51 106 61.5 Z' fill='%23F8F1E9' stroke='%230B2236' stroke-width='6'/%3E%3C/g%3E%3Ccircle cx='120' cy='60' r='10' fill='%230B2236' stroke='%23F8F1E9' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E") 21 12, pointer;
+  -webkit-tap-highlight-color: transparent; user-select: none; border-radius: 6px; }
+.hero .cut:focus-visible { outline-offset: 6px; }
+.cut::after { z-index: 3; transition: filter .25s; }
+.cut:hover::after, .cut:focus-visible::after { filter: drop-shadow(0 0 .07em color-mix(in oklab, var(--cardinal) 85%, transparent)); }
+.cut-base { display: inline-block; width: 0; height: 0; }
+.cut-piece { position: absolute; left: 0; top: 0; z-index: 2; visibility: hidden; white-space: nowrap; pointer-events: none; will-change: transform, opacity; }
+.hero.snip-cut h1 .line { overflow: visible; }
+.hero.snip-cut .cut-piece { visibility: visible; }
+.hero.snip-cut .cut-solid { color: transparent; }  /* not visibility: the h1 must still read "Debt" while it is cut */
+.hero.snip-gone .cut-piece--top { visibility: hidden; }
+
+/* the round Cardinal button: sits in the CTA row, same glass and border as the ghost pills */
+.snip { --d: clamp(38px, 1.9rem + 1vw, 48px); display: inline-flex; align-items: center; gap: 12px; padding: 5px 1.3em 5px 5px; border-radius: 999px;
+  border: 1.7px solid color-mix(in oklab, var(--ivory) 55%, transparent); background: color-mix(in oklab, var(--admiral) 30%, transparent); backdrop-filter: blur(10px);
+  color: var(--ivory); font: 700 var(--t-body)/1.1 var(--f-body); letter-spacing: -.005em; cursor: pointer; transition: border-color .2s, transform .2s; -webkit-tap-highlight-color: transparent; }
+.snip:hover { border-color: var(--ivory); }
+.snip:active { transform: scale(.98); }
+.snip:focus-visible { border-radius: 999px; outline-offset: 4px; }
+.snip-disc { position: relative; flex: none; display: grid; place-items: center; width: var(--d); height: var(--d); border-radius: 50%; background: var(--cardinal);
+  box-shadow: 0 10px 26px -10px color-mix(in oklab, var(--cardinal) 90%, transparent), inset 0 -3px 0 color-mix(in oklab, var(--cardinal) 70%, #000); transition: transform .25s var(--ease-out); }
+.snip:hover .snip-disc { transform: scale(1.06) rotate(-6deg); }
+.snip-disc::before { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid var(--cardinal); opacity: 0; pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) { html:not(.still) .hero:not(.snip-used) .snip-disc::before { animation: snip-pulse 2.6s 2.4s var(--ease-out) 3; } }
+@keyframes snip-pulse { 0% { transform: scale(.92); opacity: .85; } 100% { transform: scale(1.38); opacity: 0; } }
+.snip-ico { width: 68%; height: 34%; overflow: visible; transform: rotate(-35deg); --sc-handle: var(--ivory); --sc-pivot: var(--cardinal); }
+.snip-ico [data-half] { transform-box: view-box; transform-origin: 120px 60px; }
+.snip-ico [data-half="a"] { transform: rotate(-18deg); }
+.snip-ico [data-half="b"] { transform: rotate(18deg); }
+.snip:hover .snip-ico [data-half="a"], .hero.snip-go .snip-ico [data-half="a"] { animation: snip-a .34s ease-in-out; }
+.snip:hover .snip-ico [data-half="b"], .hero.snip-go .snip-ico [data-half="b"] { animation: snip-b .34s ease-in-out; }
+@keyframes snip-a { 45% { transform: rotate(1deg); } }
+@keyframes snip-b { 45% { transform: rotate(-1deg); } }
+
+/* the clock flinches: figure dips in Mint, the quip stands in for the label, the fun fact is untouched */
+.clock { position: relative; }
+.clock .label { transition: opacity .4s; }
+.clock output { transition: color .45s; }
+.cut-quip { position: absolute; right: 0; top: calc(var(--t-small) * 1.55); margin: 0; white-space: nowrap; font-family: var(--f-serif); font-style: italic; font-size: clamp(1.05rem, .95rem + .45vw, 1.35rem); line-height: 1; color: var(--rouge);
+  opacity: 0; transform: translateY(calc(-100% + 6px)); transition: opacity .5s, transform .6s var(--ease-out); pointer-events: none; }
+.hero.snip-quip .clock .label { opacity: 0; }
+.hero.snip-quip .cut-quip { opacity: 1; transform: translateY(-100%); }
+.hero.snip-down #debt { color: var(--mint); }
+@media (max-width: 860px) { .cut-quip { right: auto; left: 0; } }
+
+/* flight layer: the scissors, sparks and chips fly over the whole hero */
+.snip-layer { position: absolute; inset: 0; z-index: 6; overflow: hidden; pointer-events: none; }
+.snip-flyer { position: absolute; left: 0; top: 0; aspect-ratio: 2 / 1; opacity: 0; }
+.hero.snip-flying .snip-flyer { opacity: 1; }
+.snip-flyer svg { display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 8px 12px rgba(0, 0, 0, .4)); }
+.snip-spark, .snip-bit { position: absolute; left: 0; top: 0; pointer-events: none; }
+.snip-spark { height: 2.5px; margin-top: -1.25px; border-radius: 2px; transform-origin: 0 50%; }
+.snip-bit { width: 3px; height: 9px; border-radius: 2px; background: var(--ivory); }
+@media (prefers-reduced-motion: reduce) { .cut-quip, .clock .label, .clock output, .snip-disc { transition: none; } .snip:hover .snip-ico [data-half] { animation: none; } }
+
+/* v5: airports keep their layout, tighter type so names never overflow */
+.card4 { min-width: 0; }
+.air a { grid-template-columns: 2.7em 1fr; gap: 8px; }
+.air b { font-size: 1.2rem; }
+.air span { font-size: .88rem; }
+/* mockup switcher on phones: scroll instead of colliding with the pause button */
+@media (max-width: 700px) { .bgpick { max-width: calc(100% - 150px); overflow-x: auto; scrollbar-width: none; } .bgpick span { display: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Summit">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/brand/logo-action-on-dark.svg" alt="Concord Action, home"></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#travel">Travel</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="pill pill--red" href="#register">Register</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="hero-photo" aria-hidden="true"></div>
+  <canvas id="flag" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap stage" id="main">
+    <div>
+      <p class="eyebrow fade-in">It's time to <span>cut the debt.</span></p>
+      <h1>
+        <span class="line"><span>National</span></span>
+        <span class="line"><span>Citizens</span></span>
+        <span class="line"><span><span class="cut" role="button" tabindex="0" aria-describedby="snip-hint"><span class="cut-solid">Debt</span><span class="cut-base"></span><span class="cut-piece cut-piece--top" aria-hidden="true">Debt</span><span class="cut-piece" aria-hidden="true">Debt</span></span> Summit</span></span>
+      </h1>
+      <p class="when4 fade-in">March 2-4, 2027 <span aria-hidden="true">&middot;</span> Washington, D.C.</p>
+      <div class="ctas fade-in">
+        <a class="pill pill--red pill--big" href="#register">Register now</a>
+        <a class="pill pill--ghost" href="#agenda">See the agenda</a>
+        <a class="pill pill--ghost" href="#speakers">Speakers</a>
+        <button class="snip" id="snip" type="button"><span class="snip-disc" aria-hidden="true"></span><span class="snip-l">Cut the debt</span></button>
+      </div>
+    </div>
+    <div class="clock fade-in">
+      <div class="label" id="debt-label">U.S. national debt, live estimate</div>
+      <p class="cut-quip" aria-hidden="true">(If only it were that easy.)</p>
+      <output id="debt" aria-labelledby="debt-label">$40,301,480,531,899</output>
+      <p class="fact" id="fact"><span class="fact-l">Fun fact:</span> <span id="fact-t" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span><span class="sr-only" id="fact-sr"></span></p>
+    </div>
+  </div>
+  <div class="bars" aria-hidden="true"><svg id="bars" preserveAspectRatio="none"></svg></div>
+  <div class="snip-layer" aria-hidden="true"><div class="snip-flyer"></div></div>
+  <span class="sr-only" id="snip-hint">Cut the debt</span>
+  <p class="sr-only" id="snip-live" aria-live="polite"></p>
+  <a class="scroll-cue" href="#about" aria-label="Scroll to event details"></a>
+</header>
+
+<main>
+  <!-- ABOUT -->
+  <section class="about3 pad" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <h2 class="h2" id="about-h" data-reveal>Event Details</h2>
+      <p class="lead3" data-reveal="2">Concord Action is hosting the National Citizens Debt Summit in Washington, D.C. March 2-4, 2027. This is a unique opportunity to join other Concord advocates from around the country to send a message to Congress: we must cut the debt and save America's future.</p>
+      <hr class="hair">
+      <div class="eras">
+        <div data-reveal>
+          <p class="yr">1775</p>
+          <p>Ordinary people, mostly farmers called Minutemen, answered a call to arms. They courageously stood together in the town of Concord, Massachusetts, against thousands of British soldiers, and successfully turned them back to Boston.</p>
+        </div>
+        <div data-reveal="2">
+          <p class="yr">$40T</p>
+          <p>This summit is a launching point for a national movement focused on restoring fiscal responsibility and strengthening America's long-term economic future. With the national debt approaching $40 trillion, Americans are already feeling the effects through rising inflation and high interest rates. Without action to tackle the almost $2 trillion annual deficit, these problems will worsen rapidly.</p>
+        </div>
+        <div data-reveal="3">
+          <p class="yr">2027</p>
+          <p>The 2027 National Citizens Debt Summit will bring together advocates, leaders, and changemakers from across the country around this issue. By taking part in the summit, you will become a Concord Action policy advocate influencing legislators directly and learning from national experts how to grow this movement in your own community.</p>
+        </div>
+      </div>
+      <hr class="hair">
+      <h3 class="sub2" data-reveal>Summit participants will</h3>
+      <ol class="four" data-reveal="2">
+        <li><span class="n" aria-hidden="true">01</span>Be a part of exclusive briefings from the nation's top experts and policymakers on the federal debt and deficit</li>
+        <li><span class="n" aria-hidden="true">02</span>Network with Concord Action advocates from around the country who are advancing the mission in their communities to learn and grow this movement together</li>
+        <li><span class="n" aria-hidden="true">03</span>Meet with your member of Congress and key Washington decision-makers to make the case directly to national leaders to get control of the federal deficit NOW</li>
+        <li><span class="n" aria-hidden="true">04</span>Be a direct part of Concord Action's mission to restore fiscal sanity in Washington D.C. and build a brighter future for generations of Americans to come</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote" aria-label="From Concord Action's executive director">
+    <svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 50 C 220 10, 420 80, 720 46 S 1180 8, 1440 40 L1440 90 Z"/></svg>
+    <div class="wrap">
+      <figure style="margin:0" data-reveal>
+        <blockquote>Maya is one of the country's most respected and effective voices on fiscal policy, and we are very excited to have her kick off our first National Citizens Debt Summit.</blockquote>
+        <figcaption><b>Dr. Carolyn Bourdeaux</b>Executive Director, Concord Action</figcaption>
+      </figure>
+    </div>
+    <svg class="edge bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 44 C 260 80, 520 6, 820 40 S 1240 76, 1440 34 L1440 90 Z"/></svg>
+  </section>
+
+  <!-- AGENDA -->
+  <section class="agenda3" id="agenda" aria-labelledby="agenda-h">
+    <div class="wrap ag-wrap">
+      <h2 class="h2" id="agenda-h" data-reveal>Agenda</h2>
+      <p class="sub" data-reveal="2">Three days on Capitol Hill. Initial agenda, more details to come.</p>
+      <div class="timeline" data-reveal="3">
+        <svg class="arcs3" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M6 96 A 197 92 0 0 1 400 96"/><path d="M400 96 A 197 92 0 0 1 794 96"/><path d="M794 96 A 203 92 0 0 1 1200 96"/>
+        </svg>
+        <div class="nodes" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="days3">
+          <article>
+            <p class="date"><span>02</span> Mar</p>
+            <h3>Tuesday</h3>
+            <ol>
+              <li><time>2:00 PM</time>Registration Begins</li>
+              <li><time>5:00 PM</time>Welcome Reception</li>
+            </ol>
+          </article>
+          <article>
+            <p class="date"><span>03</span> Mar</p>
+            <h3>Wednesday</h3>
+            <ol>
+              <li><time>8:00 AM</time>Seated Breakfast And Keynote Address</li>
+              <li class="hi"><time>9:30 AM</time>"The Fiscal State of the Nation"<small>Maya MacGuineas, President of CRFB</small></li>
+              <li><time>10:30 AM</time>Member of Congress Panel <span class="tbd">Panelists to be announced</span></li>
+              <li><time>11:30 AM</time>Lunch And Capitol Hill Meeting Prep</li>
+              <li class="hi"><time>1:00 PM</time>Capitol Hill Meetings</li>
+              <li><time>6:30 PM</time>Reception And Networking</li>
+              <li><time>7:00 PM</time>Dinner And Awards Ceremony</li>
+            </ol>
+          </article>
+          <article>
+            <p class="date"><span>04</span> Mar</p>
+            <h3>Thursday</h3>
+            <ol>
+              <li>Breakfast On Your Own</li>
+              <li>Wrap Up Capitol Hill Meetings</li>
+              <li>Departures</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+      <p class="where3" data-reveal>Location for all events: Hilton Washington D.C. Capitol Hill, 525 New Jersey Ave NW, Washington, D.C. 20001</p>
+    </div>
+    <svg class="edge bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 40 C 300 76, 620 8, 900 42 S 1280 70, 1440 32 L1440 90 Z"/></svg>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section class="speakers paper pad" id="speakers" aria-labelledby="spk-h">
+    <div class="wrap">
+      <h2 class="h2" id="spk-h" data-reveal>Speakers</h2>
+      <p class="sub" data-reveal="2">Hear from the experts</p>
+      <div class="spk-grid">
+        <article class="spk" data-reveal="2">
+          <div class="ph"><span class="tbd">Headshot to come from CRFB</span></div>
+          <div>
+            <p class="role">Featured Speaker</p>
+            <h3>Maya MacGuineas</h3>
+            <p class="title">President, Committee for a Responsible Federal Budget</p>
+            <div class="session"><b>The Fiscal State of the Nation</b>Wednesday, March 3, 9:30 AM</div>
+            <p>MacGuineas will open summit programming on March 3 with an assessment of where the nation's finances stand, what is driving growing debt and deficits, and what Congress must do to change course.</p>
+          </div>
+        </article>
+        <div class="spk-side">
+          <article class="mini" data-reveal="3">
+            <p class="role">Wednesday, March 3 at 10:30 AM</p>
+            <h3>Member of Congress Panel</h3>
+            <p><span class="tbd">Panelists to be announced</span></p>
+          </article>
+          <article class="mini" data-reveal="4">
+            <p class="role">Coming soon</p>
+            <h3>More speakers to be announced</h3>
+            <p>The agenda is initial, with more details to come. <span class="tbd">Full speaker list to be announced</span></p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO RIVER -->
+  <section class="river on-dark" aria-labelledby="river-h">
+    <svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 40 C 300 80, 560 0, 900 44 S 1300 70, 1440 30 L1440 90 Z"/></svg>
+    <div class="wrap river-head">
+      <div>
+        <h2 class="h2" id="river-h" data-reveal>Advocates in Action</h2>
+        <p class="sub" data-reveal="2">Citizens who show up</p>
+      </div>
+      <p data-reveal="2" class="lede" style="margin:0">From Concord's 2026 National Volunteer Debt Summit in Washington and the debt clock truck tour.</p>
+    </div>
+    <div class="wrap shuffle" id="shuffle">
+      <figure class="frame"><div class="pic"><img class="m" alt=""><img class="u" alt=""><div class="veil" aria-hidden="true"><span class="o"></span></div></div><figcaption></figcaption></figure>
+      <figure class="frame"><div class="pic"><img class="m" alt=""><img class="u" alt=""><div class="veil" aria-hidden="true"><span class="o"></span></div></div><figcaption></figcaption></figure>
+      <figure class="frame"><div class="pic"><img class="m" alt=""><img class="u" alt=""><div class="veil" aria-hidden="true"><span class="o"></span></div></div><figcaption></figcaption></figure>
+    </div>
+    <svg class="edge bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 30 C 240 70, 600 10, 880 46 S 1260 12, 1440 44 L1440 90 Z"/></svg>
+  </section>
+
+  <!-- REGISTER -->
+  <section class="paper pad" id="register" aria-labelledby="reg-h">
+    <div class="wrap">
+      <h2 class="h2" id="reg-h" data-reveal>Registration</h2>
+      <p class="sub" data-reveal="2">Reserve your <span class="mark-word">seat<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 18 C 60 6, 120 26, 180 14 S 270 10, 296 16"/></svg></span></p>
+      <p class="lede" data-reveal="2" style="max-width:34ch">Register today to reserve your seat to be a part of this important event.</p>
+      <div class="reg-grid">
+        <article class="tier gen" data-reveal="2">
+          <p class="role">General Registration</p>
+          <div class="rule" aria-hidden="true"></div>
+          <p class="price"><sup>$</sup>150</p>
+          <p class="early">*Early Bird Pricing, subject to change after December 31, 2026.</p>
+          <a class="pill pill--red" href="https://secure.everyaction.com/v1/Forms/njHlIdGfh0uNGVA9dhy0GQ2" target="_blank" rel="noopener">Register: General, $150</a>
+          <a class="incl-link" href="#faq-incl">What's included</a>
+        </article>
+        <article class="tier stu" data-reveal="3">
+          <p class="role">Student Registration</p>
+          <div class="rule" aria-hidden="true"></div>
+          <p class="price"><sup>$</sup>35</p>
+          <p class="early">*Early Bird Pricing, subject to change after December 31, 2026.</p>
+          <a class="pill pill--ivory" href="https://secure.everyaction.com/v1/Forms/hgqSpl__j0mruzmoiJCnJg2" target="_blank" rel="noopener">Register: Student, $35</a>
+          <a class="incl-link" href="#faq-incl">What's included</a>
+        </article>
+      </div>
+      <div class="help" data-reveal>
+        <span class="icon" aria-hidden="true">?</span>
+        <p>If the registration fee and/or travel expenses present a barrier to your attendance, please contact Ashlei Horn, <a href="mailto:ahorn@concordaction.org">ahorn@concordaction.org</a>, for information about scholarships and financial assistance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAVEL -->
+  <section class="travel on-dark" id="travel" aria-labelledby="trav-h">
+    <svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 50 C 280 10, 560 76, 860 40 S 1260 8, 1440 46 L1440 90 Z"/></svg>
+    <div class="wrap" style="padding-top: clamp(30px, 5vw, 70px); padding-bottom: clamp(30px, 5vw, 70px);">
+      <h2 class="h2" id="trav-h" data-reveal>Accommodations</h2>
+      <p class="sub" data-reveal="2">Stay and travel</p>
+      <div class="trav4">
+        <article class="hotel4" data-reveal="2">
+          <figure><img src="img/stock/hotel.webp" alt="The entrance canopy of the Hilton Washington D.C. Capitol Hill" loading="lazy"></figure>
+          <div class="hotel4-body">
+            <h3>The room block</h3>
+            <address>Hilton Washington D.C. Capitol Hill<br>525 New Jersey Ave NW, Washington, D.C. 20001</address>
+            <p class="near">A couple of blocks from Union Station and the U.S. Capitol. Reagan National (DCA) is about five miles away.</p>
+            <div class="hotel4-ctas">
+              <a class="pill pill--red" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=DCADCHH&amp;arrivalDate=2027-03-02&amp;departureDate=2027-03-04&amp;groupCode=NBS27&amp;room1NumAdults=1&amp;cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink" target="_blank" rel="noopener">Book in the Concord block</a>
+              <a class="go" href="https://www.hilton.com/en/hotels/dcadchh-hilton-washington-dc-capitol-hill/" target="_blank" rel="noopener">Hotel website</a>
+            </div>
+            <p class="small">Room block questions: <span class="tbd">Contact to be confirmed</span></p>
+          </div>
+        </article>
+        <div class="trav4-side">
+          <figure class="map4" data-reveal="3">
+            <iframe title="Map of the Hilton Washington D.C. Capitol Hill and the U.S. Capitol" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.0200,38.8860,-77.0000,38.9000&amp;layer=mapnik&amp;marker=38.8970565,-77.0107965" loading="lazy"></iframe>
+            <figcaption><a class="go" href="https://www.openstreetmap.org/?mlat=38.8970565&amp;mlon=-77.0107965#map=16/38.8935/-77.0100" target="_blank" rel="noopener">View larger map</a><span>&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</span></figcaption>
+          </figure>
+          <div class="trav4-pair">
+            <article class="card4" data-reveal="3">
+              <h3>Nearby options</h3>
+              <ul>
+                <li><a class="go" href="https://www.hyatt.com/hyatt-regency/en-US/wasrw-hyatt-regency-washington-on-capitol-hill" target="_blank" rel="noopener">Hyatt Regency Washington on Capitol Hill</a></li>
+                <li><a class="go" href="https://www.yotel.com/en/hotels/yotel-washington-dc" target="_blank" rel="noopener">YOTEL Washington D.C.</a></li>
+              </ul>
+            </article>
+            <article class="card4" data-reveal="4">
+              <h3>Airports</h3>
+              <ul class="air">
+                <li><a href="https://www.flyreagan.com/" target="_blank" rel="noopener"><b>DCA</b><span>Reagan National <em>(closest)</em></span></a></li>
+                <li><a href="https://www.flydulles.com/" target="_blank" rel="noopener"><b>IAD</b><span>Dulles International</span></a></li>
+                <li><a href="https://bwiairport.com/" target="_blank" rel="noopener"><b>BWI</b><span>Baltimore/<wbr>Washington</span></a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg class="edge bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 40 C 320 6, 640 70, 960 36 S 1320 60, 1440 30 L1440 90 Z"/></svg>
+  </section>
+
+  <!-- FAQ -->
+  <section class="paper pad" id="faq" aria-labelledby="faq-h">
+    <div class="wrap faq-grid">
+      <div>
+        <h2 class="h2" id="faq-h" data-reveal>FAQ</h2>
+        <p class="sub" data-reveal="2">Good questions</p>
+      </div>
+      <div data-reveal="2">
+        <details open>
+          <summary>What is the Debt Summit?</summary>
+          <div class="ans"><ul>
+            <li>The National Citizens Debt Summit will bring together engaged citizens, policy leaders, and advocates from across the country for an important conversation on America's growing national debt and long-term fiscal future. Attendees will hear from respected speakers, participate in educational programming, and meet directly with Members of Congress and staff on Capitol Hill.</li>
+            <li>The Summit will take place March 2-4, 2027 in Washington, D.C. We have reserved a room block at the Hilton Washington D.C. Capitol Hill: 525 New Jersey Ave NW, Washington, D.C. 20001</li>
+          </ul></div>
+        </details>
+        <details>
+          <summary>What is the agenda?</summary>
+          <div class="ans"><p>See the <a href="#agenda">initial agenda</a> above. More details to come.</p></div>
+        </details>
+        <details>
+          <summary>Accommodations</summary>
+          <div class="ans"><p>Concord has a dedicated room block at the Hilton Washington D.C. Capitol Hill. Nearby options and recommended airports are under <a href="#travel">Stay and travel</a>.</p></div>
+        </details>
+        <details id="faq-incl">
+          <summary>What does registration include?</summary>
+          <div class="ans"><ul>
+            <li>Registration fees include two networking receptions and a plated breakfast, lunch and dinner.</li>
+            <li>General registration is $150 and student registration is $35. Both are early bird pricing, subject to change after December 31, 2026.</li>
+            <li>Student eligibility: <span class="tbd">to be confirmed by Concord</span></li>
+          </ul></div>
+        </details>
+        <details>
+          <summary>Who can I contact with questions?</summary>
+          <div class="ans"><ul>
+            <li>For questions regarding scholarships to attend, meeting with your local Member of Congress, or how to prepare for the conference, please contact Ashlei Horn, <a href="mailto:ahorn@concordaction.org">ahorn@concordaction.org</a>.</li>
+            <li>For questions regarding the hotel block, general schedule, registration, or to RSVP for the breakfast, lunch and dinner, please contact Ashlei Horn. <span class="tbd">Contact to be confirmed</span></li>
+          </ul></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final" aria-labelledby="final-h">
+    <svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 46 C 260 6, 560 76, 860 40 S 1260 10, 1440 50 L1440 90 Z"/></svg>
+    <div class="photo" aria-hidden="true"></div>
+    <div class="wrap" style="padding: clamp(60px, 9vw, 120px) var(--gutter) clamp(70px, 10vw, 140px);">
+      <p class="eyebrow" data-reveal style="margin-bottom:.2em">It's time to</p>
+      <h2 class="h2" id="final-h" data-reveal="2">Cut the <span class="cut" style="animation:none">Debt</span></h2>
+      <p class="lede" data-reveal="3">March 2-4, 2027. Washington, D.C.</p>
+      <div class="ctas" data-reveal="4"><a class="pill pill--red pill--big" href="#register">Register now</a><a class="pill pill--ghost" href="#agenda">See the agenda</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <img src="assets/brand/logo-action-on-dark.svg" alt="Concord Action">
+      <address>Concord Action<br>1530 Wilson Blvd. Suite 650<br>Arlington, VA 22209<br><a href="tel:7038946222">703.894.6222</a></address>
+      <div>
+        <ul>
+          <li><a href="https://www.facebook.com/concordaction">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/concordaction">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/concordaction/">Instagram</a></li>
+          <li><a href="https://x.com/ConcordAction">X</a></li>
+        </ul>
+        <ul style="margin-top:10px">
+          <li><a href="https://www.concordaction.org/accessibility-statement/">Accessibility Statement</a></li>
+          <li><a href="https://www.concordaction.org/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">A JOINT WEBSITE OF CONCORD COALITION ACTION FUND, INC. AND CONCORD COALITION CORP. PAID FOR IN PART BY CONCORD COALITION ACTION FUND, INC. AND CONCORD COALITION CORP. CONCORD COALITION ACTION FUND, INC. AND CONCORD COALITION CORP. ARE SEPARATE ORGANIZATIONS.</p>
+    <p class="legal" style="margin-top:14px">Debt figures: U.S. Treasury, Debt to the Penny (latest record Oct 9, 2026); the live figure extrapolates the past year's average daily increase. Fun facts: sources listed in brand/fun_facts.json.</p>
+    <p class="legal" style="margin-top:8px">Event photos: Concord Action and The Concord Coalition. Stock photos (Unsplash License): Mike Stoll, Venkata Oruganti, Pretty Pink, James A. Molnar, Jeffrey Clayton, Elijah Mears, Sarguninder Singh. Hotel: “Hilton Capitol Hill - Washington D.C. Hotel” by Tony Webster, CC BY 2.0, via Wikimedia Commons, cropped. Map © OpenStreetMap contributors. Full credits in img/stock/PHOTO_CREDITS.md.</p>
+    <p class="mocknote">Design mockup v5 prepared by Jonus Goldstein, October 2026. Not a live page.</p>
+  </div>
+</footer>
+
+<div class="bgpick" role="group" aria-label="Mockup only: hero background"><span>Hero</span><a data-bg="c4">Moon</a><a data-bg="c1">Gold</a><a data-bg="c2">Amber</a><a data-bg="c3">Trails</a><a data-bg="c5">Dawn</a><a data-bg="none">No photo</a><b></b><a data-flag>Flag</a></div>
+<button class="motion" id="motion" type="button" aria-pressed="false">Pause motion</button>
+
+<script>
+(() => {
+  const root = document.documentElement, qs = new URLSearchParams(location.search);
+  if (qs.get('fonts') === 'ofl') root.classList.add('ofl');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const still = qs.get('t') !== null;
+  if (still) root.classList.add('still');
+  if (qs.get('h')) document.querySelector('.hero').style.minHeight = qs.get('h') + 'px'; // full-page captures
+
+  /* ---- real data: last Debt to the Penny record of each year, trillions (brand/debt_series.json) ---- */
+  const S = [[2000,5.66],[2001,5.94],[2002,6.41],[2003,7.00],[2004,7.60],[2005,8.17],[2006,8.68],[2007,9.23],[2008,10.70],[2009,12.31],[2010,14.03],[2011,15.22],[2012,16.43],[2013,17.35],[2014,18.14],[2015,18.92],[2016,19.98],[2017,20.49],[2018,21.97],[2019,23.20],[2020,27.75],[2021,29.62],[2022,31.42],[2023,34.00],[2024,36.22],[2025,38.51],[2026,40.30]];
+  const BASE = 40301480531899.65, BASE_T = Date.parse('2026-10-09T20:00:00Z'), RATE = 77418.77; // $/s, DERIVED 365-day average (SOURCES.md s.8)
+
+  /* ---- bars ---- */
+  const svg = document.getElementById('bars'), W = 1000, H = 400, n = S.length, gap = 0.18, bw = W / n;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  let g = '<g class="grid">';
+  for (let i = 1; i <= 6; i++) { const y = H - (H * 0.95) * i / 6; g += `<line x1="0" x2="${W}" y1="${y}" y2="${y}"/>`; }
+  g += '</g>';
+  S.forEach(([yr, v], i) => { const h = (v / 42) * H * 0.95, x = i * bw + bw * gap / 2; g += `<rect x="${x.toFixed(2)}" y="${(H - h).toFixed(2)}" width="${(bw * (1 - gap)).toFixed(2)}" height="${h.toFixed(2)}" style="animation-delay:${(0.9 + i * 0.07).toFixed(2)}s"></rect>`; });
+  svg.innerHTML = g;
+
+  /* ---- live debt + story captions ---- */
+  const out = document.getElementById('debt');
+  const fmt = v => '$' + Math.floor(v).toLocaleString('en-US');
+  const live = () => BASE + RATE * (Date.now() - BASE_T) / 1000;
+
+  /* ---- waving flag, tone on tone (Brand Guide p. 20); render(t) is seekable for MP4 export ---- */
+  const cv = document.getElementById('flag'), cx = cv.getContext('2d');
+  let w, h, dpr, lastT = 0;
+  const size = () => { dpr = Math.min(devicePixelRatio || 1, 2); w = cv.clientWidth; h = cv.clientHeight; cv.width = w * dpr; cv.height = h * dpr; cx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+  const star = (x, y, r) => { cx.beginPath(); for (let k = 0; k < 10; k++) { const a = -Math.PI / 2 + k * Math.PI / 5, rr = k % 2 ? r * .42 : r; cx.lineTo(x + rr * Math.cos(a), y + rr * Math.sin(a)); } cx.closePath(); cx.fill(); };
+  function render(t) {
+    lastT = t; cx.clearRect(0, 0, w, h);
+    const fw = Math.max(w * 1.35, 900), fh = fw * 0.55, ox = w * 0.18, oy = -fh * 0.18;
+    const wave = (x, y) => Math.sin(x * 0.0065 - t * 0.9 + y * 0.0016) * (18 + x * 0.03) + Math.sin(x * 0.013 - t * 1.6) * 6;
+    cx.save(); cx.translate(ox, oy); cx.rotate(-0.12);
+    const sh = fh / 13, step = 14;
+    for (let s = 0; s < 13; s += 2) {
+      cx.beginPath();
+      for (let x = 0; x <= fw; x += step) cx.lineTo(x, s * sh + wave(x, s * sh));
+      for (let x = fw; x >= 0; x -= step) cx.lineTo(x, (s + 1) * sh + wave(x, (s + 1) * sh));
+      cx.closePath();
+      const gr = cx.createLinearGradient(0, 0, fw, 0);
+      for (let k = 0; k <= 12; k++) { const x = fw * k / 12, shade = 0.06 + 0.042 * Math.cos(x * 0.0065 - t * 0.9); gr.addColorStop(k / 12, `rgba(248,241,233,${shade.toFixed(3)})`); }
+      cx.fillStyle = gr; cx.fill();
+    }
+    const cw = fw * 0.4, ch = sh * 7;
+    cx.fillStyle = 'rgba(15,61,95,0.35)'; cx.beginPath();
+    for (let x = 0; x <= cw; x += step) cx.lineTo(x, wave(x, 0));
+    for (let x = cw; x >= 0; x -= step) cx.lineTo(x, ch + wave(x, ch));
+    cx.closePath(); cx.fill();
+    cx.fillStyle = 'rgba(248,241,233,0.09)';
+    for (let r = 0; r < 9; r++) for (let c = 0; c < (r % 2 ? 5 : 6); c++) { const x = cw * ((c * 2 + (r % 2 ? 2 : 1)) / 12), y = ch * ((r + 1) / 10); star(x, y + wave(x, y), sh * 0.32); }
+    cx.restore();
+  }
+  window.render = render;
+  size(); addEventListener('resize', () => { size(); render(lastT); });
+
+  let paused = false, heroVisible = true;
+  const t0 = performance.now(), intro = (reduce || still) ? 0 : 2800;
+  /* Cut the debt: dollars the clock briefly dips by. dipAt is a performance.now() stamp; the envelope
+     drops for 1.15 s, holds 1 s, then creeps back to the live value by about 3.85 s. */
+  let cutOffset = 0, dipAt = -1;
+  const DIP = 1.53e6, DIP_DOWN = 1150, DIP_HOLD = 2150, DIP_END = 3850;
+  const dipEnvelope = ms => {
+    if (ms < DIP_DOWN) return 1 - Math.pow(1 - ms / DIP_DOWN, 3);
+    if (ms < DIP_HOLD) return 1;
+    const k = (ms - DIP_HOLD) / (DIP_END - DIP_HOLD);
+    return k >= 1 ? 0 : 1 - (k < .5 ? 2 * k * k : 1 - (-2 * k + 2) ** 2 / 2);
+  };
+  function frame(now) {
+    if (heroVisible && bg !== 'capitol') render(now / 1000);
+    const k = Math.min(1, (now - t0) / Math.max(intro, 1)), e = 1 - Math.pow(1 - k, 3);
+    if (dipAt >= 0) { cutOffset = DIP * dipEnvelope(Math.max(0, now - dipAt)); if (now - dipAt >= DIP_END) { dipAt = -1; cutOffset = 0; } }
+    out.textContent = fmt((k < 1 ? 5.66e12 + (live() - 5.66e12) * e : live()) - cutOffset);
+    if (!paused) requestAnimationFrame(frame);
+  }
+  new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; }).observe(document.querySelector('.hero'));
+
+  /* ---- sticky nav ---- */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* ---- scroll reveals ---- */
+  const els = document.querySelectorAll('[data-reveal], .mark-word, .days');
+  if (reduce || still || !('IntersectionObserver' in window)) els.forEach(el => el.classList.add('in'));
+  else {
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -12% 0px' });
+    els.forEach(el => io.observe(el));
+  }
+
+
+  /* ---- hero background (mockup switcher): each Capitol photo framed at its best crop ---- */
+  const BG = {
+    c4: { pos: '50% 42%', size: 'cover', op: .85, blend: 'normal' },          // lit dome, full moon, black sky
+    c1: { pos: '50% 28%', size: 'auto 160%', op: .78, blend: 'normal' },      // gold dome, navy night sky
+    c2: { pos: '64% 35%', size: 'auto 200%', op: .7, blend: 'normal' },      // dome down the Mall, amber cloud ceiling
+    c3: { pos: '62% 7%', size: 'auto 190%', op: .78, blend: 'normal' },       // blue hour, light trails
+    c5: { pos: '56% 0%', size: 'auto 170%', op: .62, blend: 'luminosity' }    // dawn reflection, toned to navy
+  };
+  const bgKey = Object.prototype.hasOwnProperty.call(BG, qs.get('bg')) || qs.get('bg') === 'none' ? qs.get('bg') : 'c1';
+  const flagOn = qs.get('flag') === '1';
+  const bg = bgKey === 'none' ? 'flag' : (flagOn ? 'both' : 'capitol');
+  const heroEl = document.querySelector('.hero'), hp = document.querySelector('.hero-photo');
+  heroEl.classList.add('bg-' + bg);
+  if (bgKey !== 'none') { const c = BG[bgKey]; Object.assign(hp.style, { backgroundImage: `url(img/stock/capitol2/${bgKey}.webp)`, backgroundPosition: c.pos, backgroundSize: c.size, opacity: c.op, mixBlendMode: c.blend }); }
+  const linkFor = (b, f) => { const u = new URLSearchParams(location.search); u.set('bg', b); f ? u.set('flag', '1') : u.delete('flag'); return '?' + u.toString(); };
+  document.querySelectorAll('.bgpick a[data-bg]').forEach(a => { a.href = linkFor(a.dataset.bg, flagOn || a.dataset.bg === 'none'); if (a.dataset.bg === bgKey) a.setAttribute('aria-current', 'true'); });
+  const fl = document.querySelector('.bgpick a[data-flag]');
+  if (bgKey === 'none') { fl.hidden = true; } else { fl.href = linkFor(bgKey, !flagOn); fl.textContent = flagOn ? 'Flag: on' : 'Flag: off'; if (flagOn) fl.setAttribute('aria-current', 'true'); }
+
+  /* ---- Fun fact typing (facts: brand/fun_facts.json, each with a source) ---- */
+  const factT = document.getElementById('fact-t'), factSr = document.getElementById('fact-sr');
+  const FALLBACK = [{ text: 'At the end of 2000, total public debt was $5.66 trillion.', source: 'U.S. Treasury, Debt to the Penny', url: 'https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/' }];
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const waitPlay = async () => { while (paused) await sleep(250); };
+  const showFact = f => { factSr.textContent = 'Fun fact: ' + f.text; };
+  async function typeFacts(list) {
+    for (let i = list.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [list[i], list[j]] = [list[j], list[i]]; }
+    if (reduce || qs.get('t') !== null) { factT.textContent = list[0].text; showFact(list[0]); return; }
+    for (let k = 0; ; k = (k + 1) % list.length) {
+      const f = list[k];
+      for (let c = 1; c <= f.text.length; c++) { await waitPlay(); factT.textContent = f.text.slice(0, c); await sleep(f.text[c - 1] === ' ' ? 18 : 28 + Math.random() * 26); }
+      showFact(f); await sleep(5600); await waitPlay();
+      for (let c = f.text.length; c >= 0; c -= 2) { factT.textContent = f.text.slice(0, c); await sleep(9); }
+      await sleep(380);
+    }
+  }
+  fetch('brand/fun_facts.json').then(r => r.json())
+    .then(d => d.facts.filter(f => f.status === 'VERIFIED' || f.status === 'DERIVED'))
+    .catch(() => FALLBACK)
+    .then(l => typeFacts(l.length ? l : FALLBACK));
+
+  /* ---- Advocates in action: Minuteman-O reveal shuffle ---- */
+  const PH = [
+    { src: 'img/panel.webp', alt: 'Four panelists on stage under the Welcome to the National Volunteer Debt Summit screen', cap: 'Opening panel, 2026 summit', pos: '50% 40%' },
+    { src: 'img/hillprep.webp', alt: 'Three presenters with microphones in front of a Hill Meetings slide', cap: 'Prepping for Hill meetings', pos: '50% 30%' },
+    { src: 'img/truck.webp', alt: 'Speakers beside the Concord Coalition debt clock truck showing the national debt', cap: 'Debt clock truck tour, North Carolina', pos: '70% 50%' },
+    { src: 'img/chart.webp', alt: 'A presenter explaining a chart on long-term budget options', cap: 'Briefings from policy experts', pos: '40% 45%' },
+    { src: 'img/reception.webp', alt: 'Attendees talking at an evening reception', cap: 'Reception and networking', pos: '50% 22%' },
+    { src: 'img/press.webp', alt: 'A Concord speaker interviewed by a TV news crew beside the debt clock truck', cap: 'Making the case on the local news', pos: '60% 40%' },
+    { src: 'img/checkin.webp', alt: 'Attendees checking in at the Concord Action registration table', cap: 'Check-in, 2026 summit', pos: '38% 55%' }
+  ];
+  PH.forEach(p => { const im = new Image(); im.src = p.src; });
+  const frames = [...document.querySelectorAll('.frame')];
+  const setPhoto = (f, p) => {
+    f.querySelectorAll('img').forEach(im => { im.src = p.src; im.style.objectPosition = p.pos; });
+    f.querySelector('img.u').alt = p.alt; f.querySelector('figcaption').textContent = p.cap;
+  };
+  frames.forEach((f, i) => {
+    let k = i;
+    if (reduce || qs.get('t') !== null) { setPhoto(f, PH[i]); f.classList.add('reveal'); return; }
+    f.classList.add('cover');
+    const cycle = async () => {
+      for (;;) {
+        await waitPlay();
+        setPhoto(f, PH[k % PH.length]); k += frames.length;
+        await f.querySelector('img.u').decode().catch(() => {});
+        f.classList.remove('reveal'); void f.offsetWidth;
+        f.classList.add('reveal'); f.classList.remove('cover');
+        await sleep(6200); await waitPlay();
+        f.classList.add('cover'); await sleep(1500);
+      }
+    };
+    let started = false;
+    new IntersectionObserver(([e]) => { if (e.isIntersecting && !started) { started = true; setTimeout(cycle, 300 + i * 1500); } }, { threshold: .25 }).observe(f);
+  });
+
+  document.querySelectorAll('.incl-link').forEach(a => a.addEventListener('click', () => { const d = document.getElementById('faq-incl'); if (d) d.open = true; }));
+
+  /* ---- Cut the debt: one-click snip (option 3 of v2/_parts/scissors-options.html) ----
+     DEBT (role=button) or the round button: scissors fly in along the load-time slash, snip three times,
+     clack, the top of DEBT slips down the cut and drops away; the clock dips; DEBT heals after 6 s. */
+  const SCISSORS = `<svg viewBox="0 0 240 120" aria-hidden="true" focusable="false">
+    <g data-half="b">
+      <path d="M116 58 L75 39.5" style="stroke:var(--sc-handle, var(--cardinal))" stroke-width="11" stroke-linecap="round" fill="none"/>
+      <ellipse cx="54" cy="30" rx="23" ry="15" transform="rotate(24.4 54 30)" style="stroke:var(--sc-handle, var(--cardinal))" stroke-width="9" fill="none"/>
+      <ellipse cx="54" cy="30" rx="23" ry="15" transform="rotate(24.4 54 30)" stroke="#fff" stroke-opacity=".28" stroke-width="1.6" fill="none" stroke-dasharray="20 300" stroke-dashoffset="-72"/>
+      <path d="M106 58.5 L231 59.4 C216 64.5 174 71.2 136 72.4 C119 72.9 107 69 106 58.5 Z" style="fill:var(--ivory)" stroke="rgba(15,61,95,.35)" stroke-width="1" stroke-linejoin="round"/>
+      <path d="M124 61.6 L220 60.5" stroke="rgba(15,61,95,.3)" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <g data-half="a">
+      <path d="M116 62 L74 80.6" style="stroke:var(--sc-handle, var(--cardinal))" stroke-width="11" stroke-linecap="round" fill="none"/>
+      <ellipse cx="48" cy="92" rx="28" ry="17" transform="rotate(-24 48 92)" style="stroke:var(--sc-handle, var(--cardinal))" stroke-width="9.5" fill="none"/>
+      <ellipse cx="48" cy="92" rx="28" ry="17" transform="rotate(-24 48 92)" stroke="#fff" stroke-opacity=".28" stroke-width="1.6" fill="none" stroke-dasharray="24 300" stroke-dashoffset="-88"/>
+      <path d="M106 61.5 L231 60.6 C216 55.5 174 48.8 136 47.6 C119 47.1 107 51 106 61.5 Z" style="fill:var(--ivory)" stroke="rgba(15,61,95,.35)" stroke-width="1" stroke-linejoin="round"/>
+      <path d="M124 58.4 L220 59.5" stroke="rgba(15,61,95,.3)" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <circle cx="120" cy="60" r="7" style="fill:var(--sc-pivot, var(--admiral));stroke:var(--ivory)" stroke-width="2.2"/>
+    <path d="M117.2 57.2 L122.8 62.8" style="stroke:var(--ivory)" stroke-width="1.6" stroke-linecap="round"/>
+  </svg>`;
+  const word = document.querySelector('.hero .cut'), heading = word.closest('h1'), probe = word.querySelector('.cut-base');
+  const [pTop, pBot] = word.querySelectorAll('.cut-piece');
+  const snipBtn = document.getElementById('snip'), snipL = snipBtn.querySelector('.snip-l'), say = document.getElementById('snip-live');
+  const layer = heroEl.querySelector('.snip-layer'), fly = layer.querySelector('.snip-flyer');
+  const ANG = 14 * Math.PI / 180, D = [Math.cos(ANG), Math.sin(ANG)], N = [-D[1], D[0]], TAU = Math.PI * 2;  // 14deg = the .cut::after slash
+  const ease = k => k < .5 ? 2 * k * k : 1 - (-2 * k + 2) ** 2 / 2, easeOut = k => 1 - (1 - k) ** 3;
+  const HEAL = 6000;                                         // DEBT restores this long after the cut starts
+  const calm = () => reduce || still || paused;              // no flight: instant end state, instant restore
+  let G = null, state = 'idle', gen = 0, qgen = 0, healT = 0, quipped = false;
+  const anims = [];
+  const anim = (el, kf, o) => { const a = el.animate(kf, o); anims.push(a); return a; };
+  const tween = (ms, fn, then) => {
+    const g = gen, s = performance.now();
+    const f = now => { if (g !== gen) return; const k = Math.min(1, Math.max(0, (now - s) / ms)); fn(k); if (k < 1) requestAnimationFrame(f); else if (then) then(); };
+    requestAnimationFrame(f);
+  };
+
+  fly.innerHTML = SCISSORS;
+  snipBtn.querySelector('.snip-disc').innerHTML = SCISSORS.replace('<svg ', '<svg class="snip-ico" ');
+  const hA = fly.querySelector('[data-half="a"]'), hB = fly.querySelector('[data-half="b"]');
+  const setOpen = o => { const d = o * 24; hA.setAttribute('transform', `rotate(${(-d).toFixed(2)} 120 60)`); hB.setAttribute('transform', `rotate(${d.toFixed(2)} 120 60)`); };
+
+  /* ink of DEBT as sample points (for the top half's centre of mass) */
+  function measure() {
+    const cs = getComputedStyle(word), fs = parseFloat(cs.fontSize), wr = word.getBoundingClientRect();
+    const base = probe.getBoundingClientRect().bottom - wr.top, txt = word.querySelector('.cut-solid').textContent.toUpperCase();
+    const cv2 = document.createElement('canvas'), c2 = cv2.getContext('2d', { willReadFrequently: true });
+    const pad = Math.ceil(fs * .4), W2 = Math.ceil(wr.width) + pad * 2, H2 = Math.ceil(wr.height) + pad * 2;
+    cv2.width = W2; cv2.height = H2;
+    c2.font = `${cs.fontWeight} ${fs}px ${cs.fontFamily}`;
+    if ('letterSpacing' in c2 && cs.letterSpacing !== 'normal') c2.letterSpacing = cs.letterSpacing;
+    c2.fillText(txt, pad, pad + base);
+    const px = c2.getImageData(0, 0, W2, H2).data, st = Math.max(2, Math.round(fs / 36)), pts = [];
+    for (let y = 0; y < H2; y += st) for (let x = 0; x < W2; x += st) if (px[(y * W2 + x) * 4 + 3] > 120) pts.push([x - pad, y - pad]);
+    return { fs, wr, pts };
+  }
+  /* the cut line is the slash itself: left -3%, top 46% + half its .055em thickness, 106% long, rotated about its left end */
+  function layout() {
+    const m = measure(), hr = heroEl.getBoundingClientRect(), fs = m.fs, W2 = m.wr.width, H2 = m.wr.height, fw = Math.max(84, fs * 1.2);
+    fly.style.width = fw + 'px';
+    G = { m, fs, off: [m.wr.left - hr.left, m.wr.top - hr.top], A: [-.03 * W2, .46 * H2 + .0275 * fs], len: 1.06 * W2, an: [fw * 150 / 240, fw / 4], fw, sh: hr.height };
+    fly.style.transformOrigin = `${G.an[0]}px ${G.an[1]}px`;
+  }
+  const at = t => [G.A[0] + D[0] * t, G.A[1] + D[1] * t];
+  const stage = p => [p[0] + G.off[0], p[1] + G.off[1]];
+  const halfPlane = (A, side) => { const L = 5000, n = [N[0] * side, N[1] * side], p1 = [A[0] - D[0] * L, A[1] - D[1] * L], p2 = [A[0] + D[0] * L, A[1] + D[1] * L]; return [p1, p2, [p2[0] + n[0] * L, p2[1] + n[1] * L], [p1[0] + n[0] * L, p1[1] + n[1] * L]]; };
+  const clip = P => `polygon(${P.map(p => `${p[0].toFixed(1)}px ${p[1].toFixed(1)}px`).join(', ')})`;
+  const flyT = (P, r) => `translate(${(P[0] - G.an[0]).toFixed(2)}px, ${(P[1] - G.an[1]).toFixed(2)}px) rotate(${r.toFixed(4)}rad)`;
+  const place = (t, r) => { const P = stage(at(t)); fly.style.transform = flyT(P, r); return P; };
+  function split() {
+    pTop.style.clipPath = clip(halfPlane(G.A, -1)); pBot.style.clipPath = clip(halfPlane(G.A, 1));
+    const A = G.A, top = G.m.pts.filter(p => (D[0] * (p[1] - A[1]) - D[1] * (p[0] - A[0])) < 0);
+    let x = 0, y = 0; for (const p of top) { x += p[0]; y += p[1]; }
+    pTop.style.transformOrigin = top.length ? `${x / top.length}px ${y / top.length}px` : '50% 50%';
+  }
+  function bits(P) {
+    for (let i = 0; i < 2; i++) {
+      const el = document.createElement('i'); el.className = 'snip-bit'; el.style.left = P[0] + 'px'; el.style.top = P[1] + 'px'; layer.appendChild(el);
+      const dx = (i ? 1 : -1) * G.fs * (.06 + Math.random() * .1), dy = G.fs * (.35 + Math.random() * .3), r = (Math.random() * 2 - 1) * 300;
+      anim(el, [{ transform: 'translate(-50%, -50%) rotate(0deg)', opacity: 1 }, { transform: `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) rotate(${r}deg)`, opacity: 0 }],
+        { duration: 650, easing: 'cubic-bezier(.3, .1, .6, 1)' }).onfinish = () => el.remove();
+    }
+  }
+  function spark(P) {
+    const fs = G.fs;
+    for (let i = 0; i < 11; i++) {
+      const a = i / 11 * TAU + .3, el = document.createElement('i'); el.className = 'snip-spark';
+      Object.assign(el.style, { left: P[0] + 'px', top: P[1] + 'px', width: fs * .15 + 'px', background: i % 3 ? 'var(--ivory)' : 'var(--rouge)' });
+      layer.appendChild(el);
+      const r0 = fs * .06, r1 = fs * (.26 + (i % 3) * .06);
+      anim(el, [{ transform: `rotate(${a}rad) translateX(${r0}px) scaleX(.2)`, opacity: 1 }, { transform: `rotate(${a}rad) translateX(${r1}px) scaleX(1)`, opacity: .9, offset: .45 },
+        { transform: `rotate(${a}rad) translateX(${r1 + fs * .08}px) scaleX(.1)`, opacity: 0 }], { duration: 440, easing: 'cubic-bezier(.2, .7, .3, 1)' }).onfinish = () => el.remove();
+    }
+  }
+  /* top half: a short slip down the cut, then it drops out of the hero with a turn while fading */
+  function topOff() {
+    const fs = G.fs, T1 = .22, S1 = fs * .16, T2 = .75, v0 = 2 * S1 / T1, drop = G.sh - G.off[1];
+    const kf = [], dur = T1 + T2, n = Math.ceil(dur * 60);
+    for (let i = 0; i <= n; i++) {
+      const t = i / n * dur; let x, y, r, o;
+      if (t < T1) { const k = t / T1, d = S1 * k * k; x = D[0] * d; y = D[1] * d; r = 0; o = 1; }
+      else { const u = (t - T1) / T2; x = D[0] * S1 + v0 * D[0] * T2 * u * .7; y = D[1] * S1 + v0 * D[1] * T2 * u + drop * u * u; r = .55 * u * u; o = 1 - u ** 1.6; }
+      kf.push({ transform: `translate(${x.toFixed(2)}px, ${y.toFixed(2)}px) rotate(${r.toFixed(4)}rad)`, opacity: o });
+    }
+    return [kf, { duration: dur * 1000, fill: 'forwards' }];
+  }
+  /* the clock: dip (frame() subtracts cutOffset), Mint while down, quip in place of the label */
+  function quip() {
+    if (quipped) return; quipped = true;
+    const q = ++qgen, then = (ms, fn) => setTimeout(() => { if (q === qgen) fn(); }, ms);
+    heroEl.classList.remove('snip-down');
+    if (calm()) { heroEl.classList.add('snip-quip'); then(DIP_END, () => heroEl.classList.remove('snip-quip')); return; }
+    then(150, () => { dipAt = performance.now(); heroEl.classList.add('snip-down'); });
+    then(550, () => heroEl.classList.add('snip-quip'));
+    then(150 + DIP_HOLD, () => heroEl.classList.remove('snip-down'));
+    then(DIP_END - 150, () => heroEl.classList.remove('snip-quip'));
+  }
+  function land(instant) {
+    split();
+    heroEl.classList.add('snip-cut');
+    if (instant) heroEl.classList.add('snip-gone'), heroEl.classList.remove('snip-flying');
+    state = 'cut';
+    snipL.textContent = 'Again'; snipBtn.setAttribute('aria-label', 'Cut the debt again');
+    quip();
+  }
+  async function cut() {
+    if (state !== 'idle') return;
+    state = 'cutting'; quipped = false;
+    const g = ++gen;
+    heroEl.classList.add('snip-used'); heroEl.classList.remove('snip-go'); void snipBtn.offsetWidth; heroEl.classList.add('snip-go');
+    const intro = heading.getAnimations({ subtree: true });   // the rise and the slash have to finish before the cut
+    if (calm()) intro.forEach(a => { try { a.finish(); } catch (e) { /* already done */ } });
+    await Promise.all(intro.map(a => a.finished)).catch(() => {});
+    await document.fonts.ready;
+    if (g !== gen) return;
+    layout();
+    say.textContent = ''; setTimeout(() => { say.textContent = 'Debt cut. If only it were that easy.'; }, 60);
+    clearTimeout(healT); healT = setTimeout(() => restore(), HEAL);
+    if (calm()) return land(true);
+    split();
+    const fs = G.fs, far = (stage(G.A)[0] + G.fw * 1.1) / D[0];
+    setOpen(0); place(-far, ANG - .5); heroEl.classList.add('snip-flying');
+    /* 1. fly in along the slash, blades opening on arrival */
+    tween(460, k => { const e = easeOut(k); place(-far * (1 - e) - fs * .02, ANG - .5 * (1 - e) ** 2); setOpen(k < .55 ? 0 : (k - .55) / .45); }, () => {
+      /* 2. three snips along the slash */
+      let last = 0;
+      tween(640, k => {
+        const e = ease(k), t = e * G.len; place(t, ANG); setOpen(.5 + .5 * Math.cos(e * 3 * TAU));
+        const c = Math.floor(e * 3 + .5); if (c > last) { last = c; bits(stage(at(t))); }
+      }, () => {
+        /* 3. the clack: open wide, shut hard; the top of DEBT goes */
+        tween(70, k => setOpen(1 + .2 * k), () => tween(80, k => setOpen(1.2 - 1.27 * k * k), () => {
+          const P = stage(at(G.len)), X = [P[0] - N[0] * fs * 1.2 + D[0] * fs * .6, P[1] - N[1] * fs * 1.2 + D[1] * fs * .6];
+          spark(P);
+          anim(word, [{ transform: 'translate(0, 0)' }, { transform: 'translate(2px, 1px)' }, { transform: 'translate(-2px, -1px)' }, { transform: 'translate(0, 0)' }], { duration: 160 });
+          land(false);
+          anim(pTop, ...topOff());
+          anim(fly, [{ transform: flyT(P, ANG), opacity: 1 }, { transform: flyT(X, ANG - .7), opacity: 0 }], { duration: 520, easing: 'cubic-bezier(.4, 0, .2, 1)', fill: 'forwards' })
+            .onfinish = () => { if (state === 'cut') heroEl.classList.remove('snip-flying'); };
+        }));
+      });
+    });
+  }
+  function clear() {
+    gen++; clearTimeout(healT); anims.splice(0).forEach(a => a.cancel());
+    layer.querySelectorAll('.snip-spark, .snip-bit').forEach(n => n.remove());
+    heroEl.classList.remove('snip-cut', 'snip-gone', 'snip-flying', 'snip-go');
+    [pTop, pBot].forEach(p => { p.style.clipPath = ''; p.style.transformOrigin = ''; });
+    state = 'idle';
+  }
+  /* heal: the top half slides back up the cut and settles; then DEBT is whole text again */
+  function restore(then) {
+    if (state !== 'cut') return;
+    if (calm() || !G) { clear(); if (then) then(); return; }
+    gen++; clearTimeout(healT); state = 'restoring';
+    anims.splice(0).forEach(a => a.cancel());
+    layer.querySelectorAll('.snip-spark, .snip-bit').forEach(n => n.remove());
+    heroEl.classList.remove('snip-gone', 'snip-flying');
+    const g = gen, S = G.fs * .42;
+    anim(pTop, [{ transform: `translate(${(D[0] * S).toFixed(2)}px, ${(D[1] * S).toFixed(2)}px) rotate(.16rad)`, opacity: 0 }, { transform: 'none', opacity: 1 }],
+      { duration: then ? 420 : 680, easing: 'cubic-bezier(.16, 1, .3, 1)' })
+      .onfinish = () => { if (g !== gen) return; clear(); if (then) then(); };
+  }
+  const trigger = again => { if (state === 'idle') cut(); else if (state === 'cut') restore(again ? cut : null); };
+  snipBtn.addEventListener('click', () => trigger(true));
+  word.addEventListener('click', () => trigger(false));
+  word.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); if (!e.repeat) trigger(false); }
+    else if (e.key === ' ') e.preventDefault();                 // Space acts on keyup, like a native button
+  });
+  word.addEventListener('keyup', e => { if (e.key === ' ') { e.preventDefault(); trigger(false); } });
+  /* page-wide pause: whatever is moving jumps to its end state */
+  const finishAll = list => list.slice().forEach(a => { try { a.finish(); } catch (e) {} });
+  const snipCalm = () => {
+    if (state === 'cutting') { if (heroEl.classList.contains('snip-flying')) { gen++; finishAll(anims); land(true); } else finishAll(heading.getAnimations({ subtree: true })); }
+    else if (state === 'cut') finishAll(anims);
+    else if (state === 'restoring') clear();
+  };
+  let snipW = innerWidth;
+  addEventListener('resize', () => {
+    if (innerWidth === snipW) return; snipW = innerWidth;
+    if (state === 'restoring') return clear();
+    if (state !== 'cut' && !(state === 'cutting' && G && heroEl.classList.contains('snip-flying'))) return;
+    gen++; anims.splice(0).forEach(a => a.cancel()); layer.querySelectorAll('.snip-spark, .snip-bit').forEach(n => n.remove());
+    word.style.transform = ''; layout(); land(true);
+  });
+  /* review hook: ?demo=cut plays the snip on load (optional &delay=ms from load; never before the intro ends) */
+  if (qs.get('demo') === 'cut' && !still) setTimeout(cut, Math.max(0, +qs.get('delay') || 400));
+
+  /* ---- motion toggle ---- */
+  const btn = document.getElementById('motion');
+  if (still) { requestAnimationFrame(() => { size(); render(+qs.get('t')); }); out.textContent = fmt(live()); btn.hidden = true; return; }
+  if (reduce) { render(0); out.textContent = '$40,301,480,531,899'; document.getElementById('debt-label').textContent = 'U.S. national debt, Oct 9, 2026 (U.S. Treasury)'; btn.hidden = true; return; }
+  requestAnimationFrame(frame);
+  btn.addEventListener('click', () => {
+    paused = !paused; btn.setAttribute('aria-pressed', paused); btn.textContent = paused ? 'Play motion' : 'Pause motion';
+    root.classList.toggle('paused', paused); if (paused) snipCalm(); else requestAnimationFrame(frame);
+  });
+})();
+</script>
+</body>
+</html>
