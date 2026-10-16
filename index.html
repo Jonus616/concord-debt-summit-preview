@@ -586,7 +586,7 @@ html.still .hero-photo { animation: none; }
   opacity: 0; transform: translateY(calc(-100% + 6px)); transition: opacity .5s, transform .6s var(--ease-out); pointer-events: none; }
 .hero.snip-quip .clock .label { opacity: 0; }
 .hero.snip-quip .cut-quip { opacity: 1; transform: translateY(-100%); }
-.hero.snip-down #debt { color: var(--mint); }
+html.snip-down #debt { color: var(--mint); }
 @media (max-width: 860px) { .cut-quip { right: auto; left: 0; } }
 
 /* flight layer: the scissors, sparks and chips fly over the whole hero */
@@ -632,8 +632,6 @@ html.still .hero-photo { animation: none; }
 .hero.snip-msg-on .snip-msg { opacity: 1; transform: rotate(-2.5deg); }
 @media (prefers-reduced-motion: reduce) { .snip-msg { transition: none; } }
 html.still .snip-msg { transition: none; }
-/* Round 7c: phones keep REGISTER NOW and See the agenda on one row */
-@media (max-width: 599px) { .hero .ctas a[href="#speakers"] { display: none; } }
 /* nav: the undated Direction 1 lockup at every width, from load */
 .nav .brand img.b-event { width: clamp(200px, 21vw, 300px); height: auto; }
 
@@ -691,6 +689,183 @@ html.still .snip-msg { transition: none; }
    SVG met its section (visible in v6 above Registration and above the footer) */
 .edge { overflow: visible; }
 .edge path { stroke: currentColor; stroke-width: 2px; vector-effect: non-scaling-stroke; }
+/* ================= v8 (Round 8b): hero variants A (ticker, default), B (clock section), D (v7 layout + counter panel) ================= */
+/* The photo keeps the v7 framing in every variant (gold dome large on the right side). Logo, bars and counter move per variant. */
+
+/* stable counter: Instrument Serif has proportional figures only (no tnum), so JS puts every glyph in a fixed-width cell */
+#debt { white-space: nowrap; min-width: 8.4em; }
+#debt .dg, #debt .dc, #debt .ds { display: inline-block; text-align: center; }
+#debt .dg { width: .5em; }
+#debt .dc { width: .22em; }
+#debt .ds { width: .44em; }
+
+/* A and B: logo and the two buttons centered over the v7 photo; a stronger centred oval keeps the logo legible over the dome */
+.hv-a .hero .stage, .hv-b .hero .stage { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 0; padding-top: clamp(96px, 14vh, 150px); }
+.hv-a .hero .stage { padding-bottom: calc(var(--tick-h, 100px) + clamp(70px, 14vh, 150px)); }
+.hv-b .hero .stage { padding-bottom: clamp(120px, 20vh, 220px); }
+.hv-a .hero .stage > div, .hv-b .hero .stage > div { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.hv-a .hero-mark, .hv-b .hero-mark { width: min(100%, clamp(540px, 50vw, 880px)); }
+.hv-a .hero .ctas, .hv-b .hero .ctas { justify-content: center; }
+.hv-a .hero .snip-msg, .hv-b .hero .snip-msg { left: 50%; transform: translate(-50%, 16px) rotate(-2.5deg); }
+.hv-a .hero.snip-msg-on .snip-msg, .hv-b .hero.snip-msg-on .snip-msg { transform: translate(-50%, 0) rotate(-2.5deg); }
+.hv-a .hero-mark::before, .hv-b .hero-mark::before { left: -16%; right: -16%; top: -20%; bottom: -36%;
+  background: radial-gradient(closest-side, color-mix(in oklab, var(--admiral-night) 95%, transparent) 0%, color-mix(in oklab, var(--admiral-night) 92%, transparent) 66%, transparent 100%); }
+/* bars: full width under the centered layout, raised onto the ticker in A so nothing dead sits at the bottom */
+.hv-a .hero .bars, .hv-b .hero .bars { left: 0; right: 0; height: min(36vh, 360px); opacity: .42; }
+.hv-a .hero .bars { bottom: var(--tick-h, 100px); }
+.hero .scroll-cue { display: none; }
+
+/* shared counter block (A ticker strip, D panel), built like a printed Concord campaign piece: solid Admiral, an Old gold rule,
+   a Ruder caps label with a Cardinal LIVE tag cut on the campaign slash, a three-bar Old gold anchor, Instrument Serif figures,
+   then a solid divider and the fun fact (Rouge italic lead-in) with its height reserved. No glass, glow or chips. */
+.ticker .clock, .hv-d .hero .clock { position: relative; display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: stretch; width: auto; max-width: none; margin: 0; text-align: left; justify-self: stretch; align-self: auto; }
+.ticker .clock::before, .hv-d .hero .clock::before { content: ""; position: absolute; left: 0; top: 50%; width: 21px; height: 26px; transform: translateY(-50%);
+  background: linear-gradient(var(--gold), var(--gold)) 0 100% / 5px 42% no-repeat, linear-gradient(var(--gold), var(--gold)) 8px 100% / 5px 70% no-repeat, linear-gradient(var(--gold), var(--gold)) 16px 100% / 5px 100% no-repeat; }
+.ticker .cn, .hv-d .hero .cn { align-self: center; padding: 14px clamp(18px, 2.4vw, 34px) 14px 36px; }
+.ticker .clock .label, .hv-d .hero .clock .label { display: flex; align-items: center; gap: 10px; opacity: 1; color: var(--ivory); font: 400 clamp(.85rem, .78rem + .25vw, 1rem)/1 var(--f-display); text-transform: uppercase; letter-spacing: .04em; word-spacing: .1em; }
+.ticker .clock .label::before, .hv-d .hero .clock .label::before { content: "Live"; flex: none; padding: .28em .75em .22em .45em; background: var(--cardinal); color: var(--ivory);
+  font: inherit; letter-spacing: .06em; clip-path: polygon(0 0, 100% 0, calc(100% - .5em) 100%, 0 100%); }
+@media (prefers-reduced-motion: reduce) { .ticker .clock .label::before, .hv-d .hero .clock .label::before { display: none; } }   /* the figure is static then */
+html.still .ticker .clock .label::before, html.still .hv-d .hero .clock .label::before { display: none; }
+.ticker .clock output, .hv-d .hero .clock output { color: var(--ivory); font-size: clamp(1.6rem, .95rem + 1.5vw, 2.5rem); margin: .12em 0 0; }
+.ticker .fact, .hv-d .hero .fact { margin: 0; max-width: none; min-height: 2.6em; color: var(--ivory); padding: 14px 0 14px clamp(18px, 2.4vw, 34px); border-left: 1px solid color-mix(in oklab, var(--ivory) 40%, transparent); font-size: clamp(1.02rem, .94rem + .3vw, 1.22rem); }
+@media (max-width: 700px) {
+  .ticker .clock, .hv-d .hero .clock { grid-template-columns: minmax(0, 1fr); }
+  .ticker .clock::before, .hv-d .hero .clock::before { top: 16px; transform: none; }
+  .ticker .cn, .hv-d .hero .cn { padding: 12px 0 10px 34px; }
+  .ticker .fact, .hv-d .hero .fact { border-left: 0; border-top: 1px solid color-mix(in oklab, var(--ivory) 40%, transparent); padding: 10px 0 12px; }
+}
+
+/* A: the ticker strip, a solid Admiral band on an Old gold rule (the bars stand on it), pinned to the hero's bottom edge */
+.ticker { position: absolute; z-index: 6; left: 0; right: 0; bottom: 0; color: var(--ivory); text-align: left; background: var(--admiral); border-top: 2px solid var(--gold); }
+.ticker-in { padding-top: 0; padding-bottom: 0; }
+@media (min-width: 701px) { .ticker-in { padding-right: calc(var(--gutter) + 130px); } }   /* clear of the fixed Pause motion button */
+@media (max-width: 700px) { .ticker-in { padding-bottom: 50px; } }
+html:not(.hv-a) .ticker { display: none; }
+
+/* B: the hero is only the logo and buttons; the counter gets its own compact dark section */
+.hv-b .hero { min-height: 86svh; }
+.clock-sec { display: none; }
+.hv-b .clock-sec { display: flow-root; position: relative; z-index: 1; margin-top: -1px; background: var(--admiral-night); color: var(--ivory); text-align: center; }
+.clock-sec .wrap { padding-top: clamp(36px, 5vw, 72px); padding-bottom: clamp(36px, 4.5vw, 64px); }
+.clock-sec .h2 { color: var(--ivory); font-size: clamp(2rem, 1.1rem + 3.2vw, 4rem); margin: 0 0 .45em; }
+.clock-sec .edge { color: var(--admiral-night); }
+.hv-b .clock-sec .clock { display: flex; flex-direction: column; align-items: center; width: min(100%, 44rem); max-width: none; margin: 0 auto; text-align: center; justify-self: auto; align-self: auto; }
+.hv-b .clock-sec .cn { display: flex; flex-direction: column; align-items: center; }
+.hv-b .clock-sec .clock output { order: 1; font-size: clamp(2.3rem, .8rem + 5.4vw, 6.2rem); margin: 0; }
+.hv-b .clock-sec .clock .label { order: 2; margin-top: .7em; opacity: 1; color: var(--ivory); font: 400 clamp(.95rem, .85rem + .4vw, 1.25rem)/1 var(--f-display); text-transform: uppercase; letter-spacing: .05em; word-spacing: .12em; }
+.hv-b .clock-sec .fact { width: 100%; max-width: 40rem; margin: 22px 0 0; text-align: left; }
+
+/* D: Jonus's layout. The v7 hero (logo and buttons left, photo as v7) with the counter panel in the lower-left under the buttons */
+.clock-slot-d { display: none; }
+.hv-d .clock-slot-d { display: block; width: min(calc(100vw - 2 * var(--gutter)), 860px); margin-top: clamp(24px, 4vh, 44px); }   /* wider than the logo column so the fact runs 2 to 3 lines */
+.hv-d .hero .clock { padding: 0 clamp(16px, 2vw, 26px); border-radius: 10px; background: var(--admiral); border-top: 2px solid var(--gold); box-shadow: 0 24px 50px -30px rgba(0, 0, 0, .7); }
+.hv-d .hero .clock::before { left: clamp(16px, 2vw, 26px); }
+.hv-d .hero .cn { padding-left: 36px; }
+.hv-d .hero .stage { padding-bottom: clamp(60px, 9vh, 120px); }
+
+/* ================= Round 8c ================= */
+/* title contrast without a smudge: the hero ground is a deeper Admiral gradient (the teal glow behind the title is gone),
+   and the oval behind the logo is now very large, soft and low opacity */
+.hero { background: radial-gradient(120% 80% at 85% 115%, color-mix(in oklab, var(--cardinal) 34%, transparent) 0%, transparent 55%),
+  linear-gradient(170deg, var(--admiral-deep) 0%, color-mix(in oklab, var(--admiral-deep) 55%, var(--admiral-night)) 45%, var(--admiral-night) 100%); }
+.hero .hero-mark::before { left: -45%; right: -45%; top: -65%; bottom: -85%; border-radius: 50%;
+  background: radial-gradient(closest-side, color-mix(in oklab, var(--admiral-night) 58%, transparent) 0%, color-mix(in oklab, var(--admiral-night) 36%, transparent) 50%, transparent 100%); }
+/* the soft oval lives in the logo's stacking context (z-index 2): keep the buttons and D's panel above it */
+.hero .ctas, .hv-d .clock-slot-d { position: relative; z-index: 3; }
+/* See the agenda: solid Admiral, so nothing in the photo reads through its label */
+.hero .pill--ghost { background: var(--admiral); backdrop-filter: none; }
+
+/* D: the panel stacks (LIVE tag and label, counter, a solid horizontal divider, then the fun fact), sized so the counter fits on one
+   line and the panel stays clear of the dome. Wide screens: a wider stage and content that scales, so 1920 looks as full as 1190 */
+.hv-d .hero .stage, .hv-d .nav .wrap { max-width: min(1640px, 100%); }
+.hv-d .hero .stage { padding-top: clamp(96px, 14vh, 150px); }
+.hv-d .hero-mark { width: min(100%, clamp(600px, 44vw, 860px)); margin-bottom: clamp(48px, 7vh, 80px); }
+.hv-d .clock-slot-d { width: min(100%, clamp(400px, 27vw, 520px)); margin-top: clamp(18px, 3vh, 40px); }
+.hv-d .hero .clock { grid-template-columns: minmax(0, 1fr); }
+.hv-d .hero .clock::before { top: 21px; transform: none; }
+.hv-d .hero .cn { padding: 16px 0 12px 36px; }
+.hv-d .hero .clock output { font-size: clamp(1.5rem, 1rem + 1.2vw, 2.4rem); }
+.hv-d .hero .fact { border-left: 0; border-top: 1px solid color-mix(in oklab, var(--ivory) 40%, transparent); padding: 12px 0 16px; font-size: clamp(1.02rem, .9rem + .35vw, 1.3rem); }
+
+/* backdrops framed per layout by JS from each photo's dome geometry (.bgc); A and B centre the dome under the buttons,
+   D (.bgc-off) keeps it large on the right like v7. Overlay and tone come with each photo. */
+.hero.bgc .hero-photo { left: 0; right: 0; top: 0; bottom: 0; animation: none; opacity: var(--ph-op, .9); background-repeat: no-repeat; filter: var(--ph-filter, none);
+  -webkit-mask-image: linear-gradient(180deg, transparent var(--ph-y, 0px), #000 calc(var(--ph-y, 0px) + 16%)), linear-gradient(90deg, transparent var(--ph-x0, 0px), #000 var(--ph-x0f, 0px), #000 var(--ph-x1f, 100%), transparent var(--ph-x1, 100%)); -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(180deg, transparent var(--ph-y, 0px), #000 calc(var(--ph-y, 0px) + 16%)), linear-gradient(90deg, transparent var(--ph-x0, 0px), #000 var(--ph-x0f, 0px), #000 var(--ph-x1f, 100%), transparent var(--ph-x1, 100%)); mask-composite: intersect; }
+.hero.bgc.bgc-off .hero-photo { left: 0;
+  -webkit-mask-image: linear-gradient(180deg, transparent var(--ph-y, 0px), #000 calc(var(--ph-y, 0px) + 16%)), linear-gradient(90deg, transparent 0%, #000 40%); -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(180deg, transparent var(--ph-y, 0px), #000 calc(var(--ph-y, 0px) + 16%)), linear-gradient(90deg, transparent 0%, #000 40%); mask-composite: intersect; }
+.hero.bgc .hero-photo::after { background: var(--ph-ov); }
+/* with a centred dome the bars flank it instead of covering it */
+.hv-a .hero.bgc .bars, .hv-b .hero.bgc .bars { opacity: .55;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 45%), linear-gradient(90deg, #000 0%, #000 25%, transparent 36%, transparent 64%, #000 75%, #000 100%); -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 45%), linear-gradient(90deg, #000 0%, #000 25%, transparent 36%, transparent 64%, #000 75%, #000 100%); mask-composite: intersect; }
+
+/* Round 8d: the compact layout and backdrop control (ships in the final; ?picker=0 hides it). Ivory and Cardinal like the logo:
+   a two-segment Ticker | Panel toggle and round photo swatches for the active layout, about 40 px tall, bottom right of the hero */
+.heropick { position: absolute; z-index: 7; right: var(--gutter); bottom: calc(var(--tick-h, 0px) + 14px); display: flex; align-items: center; gap: 10px; height: 40px; padding: 4px;
+  border-radius: 999px; border: 1px solid color-mix(in oklab, var(--ivory) 45%, transparent); background: color-mix(in oklab, var(--admiral-night) 60%, transparent); color: var(--ivory); }
+html:not(.hv-a) .heropick { --tick-h: 48px; }   /* B and D: sit above the fixed Pause motion button */
+.heropick[hidden] { display: none; }
+.hp-seg { display: flex; height: 100%; }
+.hp-lay { display: grid; place-items: center; padding: 0 14px; border-radius: 999px; color: var(--ivory); text-decoration: none; font: 400 .8rem/1 var(--f-display); text-transform: uppercase; letter-spacing: .07em; word-spacing: .1em; }
+.hp-lay:hover { background: color-mix(in oklab, var(--ivory) 14%, transparent); }
+.hp-lay[aria-current="true"] { background: var(--cardinal); }
+.hp-sws { display: flex; gap: 8px; padding-right: 4px; }
+.hp-sw { position: relative; flex: none; width: 30px; height: 30px; padding: 0; border: 0; border-radius: 50%; background: center / cover no-repeat; cursor: pointer;
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ivory) 55%, transparent); transition: box-shadow .2s; }
+.hp-sw:hover { box-shadow: 0 0 0 1.5px var(--ivory); }
+.hp-sw[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--admiral-night), 0 0 0 3.5px var(--cardinal); }
+.hp-sw::after { content: attr(data-label); position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .2s;
+  padding: 6px 9px 5px; color: var(--ivory); background: var(--admiral-night); border-top: 1px solid color-mix(in oklab, var(--ivory) 50%, transparent);
+  font: 400 .74rem/1 var(--f-display); text-transform: uppercase; letter-spacing: .07em; }
+.hp-sw:hover::after, .hp-sw:focus-visible::after { opacity: 1; }
+.hp-sw:focus-visible { outline-offset: 4px; border-radius: 50%; }
+/* Panel: the empty bottom-left of the hero, aligned with the content column, clear of the dome on the right */
+html.hv-d .heropick { --tick-h: 10px; right: auto; left: max(var(--gutter), calc((100% - 1640px) / 2 + var(--gutter))); }
+@media (max-width: 700px) {
+  .heropick { right: 12px; bottom: calc(var(--tick-h, 0px) + 10px); }
+  html.hv-a .heropick { right: auto; left: 12px; bottom: 6px; }   /* phones: in the ticker's bottom row, beside Pause motion, off the dome */
+  html.hv-d .heropick { left: 12px; }
+  /* phones: the ticker and the panel sit over the lit dome, so their scrims deepen (still no filled box) */
+  html.hv-a .ticker { background: linear-gradient(180deg, color-mix(in oklab, var(--admiral-night) 66%, transparent), color-mix(in oklab, var(--admiral-night) 86%, transparent)); }
+  html.hv-d .hero .clock { background: linear-gradient(180deg, color-mix(in oklab, var(--admiral-night) 74%, transparent), color-mix(in oklab, var(--admiral-night) 62%, transparent)); }
+}
+
+/* ================= Round 8d: the counter boxes speak the event logo's language ================= */
+/* only Ivory and Cardinal on the darkened photo: no Admiral box, no Old gold rule, no Rouge; Ivory hairlines like the logo's
+   dateline; the Cardinal LIVE tag keeps the slash cut; a very light dark scrim only for legibility */
+.ticker .clock::before, .hv-d .hero .clock::before { content: none; }
+.ticker .cn { padding-left: 0; }
+.ticker { background: linear-gradient(180deg, color-mix(in oklab, var(--admiral-night) 38%, transparent), color-mix(in oklab, var(--admiral-night) 70%, transparent));
+  border-top: 1px solid color-mix(in oklab, var(--ivory) 50%, transparent); }
+.hv-d .hero .clock { padding: 0; border: 0; border-top: 1px solid color-mix(in oklab, var(--ivory) 50%, transparent); border-radius: 0; box-shadow: none;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--admiral-night) 42%, transparent), color-mix(in oklab, var(--admiral-night) 18%, transparent)); }
+.hv-d .hero .cn { padding: 16px 0 12px 0; }
+.ticker .fact, .hv-d .hero .fact, .hv-b .clock-sec .fact { color: color-mix(in oklab, var(--ivory) 85%, transparent); }
+.ticker .fact { border-left-color: color-mix(in oklab, var(--ivory) 50%, transparent); }
+.hv-d .hero .fact { border-top-color: color-mix(in oklab, var(--ivory) 50%, transparent); padding: 12px 0 16px; }
+.ticker .fact-l, .hv-d .hero .fact-l, .hv-b .clock-sec .fact-l { color: color-mix(in oklab, var(--ivory) 60%, transparent); }
+.ticker .caret, .hv-d .hero .caret, .hv-b .clock-sec .caret { border-left-color: color-mix(in oklab, var(--ivory) 70%, transparent); }
+@media (max-width: 700px) { .ticker .fact { border-top-color: color-mix(in oklab, var(--ivory) 50%, transparent); } .ticker .cn { padding-left: 0; } }
+
+/* ================= Round 8e ================= */
+/* Ticker at short heights: a height-aware logo and tighter spacing leave room for the whole dome above the ticker line */
+.hv-a .hero-mark { width: min(100%, clamp(540px, 50vw, 880px), 77vh); margin-bottom: clamp(44px, 6.5vh, 80px); }
+.hv-a .hero .stage { padding-top: clamp(90px, 12vh, 150px); }
+/* Ken Burns, subtle and never toward the title. Panel: anchored on the dome itself (about 52% 52% of the v7 photo box); an origin
+   at 80% 55% sits right of the dome and slid it about 37 px toward the title at full zoom. Ticker: anchored on the dome's own
+   centre-bottom (set by JS), so the dome stays put above the ticker. Off under reduced motion and for ?t= stills. */
+.hv-d .hero-photo { transform-origin: 52% 52%; animation-name: kb-panel; }
+@keyframes kb-panel { from { transform: scale(1.02); } to { transform: scale(1.09); } }
+.hv-a .hero.bgc .hero-photo { transform-origin: var(--ph-ox, 50%) var(--ph-oy, 85%); animation: kb-ticker 40s var(--ease-wave) infinite alternate; }
+@keyframes kb-ticker { from { transform: scale(1); } to { transform: scale(1.06); } }
+@media (prefers-reduced-motion: reduce) { .hv-d .hero-photo, .hv-a .hero.bgc .hero-photo { animation: none !important; } }
+html.still .hv-d .hero-photo, html.still.hv-d .hero-photo, html.still.hv-a .hero.bgc .hero-photo { animation: none !important; }
+
+/* b-roll band between the quote and the Agenda: an Admiral wave rises into the Agenda */
+.broll .edge.broll-edge { color: var(--admiral); }
 </style>
 </head>
 <body>
@@ -736,22 +911,45 @@ html.still .snip-msg { transition: none; }
       <div class="ctas fade-in">
         <a class="pill pill--red pill--big" href="#register">Register now</a>
         <a class="pill pill--ghost" href="#agenda">See the agenda</a>
-        <a class="pill pill--ghost" href="#speakers">Speakers</a>
       </div>
+      <div class="clock-slot-d" id="clock-slot-d"><!-- v8 VARIANT D (?hero=d): the counter panel sits here, under the buttons --></div>
     </div>
-    <div class="clock fade-in">
-      <div class="label" id="debt-label">U.S. national debt, live estimate</div>
-      <output id="debt" aria-labelledby="debt-label">$40,301,480,531,899</output>
-      <p class="fact" id="fact"><span class="fact-l">Fun fact:</span> <span id="fact-t" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span><span id="fact-rest" class="fact-rest" aria-hidden="true"></span><span class="sr-only" id="fact-sr"></span></p>
+  </div>
+  <!-- v8 COUNTER. Variant A (default): a slim ticker strip pinned to the hero's bottom edge. ?hero=b moves .clock into
+       #clock-slot-b (the "clock is running" section); ?hero=d moves it into #clock-slot-d (a panel under the buttons in the
+       v7 left layout). Counter math and fun-fact typing are unchanged; only placement and styling differ. -->
+  <div class="ticker" role="group" aria-label="Live national debt">
+    <div class="wrap ticker-in">
+      <div class="clock fade-in">
+        <div class="cn">
+          <div class="label" id="debt-label">U.S. national debt</div>
+          <output id="debt" aria-labelledby="debt-label">$40,301,480,531,899</output>
+        </div>
+        <p class="fact" id="fact"><span class="fact-l">Fun fact:</span> <span id="fact-t" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span><span id="fact-rest" class="fact-rest" aria-hidden="true"></span><span class="sr-only" id="fact-sr"></span></p>
+      </div>
     </div>
   </div>
   <div class="bars" aria-hidden="true"><svg id="bars" preserveAspectRatio="none"></svg></div>
   <div class="snip-layer" aria-hidden="true"><div class="snip-flyer"></div></div>
   <p class="sr-only" id="snip-live" aria-live="polite"></p>
+  <!-- Round 8c: layout and backdrop control (built by JS from LAYOUTS and PHOTOS; ?picker=0 hides it) -->
+  <div class="heropick" id="heropick" hidden>
+    <div class="hp-seg" id="hp-lays" role="group" aria-label="Hero layout"></div>
+  </div>
   <a class="scroll-cue" href="#about" aria-label="Scroll to event details"></a>
 </header>
 
 <main>
+  <!-- v8 VARIANT B (?hero=b): the hero holds only the logo and buttons; the live counter gets this compact dark section, flowing
+       into Event Details through an Admiral-night wave. Hidden in A and C. -->
+  <section class="clock-sec" aria-labelledby="clock-h">
+    <div class="wrap">
+      <h2 class="h2" id="clock-h">The clock is running</h2>
+      <div id="clock-slot-b"></div>
+    </div>
+    <svg class="edge bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 42 C 280 78, 600 10, 900 40 S 1290 72, 1440 30 L1440 90 Z"/></svg>
+  </section>
+
   <!-- ABOUT -->
   <section class="about3 pad" id="about" aria-labelledby="about-h">
     <div class="wrap">
@@ -795,6 +993,18 @@ html.still .snip-msg { transition: none; }
       </figure>
     </div>
     <svg class="edge bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 44 C 260 80, 520 6, 820 40 S 1240 76, 1440 34 L1440 90 Z"/></svg>
+  </section>
+
+  <!-- B-ROLL (Round 8): the no-text sizzle reel as an ambient band between the quote and the Agenda; its line (Concord's own copy,
+       July 2026 press release) previews what the agenda delivers. Not behind Event Details: Old gold numerals would fall below
+       3:1 over video. The quote's Rouge wave flows in on top; an Admiral wave rises into the Agenda below. -->
+  <section class="broll" aria-label="The summit in brief">
+    <video class="broll-video" muted autoplay loop playsinline preload="metadata" poster="media/summit-sizzle-hero-poster.jpg" data-src="media/summit-sizzle-hero-1280.mp4" aria-hidden="true" tabindex="-1"></video>
+    <div class="broll-shade" aria-hidden="true"></div>
+    <div class="wrap broll-inner">
+      <p class="broll-line" data-reveal>Policy discussions, grassroots training and meetings with Members of Congress.</p>
+    </div>
+    <svg class="edge broll-edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 48 C 260 8, 600 74, 900 38 S 1280 12, 1440 44 L1440 90 Z"/></svg>
   </section>
 
   <!-- AGENDA -->
@@ -922,18 +1132,6 @@ html.still .snip-msg { transition: none; }
       <figure class="frame"><div class="pic"><img class="m" alt=""><img class="u" alt=""><div class="veil" aria-hidden="true"><span class="o"></span></div></div><figcaption></figcaption></figure>
     </div>
     <svg class="edge bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 30 C 240 70, 600 10, 880 46 S 1260 12, 1440 44 L1440 90 Z"/></svg>
-  </section>
-
-  <!-- B-ROLL (Round 7b): the no-text sizzle reel as an ambient band before Registration. Not behind Event Details: Old gold
-       numerals on Admiral are 3.2:1 on a solid ground and would fall below 3:1 over video highlights. The line is Concord's own copy
-       (July 2026 press release). The River's Admiral wave flows in on top; an Ivory wave closes into Registration. -->
-  <section class="broll" aria-label="The summit in brief">
-    <video class="broll-video" muted autoplay loop playsinline preload="metadata" poster="media/summit-sizzle-hero-poster.jpg" data-src="media/summit-sizzle-hero-1280.mp4" aria-hidden="true" tabindex="-1"></video>
-    <div class="broll-shade" aria-hidden="true"></div>
-    <div class="wrap broll-inner">
-      <p class="broll-line" data-reveal>Policy discussions, grassroots training and meetings with Members of Congress.</p>
-    </div>
-    <svg class="edge broll-edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 48 C 260 8, 600 74, 900 38 S 1280 12, 1440 44 L1440 90 Z"/></svg>
   </section>
 
   <!-- REGISTER -->
@@ -1119,7 +1317,7 @@ html.still .snip-msg { transition: none; }
     <p class="legal">A JOINT WEBSITE OF CONCORD COALITION ACTION FUND, INC. AND CONCORD COALITION CORP. PAID FOR IN PART BY CONCORD COALITION ACTION FUND, INC. AND CONCORD COALITION CORP. CONCORD COALITION ACTION FUND, INC. AND CONCORD COALITION CORP. ARE SEPARATE ORGANIZATIONS.</p>
     <p class="legal" style="margin-top:14px">Debt figures: U.S. Treasury, Debt to the Penny (latest record Oct 9, 2026); the live figure extrapolates the past year's average daily increase. Fun facts: sources listed in brand/fun_facts.json.</p>
     <p class="legal" style="margin-top:8px">Event photos: Concord Action and The Concord Coalition. Stock photos (Unsplash License): Mike Stoll, Venkata Oruganti, Pretty Pink, James A. Molnar, Jeffrey Clayton, Elijah Mears, Sarguninder Singh. Hotel: “Hilton Capitol Hill - Washington D.C. Hotel” by Tony Webster, CC BY 2.0, via Wikimedia Commons, cropped. Map © OpenStreetMap contributors. Speaker headshots and the summit reel: Concord Action (concordaction.org). Full credits in img/stock/PHOTO_CREDITS.md.</p>
-    <p class="mocknote">Design mockup v7 prepared by Jonus Goldstein, October 2026. Not a live page.</p>
+    <p class="mocknote">Design mockup v8 prepared by Jonus Goldstein, October 2026. Not a live page.</p>
   </div>
 </footer>
 
@@ -1133,6 +1331,17 @@ html.still .snip-msg { transition: none; }
   const still = qs.get('t') !== null;
   if (still) root.classList.add('still');
   if (qs.get('h')) document.querySelector('.hero').style.minHeight = qs.get('h') + 'px'; // full-page captures
+  /* ---- v8: hero variant. ?hero=a (default): ticker strip; b: "The clock is running" section; d: the v7 layout with the
+     counter panel under the buttons. Only the counter's placement changes; it moves before any counter or fun-fact code runs.
+     ?hero=video stays A with the reel. ---- */
+  const HV = (h => ['a', 'b', 'd'].includes(h) ? h : 'd')((qs.get('hero') || '').toLowerCase());   // Round 8e: Panel (d) is the default
+  root.classList.add('hv-' + HV);
+  if (HV === 'b') document.getElementById('clock-slot-b').appendChild(document.querySelector('.clock'));
+  if (HV === 'd') document.getElementById('clock-slot-d').appendChild(document.querySelector('.clock'));
+  if (HV === 'a') {   // the bars stand on the ticker strip: track its height
+    const tk = document.querySelector('.ticker'), setTick = () => root.style.setProperty('--tick-h', tk.offsetHeight + 'px');
+    setTick(); new ResizeObserver(setTick).observe(tk);
+  }
 
   /* ---- real data: last Debt to the Penny record of each year, trillions (brand/debt_series.json) ---- */
   const S = [[2000,5.66],[2001,5.94],[2002,6.41],[2003,7.00],[2004,7.60],[2005,8.17],[2006,8.68],[2007,9.23],[2008,10.70],[2009,12.31],[2010,14.03],[2011,15.22],[2012,16.43],[2013,17.35],[2014,18.14],[2015,18.92],[2016,19.98],[2017,20.49],[2018,21.97],[2019,23.20],[2020,27.75],[2021,29.62],[2022,31.42],[2023,34.00],[2024,36.22],[2025,38.51],[2026,40.30]];
@@ -1150,6 +1359,19 @@ html.still .snip-msg { transition: none; }
   /* ---- live debt + story captions ---- */
   const out = document.getElementById('debt');
   const fmt = v => '$' + Math.floor(v).toLocaleString('en-US');
+  /* Instrument Serif has proportional figures only (no tnum), so every glyph gets a fixed-width cell (#debt .dg/.dc/.ds):
+     the figure never changes width as it ticks. Cells are rebuilt only when the length changes (once, during the intro ramp). */
+  let cells = [];
+  const cellClass = ch => ch === ',' ? 'dc' : ch === '$' ? 'ds' : 'dg';
+  const paint = str => {
+    if (cells.length !== str.length) {
+      out.textContent = '';
+      cells = [...str].map(ch => { const c = document.createElement('span'); c.className = cellClass(ch); c.textContent = ch; out.appendChild(c); return c; });
+      return;
+    }
+    for (let i = 0; i < str.length; i++) if (cells[i].textContent !== str[i]) { cells[i].textContent = str[i]; cells[i].className = cellClass(str[i]); }
+  };
+  paint(out.textContent);
   const live = () => BASE + RATE * (Date.now() - BASE_T) / 1000;
 
   /* ---- waving flag, tone on tone (Brand Guide p. 20); render(t) is seekable for MP4 export ---- */
@@ -1199,7 +1421,7 @@ html.still .snip-msg { transition: none; }
   function frame(now) {
     const k = Math.min(1, (now - t0) / Math.max(intro, 1)), e = 1 - Math.pow(1 - k, 3);
     if (dipAt >= 0) { cutOffset = DIP * dipEnvelope(Math.max(0, now - dipAt)); if (now - dipAt >= DIP_END) { dipAt = -1; cutOffset = 0; } }
-    out.textContent = fmt((k < 1 ? 5.66e12 + (live() - 5.66e12) * e : live()) - cutOffset);
+    paint(fmt((k < 1 ? 5.66e12 + (live() - 5.66e12) * e : live()) - cutOffset));
     if (!paused) requestAnimationFrame(frame);
   }
   new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; }).observe(document.querySelector('.hero'));
@@ -1235,6 +1457,9 @@ html.still .snip-msg { transition: none; }
     probe.remove(); factBox.style.minHeight = Math.ceil(max) + 'px';
   };
   let rzT; addEventListener('resize', () => { clearTimeout(rzT); rzT = setTimeout(reserveHeight, 150); });
+  /* Round 8b: also re-reserve when the fact box's own width changes (its column settles after fonts load), so the box never grows mid-typing */
+  let factW = 0;
+  new ResizeObserver(() => { const wNow = Math.round(factBox.getBoundingClientRect().width); if (wNow && wNow !== factW) { factW = wNow; reserveHeight(); } }).observe(factBox);
   document.fonts && document.fonts.ready.then(reserveHeight);
   const FALLBACK = [{ text: 'At the end of 2000, total public debt was $5.66 trillion.', source: 'U.S. Treasury, Debt to the Penny', url: 'https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/' }];
   const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -1296,7 +1521,7 @@ html.still .snip-msg { transition: none; }
 
   document.querySelectorAll('.incl-link').forEach(a => a.addEventListener('click', () => { const d = document.getElementById('faq-incl'); if (d) d.open = true; }));
 
-  /* ---- Cut the debt (Round 7b). DEBT in the hero logo: mouse hover-in, touch tap, or Enter/Space on the focused logo.
+  /* ---- Cut the debt (Round 7b, click-only since 8b). DEBT in the hero logo: click, tap, or Enter/Space on the focused logo.
      Scissors fly along the logo's own cut, the top half of DEBT drops away, the clock dips, the message slab holds about 3.6 s,
      then DEBT heals. Once per hover-in, plus a short cooldown. Reduced motion, ?t= stills and paused motion: no animation,
      but the message still shows and #snip-live announces it. ---- */
@@ -1389,8 +1614,8 @@ html.still .snip-msg { transition: none; }
   /* the clock: frame() subtracts the dip; the figure turns Mint while it is down */
   function dip() {
     if (calm()) return;
-    setTimeout(() => { dipAt = performance.now(); heroEl.classList.add('snip-down'); }, 150);
-    setTimeout(() => heroEl.classList.remove('snip-down'), 150 + DIP_HOLD);
+    setTimeout(() => { dipAt = performance.now(); root.classList.add('snip-down'); }, 150);
+    setTimeout(() => root.classList.remove('snip-down'), 150 + DIP_HOLD);
   }
   function land() { heroEl.classList.add('snip-cut'); state = 'cut'; showMsg(); dip(); }
   async function cut() {
@@ -1449,9 +1674,7 @@ html.still .snip-msg { transition: none; }
       { duration: 680, easing: 'cubic-bezier(.16, 1, .3, 1)' }).onfinish = () => { if (g0 === gen) clear(); };
   }
   const ready = () => state === 'idle' && performance.now() >= coolUntil;
-  /* mouse and pen: once per hover-in over DEBT; touch: tap DEBT; keyboard: Enter or Space on the focused logo */
-  hit.addEventListener('pointerenter', e => { if (e.pointerType !== 'touch' && armed && ready()) { armed = false; cut(); } });
-  hit.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') armed = true; });
+  /* Round 8b: click or tap on DEBT only (never hover; the scissors cursor is the hint); keyboard: Enter or Space on the focused logo */
   hit.addEventListener('click', () => { if (ready()) cut(); });
   mark.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (!e.repeat && ready()) cut(); } });
   /* page-wide pause: whatever is moving jumps to its end state */
@@ -1470,7 +1693,7 @@ html.still .snip-msg { transition: none; }
   /* ---- v7: hero video variant (?hero=video). Muted, looping, inline reel inside .hero-photo, under the same overlay.
      Reduced motion and ?t= stills keep the poster only (a CSS background); the default hero stays the gold Capitol. ---- */
   const heroVid = (() => {
-    if (qs.get('hero') !== 'video') return null;
+    if (qs.get('hero') !== 'video' && qs.get('video') === null) return null;
     heroEl.classList.add('v-video');
     if (reduce || still) return null;
     const v = document.createElement('video');
@@ -1497,6 +1720,80 @@ html.still .snip-msg { transition: none; }
     window.__broll = broll;
   }
 
+  /* ---- Round 8c: layout and backdrop control. Data-driven: PHOTOS holds each photo's dome geometry, LAYOUTS each layout's own
+     list (trim each to Jonus's top 3 once he picks). dome = [centre x, statue tip y, drum base y] as fractions of the image.
+     A and B frame the dome centred under the buttons with the drum on the ticker; D frames it large on the right like v7
+     ("gold" in D is the exact v7 framing). ?bg=<name> and ?hero=<a|d> share a choice; ?picker=0 hides the control.
+     New centred photos from img/stock/capitol3/ (k1 to k6) join PHOTOS and the lists when they land. ---- */
+  const NIGHT = 'var(--admiral-night)', nightA = a => `color-mix(in oklab, var(--admiral-night) ${Math.round(a)}%, transparent)`, admA = a => `color-mix(in oklab, var(--admiral) ${Math.round(a)}%, transparent)`;
+  const PHOTOS = {   // Round 8e: Gold only, framed per layout (the other photo files stay on disk)
+    gold: { label: 'Gold', src: 'img/stock/capitol2/c1.webp', dome: [.49, .21, .60], sky: 'night', dark: 55 }
+  };
+  const LAYOUTS = {   // the bare URL is Panel + Gold; Ticker is one click away
+    a: { label: 'Ticker', bgs: ['gold'], dflt: 'gold' },
+    d: { label: 'Panel',  bgs: ['gold'], dflt: 'gold' },
+    b: { label: 'Clock',  bgs: ['gold'], dflt: 'gold', unlisted: true }
+  };
+  const hp = heroEl.querySelector('.hero-photo'), lay = LAYOUTS[HV];
+  let cur = null, curName = lay.dflt;
+  const offsetMode = () => HV === 'd' && innerWidth > 860;
+  const overlayFor = (o, off) => o.sky === 'day'
+    ? (off ? `linear-gradient(90deg, ${NIGHT} 0%, ${nightA(85)} 40%, ${admA(o.dark)} 70%, ${admA(o.dark - 15)} 100%), linear-gradient(0deg, ${NIGHT} 0%, transparent 32%)`
+           : `linear-gradient(180deg, ${nightA(92)} 0%, ${nightA(80)} 42%, ${admA(o.dark)} 64%, ${admA(o.dark - 15)} 100%), linear-gradient(0deg, ${NIGHT} 0%, transparent 26%)`)
+    : (off ? `linear-gradient(90deg, ${NIGHT} 0%, ${nightA(60)} 38%, transparent 66%), linear-gradient(0deg, ${NIGHT} 0%, transparent 32%), linear-gradient(180deg, ${nightA(o.dark * .6)} 0%, transparent 30%)`
+           : `linear-gradient(180deg, ${nightA(o.dark)} 0%, ${nightA(o.dark * .6)} 40%, transparent 62%), linear-gradient(0deg, ${NIGHT} 0%, transparent 26%), radial-gradient(120% 90% at 50% 70%, transparent 55%, ${nightA(70)} 100%)`);
+  function frameBg() {
+    if (!cur || !cur.nat) return;
+    const off = offsetMode(), hr = heroEl.getBoundingClientRect(), W = hr.width, H = hr.height, [cx, top, base] = cur.dome, [iw, ih] = cur.nat;
+    heroEl.classList.toggle('bgc-off', off); hp.style.setProperty('--ph-ov', overlayFor(cur, off));
+    let T, B, X;
+    if (off) { const m = heroEl.querySelector('.hero-mark').getBoundingClientRect(); T = m.top - hr.top + m.height * .05; B = H - 4; X = W * .66; }
+    else { const c = heroEl.querySelector('.ctas').getBoundingClientRect(); T = c.top - hr.top + c.height * .25; B = H - (HV === 'a' ? document.querySelector('.ticker').offsetHeight : 0) - 4; X = W / 2; }
+    const fit = (B - T) / ((base - top) * ih), cover = Math.max(X / (cx * iw), (W - X) / ((1 - cx) * iw));
+    // D covers the window like v7; A and B fit the whole dome above the ticker, even on short wide windows, and may then be
+    // (centred: the statue tip tucks behind the buttons, a quarter of the way down them)
+    // narrower than the window (Ticker down to 55 percent of cover, so the drum and colonnade clear the ticker on wide short
+    // windows; the bars stand either side), with soft side fades into the hero
+    const s = Math.max(fit, off ? cover : cover * (HV === 'a' ? .55 : .8), (H - T) / ((1 - top) * ih));
+    const bw = iw * s, bh = ih * s, x = X - cx * bw, y = T - top * bh;
+    hp.style.backgroundSize = `${bw.toFixed(1)}px ${bh.toFixed(1)}px`; hp.style.backgroundPosition = `${x.toFixed(1)}px ${y.toFixed(1)}px`;
+    hp.style.setProperty('--ph-y', Math.max(0, y).toFixed(1) + 'px');
+    hp.style.setProperty('--ph-ox', (x + cx * bw).toFixed(1) + 'px'); hp.style.setProperty('--ph-oy', (y + base * bh).toFixed(1) + 'px');   // the zoom anchors on the dome's centre-bottom
+    const x0 = Math.max(0, x), x1 = Math.min(W, x + bw), fd = Math.min(W * .12, bw * .2);
+    [['--ph-x0', x0], ['--ph-x0f', x0 + fd], ['--ph-x1f', x1 - fd], ['--ph-x1', x1]].forEach(([k, v]) => hp.style.setProperty(k, v.toFixed(1) + 'px'));
+  }
+  function setBg(name, push) {
+    if (!lay.bgs.includes(name)) name = lay.dflt;
+    curName = name; const o = PHOTOS[name];
+    cur = (HV === 'd' && name === 'gold') || heroEl.classList.contains('v-video') ? null : o;   // D's gold is the exact v7 framing
+    heroEl.classList.toggle('bgc', !!cur); heroEl.classList.remove('bgc-off');
+    ['backgroundImage', 'backgroundSize', 'backgroundPosition'].forEach(k => { hp.style[k] = ''; });
+    ['--ph-ov', '--ph-op', '--ph-filter', '--ph-y', '--ph-x0', '--ph-x0f', '--ph-x1f', '--ph-x1', '--ph-ox', '--ph-oy'].forEach(k => hp.style.removeProperty(k));
+    if (cur) {
+      hp.style.backgroundImage = `url(${o.src})`;
+      if (o.op) hp.style.setProperty('--ph-op', o.op); if (o.filter) hp.style.setProperty('--ph-filter', o.filter);
+      if (o.nat) frameBg(); else { const im = new Image(); im.onload = () => { o.nat = [im.naturalWidth, im.naturalHeight]; if (cur === o) frameBg(); }; im.src = o.src; }
+    }
+    document.querySelectorAll('#hp-bgs .hp-sw').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.bg === name)));
+    document.querySelectorAll('#hp-lays .hp-lay').forEach(a => { const u = new URL(location.href); u.searchParams.set('hero', a.dataset.hero); u.searchParams.delete('demo');
+      if (LAYOUTS[a.dataset.hero].bgs.includes(name)) u.searchParams.set('bg', name); else u.searchParams.delete('bg'); a.href = u.pathname + u.search; });
+    if (push) { const u = new URL(location.href); u.searchParams.set('bg', name); history.replaceState(null, '', u); }
+  }
+  {
+    const pick = document.getElementById('heropick'), lays = document.getElementById('hp-lays'), bgs = document.getElementById('hp-bgs');
+    if (qs.get('picker') !== '0') {
+      Object.entries(LAYOUTS).filter(([, L]) => !L.unlisted).forEach(([k, L]) => {
+        const a = document.createElement('a'); a.className = 'hp-lay'; a.dataset.hero = k; a.textContent = L.label; if (k === HV) a.setAttribute('aria-current', 'true'); lays.appendChild(a); });
+      // Round 8e: one backdrop per layout, so the control is just the Ticker | Panel toggle (no swatches)
+      pick.hidden = false;
+    }
+    setBg(qs.get('bg') || lay.dflt, false);
+    let fbT; addEventListener('resize', () => { clearTimeout(fbT); fbT = setTimeout(frameBg, 120); });
+    if (HV === 'a') new ResizeObserver(() => frameBg()).observe(document.querySelector('.ticker'));
+    document.fonts && document.fonts.ready.then(frameBg);
+    window.__bg = { set: setBg, name: () => curName, frame: frameBg };
+  }
+
   /* ---- v7: map toggle between the two room blocks (the OSM embed takes one marker) ---- */
   const MAPS = {
     hilton: { title: 'Map of the Hilton Washington D.C. Capitol Hill and the U.S. Capitol',
@@ -1515,8 +1812,8 @@ html.still .snip-msg { transition: none; }
 
   /* ---- motion toggle ---- */
   const btn = document.getElementById('motion');
-  if (still) { requestAnimationFrame(() => { size(); render(+qs.get('t')); }); out.textContent = fmt(live()); btn.hidden = true; return; }
-  if (reduce) { render(0); out.textContent = '$40,301,480,531,899'; document.getElementById('debt-label').textContent = 'U.S. national debt, Oct 9, 2026 (U.S. Treasury)'; btn.hidden = true; return; }
+  if (still) { requestAnimationFrame(() => { size(); render(+qs.get('t')); }); paint(fmt(live())); btn.hidden = true; return; }
+  if (reduce) { render(0); paint('$40,301,480,531,899'); document.getElementById('debt-label').textContent = 'U.S. national debt, Oct 9, 2026 (U.S. Treasury)'; btn.hidden = true; return; }
   requestAnimationFrame(frame);
   btn.addEventListener('click', () => {
     paused = !paused; btn.setAttribute('aria-pressed', paused); btn.textContent = paused ? 'Play motion' : 'Pause motion';
