@@ -1,1474 +1,840 @@
 {
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-16",
  "facts": [
   {
    "id": 1,
    "category": "history",
-   "text": "Congress created the Treasury Department on September 2, 1789, and named Alexander Hamilton its first Secretary.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "text": "On January 1, 1835, the U.S. owed just $33,733, the only time the government has paid off its interest-bearing debt.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding?filter=record_fiscal_year:eq:1835",
+   "status": "VERIFIED",
+   "note": "Fiscal Data record 1835-01-01 = $33,733.05; TreasuryDirect says all interest-bearing debt was paid off by January 1835, the only time."
   },
   {
    "id": 2,
-   "category": "history",
-   "text": "The nation's first war loans were borrowed from France and the Netherlands to help pay for the American Revolution.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "As of October 2026, the national debt grows about $6.6 billion a day, or roughly $76,000 every second.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "2025-10-09 = $37.884T; 2026-10-09 = $40.301T; increase $2.418T over 365 days = $6.62B per day = $76,660 per second."
   },
   {
    "id": 3,
    "category": "history",
-   "text": "On January 1, 1783, the new nation's public debt totaled $43 million.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "text": "Charlie Chaplin, Mary Pickford and Douglas Fairbanks toured the country holding rallies to sell Liberty Bonds in World War I.",
+   "source": "Federal Reserve History, Liberty Bonds",
+   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
    "status": "VERIFIED"
   },
   {
    "id": 4,
-   "category": "history",
-   "text": "Robert Morris, nicknamed The Financier, ordered the first tally of total government debt, starting annual Treasury reports.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "category": "current",
+   "text": "Japan is the largest foreign holder of U.S. Treasuries, with $1.104 trillion as of July 2026.",
+   "source": "U.S. Treasury, Treasury International Capital Table 5: Major Foreign Holders of Treasury Securities (July 2026)",
+   "url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt",
    "status": "VERIFIED"
   },
   {
    "id": 5,
    "category": "history",
-   "text": "Debts from the Revolutionary War amounted to about $75 million by January 1, 1791.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "text": "A June 20, 1790 dinner hosted by Jefferson traded Hamilton's plan to assume state war debts for a capital on the Potomac.",
+   "source": "National Archives, Prologue blog: The Compromise of 1790",
+   "url": "https://prologue.blogs.archives.gov/2015/05/31/the-compromise-of-1790/",
+   "status": "VERIFIED",
+   "note": "Prologue: Madison agreed not to block debt assumption; Congress passed the Residence Act in July 1790 and the Funding Act in August 1790."
   },
   {
    "id": 6,
    "category": "history",
-   "text": "Hamilton's January 1790 report urged the federal government to take over the states' Revolutionary War debts.",
-   "source": "National Archives, Prologue blog: The Compromise of 1790",
-   "url": "https://prologue.blogs.archives.gov/2015/05/31/the-compromise-of-1790/",
-   "status": "VERIFIED"
+   "text": "From 1940 to 1945, World War II multiplied the national debt sixfold, from $43 billion to $259 billion.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "1940-06-29 = $42,967,531,038; 1945-06-30 = $258,682,187,410; ratio 6.02."
   },
   {
    "id": 7,
-   "category": "history",
-   "text": "At a June 20, 1790 dinner hosted by Jefferson, Hamilton and Madison struck a deal tying state debts to the Potomac capital.",
-   "source": "National Archives, Prologue blog: The Compromise of 1790",
-   "url": "https://prologue.blogs.archives.gov/2015/05/31/the-compromise-of-1790/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "On August 18, 2026, the national debt passed $40 trillion for the first time.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "VERIFIED",
+   "note": "First record at or above $40T is 2026-08-18 ($40.047T)."
   },
   {
    "id": 8,
    "category": "history",
-   "text": "In 1790 Hamilton estimated the public debt at $77.1 million and called for new federal bonds to cover it.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "text": "The U.S. paid for the Louisiana Purchase with $11.25 million in 6 percent bonds plus $3.75 million in claims it took on.",
+   "source": "American Heritage, We Banked Them",
+   "url": "https://www.americanheritage.com/we-banked-them",
+   "status": "VERIFIED",
+   "note": "American Heritage: Barings turned title over to the U.S. in exchange for $11,250,000 in 6 percent bonds; the remaining $3,750,000 covered private American claims against France."
   },
   {
    "id": 9,
-   "category": "history",
-   "text": "Hamilton argued that a national debt, if it is not excessive, will be to us a national blessing.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "In fiscal 2026, net interest on the debt topped $1 trillion for the first time, reaching $1.05 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2026-09-30",
+   "status": "DERIVED",
+   "note": "MTS Table 9: Net Interest FY2026 = $1,051.8B; FY2025 = $970.4B. Earlier years were lower."
   },
   {
    "id": 10,
    "category": "history",
-   "text": "In 1793, George Washington said no money matter was more urgent than regularly paying down the public debt.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "text": "The Second Liberty Bond Act of September 24, 1917 created the first overall cap on federal debt, the root of today's debt limit.",
+   "source": "Congressional Research Service RL31967, The Debt Limit: History and Recent Increases",
+   "url": "https://www.congress.gov/crs_external_products/RL/PDF/RL31967/RL31967.139.pdf",
    "status": "VERIFIED",
-   "note": "Treasury page quotes Washington's 1793 message: 'No pecuniary consideration is more urgent than the regular redemption and discharge of the public debt.' Paraphrased."
+   "note": "CRS RL31967 summary and IF10292: the aggregate debt limit was first created in 1917."
   },
   {
    "id": 11,
    "category": "history",
-   "text": "Benjamin Franklin is credited with the line: 'Rather go to bed without dinner than to rise in debt.'",
-   "source": "U.S. Treasury Fiscal Data, Understanding the National Debt",
-   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/",
+   "text": "In 1935, the Treasury introduced the 'baby bond': pay $18.75 now for a savings bond with a $25 face value.",
+   "source": "TreasuryDirect, The History of U.S. Savings Bonds (timeline)",
+   "url": "https://www.treasurydirect.gov/timeline.htm",
    "status": "VERIFIED"
   },
   {
    "id": 12,
-   "category": "history",
-   "text": "Treasury Secretary Albert Gallatin, the longest-serving in history, made paying down the public debt his priority.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "As of October 2026, the national debt works out to about $117,600 for every U.S. resident.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "Debt $40.329T (2026-10-14) divided by U.S. population 343.0 million (Census-based FRED POPTHM, Aug 2026)."
   },
   {
    "id": 13,
    "category": "history",
-   "text": "The War of 1812 pushed the public debt from $45.2 million in January 1812 to $119.2 million by September 1815.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "text": "The Civil War grew the debt more than 4,000 percent, from $65 million in 1860 to about $2.7 billion in 1865.",
+   "source": "U.S. Treasury Fiscal Data, Understanding the National Debt",
+   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/",
+   "status": "VERIFIED",
+   "note": "Fiscal Data: debt grew over 4,000 percent from $65 million in 1860. Historical Debt Outstanding: 1860 = $64.8 million, 1865 = $2.68 billion."
   },
   {
    "id": 14,
    "category": "history",
-   "text": "By January 1835, under Andrew Jackson, the U.S. had paid off all its interest-bearing debt, for the first and only time.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "text": "John Adams signed a five million guilder loan with Amsterdam bankers on June 11, 1782 to fund the young nation.",
+   "source": "Massachusetts Historical Society, Papers of John Adams, vol. 13",
+   "url": "https://www.masshist.org/publications/adams-papers/index.php/view/ADMS-06-13-01-pb-0021",
+   "status": "VERIFIED",
+   "note": "Contract for 5 million guilders at 5 percent with three Amsterdam firms."
   },
   {
    "id": 15,
-   "category": "history",
-   "text": "On January 1, 1835, the total public debt stood at just $33,733.",
-   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding?filter=record_fiscal_year:eq:1835",
+   "category": "current",
+   "text": "Moody's cut the U.S. from Aaa to Aa1 on May 16, 2025, the last of the big three agencies to drop its top rating.",
+   "source": "Moody's, 2025 United States Sovereign Rating Action",
+   "url": "https://www.moodys.com/web/en/us/about-us/usrating.html",
    "status": "VERIFIED",
-   "note": "Record shows debt_outstanding_amt 33733.05 for 1835-01-01."
+   "note": "S&P cut the U.S. to AA+ on August 5, 2011; Fitch on August 1, 2023; Moody's on May 16, 2025. PGPF reports no 2026 rating action."
   },
   {
    "id": 16,
    "category": "history",
-   "text": "In 1835, the federal budget surplus of $17.9 million was bigger than the government's total spending that year.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "text": "New York's National Debt Clock was retired on September 7, 2000, as budget surpluses paid down the debt.",
+   "source": "White House archives, Statement by the President: National Debt Clock (Sept 7, 2000)",
+   "url": "https://clintonwhitehouse4.archives.gov/textonly/library/hot_releases/September_7_2000_3.html",
    "status": "VERIFIED"
   },
   {
    "id": 17,
-   "category": "history",
-   "text": "The Mexican War cost an estimated $64 million, and Congress authorized new debt to pay for it.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "After the July 2025 debt-limit increase, the debt climbed from $37 trillion to $38 trillion in just 71 days.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "$37T first reached 2025-08-11; $38T first reached 2025-10-21 (71 days)."
   },
   {
    "id": 18,
    "category": "history",
-   "text": "In 1860 the public debt was $64.8 million, barely more than that year's $63.1 million federal budget.",
+   "text": "Treasury Secretary Albert Gallatin cut the debt to $45.2 million by 1812, then the War of 1812 nearly tripled it.",
    "source": "TreasuryDirect, The History of the Debt",
    "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "status": "DERIVED",
+   "note": "Fiscal Data Historical Debt Outstanding: 1812-01-01 = $45.2 million; 1816-01-01 = $127.3 million (2.8 times). TreasuryDirect credits Gallatin with the paydown."
   },
   {
    "id": 19,
    "category": "history",
-   "text": "The national debt passed $1 billion in 1863 and reached about $2.7 billion after the Civil War ended.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "text": "Franklin Roosevelt bought the first Series E war bond himself, on May 1, 1941, from Treasury Secretary Henry Morgenthau.",
+   "source": "TreasuryDirect, The History of U.S. Savings Bonds (timeline)",
+   "url": "https://www.treasurydirect.gov/timeline.htm",
+   "status": "VERIFIED",
+   "note": "Timeline: Series E announced April 30, 1941; on sale the next day, when Roosevelt bought the first one from Morgenthau."
   },
   {
    "id": 20,
-   "category": "history",
-   "text": "The Civil War cost the nation an estimated $5.2 billion in direct spending.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "CBO projects debt held by the public will hit a record 108 percent of GDP by 2030, passing the 106 percent peak of 1946.",
+   "source": "Committee for a Responsible Federal Budget, on CBO's 2026 long-term outlook",
+   "url": "https://www.crfb.org/blogs/debt-rises-175-gdp-under-cbos-long-term-outlook",
+   "status": "VERIFIED",
+   "note": "CRFB on CBO extended baseline: 108 percent in 2030, described as a record; CBO February 2026 outlook cites the previous high of 106 percent in 1946."
   },
   {
    "id": 21,
    "category": "history",
-   "text": "The 1862 Legal Tender Act let Treasury issue $150 million in U.S. notes and sell $500 million in bonds for the war.",
+   "text": "In 1835, the federal budget surplus of $17.9 million was bigger than total government spending that year.",
    "source": "TreasuryDirect, The History of the Debt",
    "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
    "status": "VERIFIED"
   },
   {
    "id": 22,
-   "category": "history",
-   "text": "At the close of fiscal 1899, the gross federal debt stood at $1.9 billion.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "Americans still hold $146 billion in U.S. savings securities, as of September 30, 2026.",
+   "source": "U.S. Treasury Fiscal Data, Monthly Statement of the Public Debt Table 1 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/debt/mspd/mspd_table_1?filter=record_date:eq:2026-09-30",
+   "status": "VERIFIED",
+   "note": "MSPD Table 1: United States Savings Securities = $146,290 million."
   },
   {
    "id": 23,
    "category": "history",
-   "text": "The Second Liberty Bond Act of September 24, 1917 set an aggregate limit on federal debt, a root of today's debt limit.",
+   "text": "Between 1916 and 1919, World War I multiplied the national debt more than seven times, from $3.6 billion to over $25 billion.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "Fiscal Data: 1916-07-01 = $3.61 billion. TreasuryDirect and CRS RL31967: total debt exceeded $25 billion (about $25.5 billion) at the end of FY1919. 25.5 / 3.6 = 7.1."
+  },
+  {
+   "id": 24,
+   "category": "history",
+   "text": "Before World War I, Congress often approved federal borrowing one project at a time, such as the Panama Canal.",
    "source": "Congressional Research Service RL31967, The Debt Limit: History and Recent Increases",
    "url": "https://www.congress.gov/crs_external_products/RL/PDF/RL31967/RL31967.139.pdf",
    "status": "VERIFIED"
   },
   {
-   "id": 24,
-   "category": "history",
-   "text": "The first Liberty Loan of 1917 was oversubscribed by 50 percent, with more than four million subscribers.",
-   "source": "Federal Reserve History, Liberty Bonds",
-   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
-   "status": "VERIFIED"
-  },
-  {
    "id": 25,
-   "category": "history",
-   "text": "About 20 million Americans bought Liberty Bonds in World War I, when the country had only 24 million households.",
-   "source": "Federal Reserve History, Liberty Bonds",
-   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "In fiscal 2026, net interest on the debt ($1.05 trillion) cost more than national defense ($965 billion).",
+   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2026-09-30",
+   "status": "VERIFIED",
+   "note": "Net Interest $1,051.8B; National Defense $965.2B (FYTD through September 2026)."
   },
   {
    "id": 26,
    "category": "history",
-   "text": "Roughly two-thirds of World War I funding came from bond sales and one-third from taxes.",
-   "source": "Federal Reserve History, Liberty Bonds",
-   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
-   "status": "VERIFIED"
+   "text": "During the 1930s, the national debt more than doubled, from $16.2 billion in 1930 to $40.4 billion in 1939.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "1930-06-30 = $16.19 billion; 1939-06-30 = $40.44 billion; ratio 2.5."
   },
   {
    "id": 27,
-   "category": "history",
-   "text": "Federal debt topped $25 billion by the end of 1919 as World War I bills came due.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "The national debt has doubled in a decade, from $19.7 trillion in October 2016 to $40.3 trillion in October 2026.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "2016-10-07 = $19.687T; 2026-10-09 = $40.301T; ratio 2.05."
   },
   {
    "id": 28,
    "category": "history",
-   "text": "Budget surpluses in the 1920s cut the federal debt from about $24 billion to about $17 billion.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "text": "Norman Rockwell's Four Freedoms paintings toured department stores in 1943 and helped sell $130 million in war bonds.",
+   "source": "TreasuryDirect, The History of U.S. Savings Bonds (timeline)",
+   "url": "https://www.treasurydirect.gov/timeline.htm",
    "status": "VERIFIED"
   },
   {
    "id": 29,
    "category": "history",
-   "text": "By 1933 the federal deficit was nearly $3 billion and the debt had climbed past $22 billion.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "text": "Treasury's records put the debt at exactly $75,463,476.52 on January 1, 1791, counted down to the penny.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding?filter=record_fiscal_year:eq:1791",
    "status": "VERIFIED"
   },
   {
    "id": 30,
-   "category": "history",
-   "text": "Treasury first offered U.S. Savings Bonds on March 1, 1935, and they later helped finance World War II.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "category": "current",
+   "text": "Foreign investors held $9.25 trillion of U.S. Treasuries in July 2026, by Treasury's international capital data.",
+   "source": "U.S. Treasury, Treasury International Capital Table 5: Major Foreign Holders of Treasury Securities (July 2026)",
+   "url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt",
    "status": "VERIFIED"
   },
   {
    "id": 31,
    "category": "history",
-   "text": "World War II cost an estimated $323 billion, and about $211 billion of it was borrowed.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "text": "In fiscal 2020, the pandemic added $4.2 trillion to the debt, taking it from $22.7 trillion to $26.9 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "2019-09-30 = $22.72 trillion; 2020-09-30 = $26.95 trillion; difference $4.23 trillion."
   },
   {
    "id": 32,
-   "category": "history",
-   "text": "By the end of World War II, Savings Bonds made up almost 18 percent of the total public debt.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "Fitch cut the U.S. from AAA to AA+ on August 1, 2023, citing falling governance standards and a rising debt burden.",
+   "source": "Peter G. Peterson Foundation, With $40 Trillion in Debt, Is the U.S. Headed for More Credit Downgrades?",
+   "url": "https://www.pgpf.org/article/with-40-trillion-in-debt-is-the-u-s-headed-for-more-credit-downgrades/",
+   "status": "VERIFIED",
+   "note": "Date and 'steady deterioration in standards of governance' language from Reuters-sourced coverage (The Week, Aug 2, 2023); PGPF page notes Fitch cited high and rising debt."
   },
   {
    "id": 33,
    "category": "history",
-   "text": "Federal debt was about $259 billion on June 30, 1945, up from $43 billion five years earlier.",
-   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
-   "status": "VERIFIED",
-   "note": "Historical Debt Outstanding: 1945-06-30 = $258,682,187,409.93; 1940-06-29 = $42,967,531,037.68."
+   "text": "About 20 million Americans bought Liberty Bonds in World War I, in a country of only 24 million households.",
+   "source": "Federal Reserve History, Liberty Bonds",
+   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
+   "status": "VERIFIED"
   },
   {
    "id": 34,
    "category": "history",
-   "text": "Debt held by the public peaked at about 106 percent of GDP in 1946, right after World War II.",
-   "source": "FRED, Federal Reserve Bank of St. Louis: Gross Federal Debt Held by the Public as Percent of GDP",
-   "url": "https://fred.stlouisfed.org/data/FYPUGDA188S.txt",
-   "status": "VERIFIED",
-   "note": "FRED series FYPUGDA188S: 1946 = 106.31 percent, the maximum of the series (begins 1940)."
+   "text": "In July 1939, Congress set the first overall debt limit at $45 billion, only about 10 percent above the $40.4 billion debt.",
+   "source": "Congressional Research Service RL31967, The Debt Limit: History and Recent Increases",
+   "url": "https://www.congress.gov/crs_external_products/RL/PDF/RL31967/RL31967.139.pdf",
+   "status": "VERIFIED"
   },
   {
    "id": 35,
-   "category": "history",
-   "text": "By 1974, debt held by the public was down to about 22 percent of GDP.",
-   "source": "FRED, Federal Reserve Bank of St. Louis: Gross Federal Debt Held by the Public as Percent of GDP",
-   "url": "https://fred.stlouisfed.org/data/FYPUGDA188S.txt",
-   "status": "VERIFIED",
-   "note": "FRED series FYPUGDA188S: 1974 = 22.24 percent."
+   "category": "current",
+   "text": "In fiscal 2026, the government paid about $33,000 in net interest every second.",
+   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2026-09-30",
+   "status": "DERIVED",
+   "note": "$1,051.8B divided by 31,536,000 seconds = $33,350 per second."
   },
   {
    "id": 36,
    "category": "history",
-   "text": "The federal government ran a budget surplus every year from 1946 through 1949.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "text": "In 1943, schoolchildren's bond and stamp purchases paid for 90,000 Jeeps under the Schools at War program.",
+   "source": "TreasuryDirect, The History of U.S. Savings Bonds (timeline)",
+   "url": "https://www.treasurydirect.gov/timeline.htm",
    "status": "VERIFIED"
   },
   {
    "id": 37,
    "category": "history",
-   "text": "The 1969 federal budget surplus of $3.2 billion was the last one until 1998.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
+   "text": "It took 12.6 years for the debt to go from $5 to $10 trillion, 8.9 years to reach $20 trillion, and 4.4 more to hit $30 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "First Debt to the Penny records at or above $5T (1996-02-23), $10T (2008-09-30), $20T (2017-09-08), $30T (2022-01-31): 12.6, 8.9 and 4.4 years."
   },
   {
    "id": 38,
-   "category": "history",
-   "text": "In 1971, Treasury began selling notes by competitive auction, letting the market set interest rates.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "category": "current",
+   "text": "CBO projects net interest will more than double from $970 billion in 2025 to $2.1 trillion in 2036.",
+   "source": "Committee for a Responsible Federal Budget, on CBO's February 2026 Budget and Economic Outlook",
+   "url": "https://www.crfb.org/blogs/cbo-releases-february-2026-budget-and-economic-outlook",
    "status": "VERIFIED"
   },
   {
    "id": 39,
    "category": "history",
-   "text": "From 1980 to 1990, the national debt more than tripled as the government borrowed for military build-ups and new policies.",
+   "text": "Alexander Hamilton wrote that a national debt, if it is not excessive, will be to us a national blessing.",
    "source": "TreasuryDirect, The History of the Debt",
    "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
    "status": "VERIFIED"
   },
   {
    "id": 40,
-   "category": "history",
-   "text": "The national debt was $998 billion at the end of fiscal 1981 and $1.14 trillion a year later.",
-   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
-   "status": "VERIFIED",
-   "note": "Historical Debt Outstanding: 1981-09-30 = $997,855,000,000; 1982-09-30 = $1,142,034,000,000."
+   "category": "current",
+   "text": "Debt held by the public reached about 100 percent of GDP in fiscal 2026, a share topped only in 1945 and 1946.",
+   "source": "Committee for a Responsible Federal Budget, FY 2026 deficit estimate (Oct 1, 2026)",
+   "url": "https://www.crfb.org/blogs/us-ran-2-trillion-deficit-last-year-we-estimate",
+   "status": "VERIFIED"
   },
   {
    "id": 41,
    "category": "history",
-   "text": "Treasury's daily data first showed more than $5 trillion of debt on February 23, 1996.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "First Debt to the Penny record with tot_pub_debt_out_amt of at least $5T is 1996-02-23 ($5.017T)."
+   "text": "After World War II, Congress cut the debt limit from $300 billion to $275 billion and left it there until 1954.",
+   "source": "Congressional Research Service RL31967, The Debt Limit: History and Recent Increases",
+   "url": "https://www.congress.gov/crs_external_products/RL/PDF/RL31967/RL31967.139.pdf",
+   "status": "VERIFIED"
   },
   {
    "id": 42,
    "category": "history",
-   "text": "Treasury's daily data first showed more than $10 trillion of debt on September 30, 2008.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "First record at or above $10T is 2008-09-30 ($10.025T); 2008-09-29 was $9.946T."
+   "text": "The first Liberty Loan opened on April 28, 1917, just 22 days after the U.S. declared war in World War I.",
+   "source": "Federal Reserve History, Liberty Bonds",
+   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
+   "status": "VERIFIED"
   },
   {
    "id": 43,
-   "category": "history",
-   "text": "Treasury's daily data first showed more than $15 trillion of debt on November 15, 2011.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "First record at or above $15T is 2011-11-15 ($15.034T)."
+   "category": "current",
+   "text": "In July 2026, the United Kingdom held a record $998 billion of U.S. Treasuries, second only to Japan.",
+   "source": "U.S. Treasury, Treasury International Capital Table 5: Major Foreign Holders of Treasury Securities (July 2026)",
+   "url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt",
+   "status": "VERIFIED",
+   "note": "TIC Table 5: UK $998.3B in July 2026; the series high in the Treasury history file (through 2025) is $901.3B. Treasury cautions custody data can misattribute owners."
   },
   {
    "id": 44,
    "category": "history",
-   "text": "Treasury's daily data first showed more than $20 trillion of debt on September 8, 2017.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "First record at or above $20T is 2017-09-08 ($20.162T); 2017-09-07 was $19.845T."
+   "text": "In 2008, New York's debt clock ran out of digits when the national debt passed $10 trillion.",
+   "source": "NBC News, National-Debt Clock Maxed Out (Oct 2008)",
+   "url": "https://www.nbcdfw.com/news/national-international/national-debt_clock_maxed_out/1838419/",
+   "status": "VERIFIED",
+   "note": "Debt to the Penny: first record above $10 trillion is 2008-09-30 ($10.025T)."
   },
   {
    "id": 45,
-   "category": "history",
-   "text": "Treasury's daily data first showed more than $30 trillion of debt on January 31, 2022.",
+   "category": "current",
+   "text": "As of October 2026, the national debt equals roughly $299,000 for every U.S. household.",
    "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
    "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
    "status": "DERIVED",
-   "note": "First record at or above $30T is 2022-01-31 ($30.012T)."
+   "note": "Debt $40.329T (2026-10-14) divided by 134.79 million households (Census Current Population Survey via FRED TTLHH, 2025)."
   },
   {
    "id": 46,
    "category": "history",
-   "text": "Treasury's daily data first showed more than $40 trillion of debt on August 18, 2026.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "First record at or above $40T is 2026-08-18 ($40.047T); 2026-08-17 was $39.987T."
+   "text": "Einstein hand-copied his 1905 relativity paper in 1943 to help sell war bonds; it now sits in the Library of Congress.",
+   "source": "Library of Congress, Albert Einstein Papers finding aid",
+   "url": "https://hdl.loc.gov/loc.mss/eadmss.ms009078",
+   "status": "VERIFIED",
+   "note": "Finding aid: autographed fair copy of the 1905 paper made by Einstein in 1943 and donated to promote the sale of war bonds."
   },
   {
    "id": 47,
    "category": "history",
-   "text": "It took nearly nine years for the debt to climb from $10 trillion to $20 trillion, from 2008 to 2017.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "2008-09-30 to 2017-09-08 = 3,265 days = 8.94 years."
+   "text": "Debt held by the public peaked at 106 percent of GDP in 1946, then fell to 22 percent by 1974.",
+   "source": "FRED, Federal Reserve Bank of St. Louis: Federal Debt Held by the Public as Percent of GDP",
+   "url": "https://fred.stlouisfed.org/data/FYPUGDA188S.txt",
+   "status": "VERIFIED",
+   "note": "FRED FYPUGDA188S: 1946 = 106.31 percent (series maximum); 1974 = 22.24 percent. Dollar debt kept rising; the share of GDP fell."
   },
   {
    "id": 48,
-   "category": "history",
-   "text": "The climb from $30 trillion to $40 trillion took about four and a half years, from January 2022 to August 2026.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "2022-01-31 to 2026-08-18 = 1,660 days = 4.54 years."
+   "category": "current",
+   "text": "On September 30, 2026, the average rate on all U.S. debt was 3.53 percent, while the 10-year yield was 5.29 percent.",
+   "source": "U.S. Treasury Fiscal Data, Average Interest Rates on Treasury Securities (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/avg_interest_rates?filter=record_date:eq:2026-09-30",
+   "status": "VERIFIED",
+   "note": "Average rate on total interest-bearing debt = 3.531 percent. 10-year par yield on 2026-09-30 = 5.29 percent (Treasury Daily Par Yield Curve Rates)."
   },
   {
    "id": 49,
    "category": "history",
-   "text": "The most recent trillion came fast: debt went from $39 trillion on March 17, 2026 to $40 trillion on August 18.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "First record at or above $39T is 2026-03-17 ($39.017T); to 2026-08-18 is 154 days."
+   "text": "The 1862 Legal Tender Act authorized $150 million in U.S. notes and $500 million in bonds to pay for the Civil War.",
+   "source": "TreasuryDirect, The History of the Debt",
+   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
+   "status": "VERIFIED"
   },
   {
    "id": 50,
-   "category": "history",
-   "text": "The national debt grew by about $4.5 trillion in calendar year 2020, from $23.2 trillion to $27.7 trillion.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "2019-12-31 = $23,201,380,134,806.73; 2020-12-31 = $27,747,797,947,667.77; difference $4.546T."
+   "category": "current",
+   "text": "CBO's long-term outlook has debt held by the public reaching 175 percent of GDP, about $168 trillion, by 2056.",
+   "source": "Committee for a Responsible Federal Budget, on CBO's 2026 long-term outlook",
+   "url": "https://www.crfb.org/blogs/debt-rises-175-gdp-under-cbos-long-term-outlook",
+   "status": "VERIFIED"
   },
   {
    "id": 51,
    "category": "history",
-   "text": "The government ran four straight budget surpluses from fiscal 1998 to 2001, peaking at $236 billion in 2000.",
-   "source": "FRED, Federal Reserve Bank of St. Louis: Federal Surplus or Deficit",
-   "url": "https://fred.stlouisfed.org/data/FYFSD.txt",
-   "status": "VERIFIED",
-   "note": "FRED series FYFSD (millions): 1998 +69,270; 1999 +125,610; 2000 +236,241; 2001 +128,236."
+   "text": "After peaking at $2.77 billion in 1866, the debt fell 44 percent over 27 years, to $1.55 billion in 1893.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "1866-07-01 = $2.773 billion; 1893-07-01 = $1.546 billion; decline 44 percent."
   },
   {
    "id": 52,
    "category": "history",
-   "text": "The federal budget has run a deficit every year since its last surplus in 2001.",
-   "source": "U.S. Treasury Fiscal Data, Understanding the National Deficit",
-   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/national-deficit/",
+   "text": "A World War I bond poster slogan read, 'If you can't enlist, invest.'",
+   "source": "Federal Reserve History, Liberty Bonds",
+   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
    "status": "VERIFIED"
   },
   {
    "id": 53,
-   "category": "history",
-   "text": "The federal deficit topped $1.4 trillion in fiscal 2009, during the Great Recession.",
-   "source": "FRED, Federal Reserve Bank of St. Louis: Federal Surplus or Deficit",
-   "url": "https://fred.stlouisfed.org/data/FYFSD.txt",
-   "status": "VERIFIED",
-   "note": "FRED series FYFSD: 2009 = -1,412,688 million."
+   "category": "current",
+   "text": "In fiscal 2026, net interest took about 19.5 cents of every dollar the government collected in revenue.",
+   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2026-09-30",
+   "status": "DERIVED",
+   "note": "Net Interest $1,051.8B divided by total receipts $5,403.3B = 19.5 percent."
   },
   {
    "id": 54,
    "category": "history",
-   "text": "The federal deficit reached about $3.1 trillion in fiscal 2020 as the pandemic hit.",
-   "source": "FRED, Federal Reserve Bank of St. Louis: Federal Surplus or Deficit",
-   "url": "https://fred.stlouisfed.org/data/FYFSD.txt",
-   "status": "VERIFIED",
-   "note": "FRED series FYFSD: 2020 = -3,095,653 million."
+   "text": "Surpluses in the 1920s cut the national debt by more than a third, from $26.0 billion in 1920 to $16.2 billion in 1930.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "1920-06-30 = $25.95 billion; 1930-06-30 = $16.19 billion; decline 37.6 percent."
   },
   {
    "id": 55,
-   "category": "history",
-   "text": "Gross federal debt passed 100 percent of GDP in 2013, when debt and GDP were each about $16.7 trillion.",
-   "source": "U.S. Treasury Fiscal Data, Understanding the National Debt",
-   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "The Federal Reserve held $4.78 trillion of Treasury debt in mid-2026, down from a $6.25 trillion peak in early 2022.",
+   "source": "FRED, Federal Reserve Bank of St. Louis: Federal Debt Held by Federal Reserve Banks",
+   "url": "https://fred.stlouisfed.org/data/FDHBFRBN.txt",
+   "status": "VERIFIED",
+   "note": "FRED FDHBFRBN: 2026 Q2 = 4,780.1 billion; maximum 6,254.966 billion in 2022 Q1."
   },
   {
    "id": 56,
    "category": "history",
-   "text": "Federal spending rose about 50 percent from fiscal 2019 to fiscal 2021 in response to the pandemic.",
-   "source": "U.S. Treasury Fiscal Data, Understanding the National Debt",
-   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/",
+   "text": "In 1898, Congress let small investors buy part of $400 million in bonds to help fund the Spanish-American War.",
+   "source": "Congressional Research Service RL31967, The Debt Limit: History and Recent Increases",
+   "url": "https://www.congress.gov/crs_external_products/RL/PDF/RL31967/RL31967.139.pdf",
    "status": "VERIFIED"
   },
   {
    "id": 57,
    "category": "history",
-   "text": "TreasuryDirect opened to the public in October 2002, first offering online Series I savings bonds.",
+   "text": "After a $3.2 billion surplus in 1969, the federal budget did not balance again until 1998.",
    "source": "TreasuryDirect, The History of the Debt",
    "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
    "status": "VERIFIED"
   },
   {
    "id": 58,
-   "category": "history",
-   "text": "Debt held by the public has grown every year since 2001, Concord notes.",
-   "source": "The Concord Coalition, Thirty-three Years of Lessons Learned and What It Means for the Future",
-   "url": "https://www.concordcoalition.org/special-publications/thirty-three-years-of-lessons-learned-and-what-it-means-for-the-future/",
+   "category": "current",
+   "text": "The debt limit is $41.1 trillion, and outside projections say the debt could reach it in early to mid 2027.",
+   "source": "Congressional Research Service IF10292, The Debt Limit (updated Sept 21, 2026)",
+   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.22.pdf",
    "status": "VERIFIED"
   },
   {
    "id": 59,
-   "category": "numbers",
-   "text": "As of October 9, 2026, the national debt was about $40.3 trillion.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-10-09",
-   "status": "VERIFIED",
-   "note": "tot_pub_debt_out_amt = $40,301,480,531,899.65 on 2026-10-09."
+   "category": "history",
+   "text": "Bonds paid for about two-thirds of World War I and taxes the rest: more than $17 billion versus $8.8 billion.",
+   "source": "Federal Reserve History, Liberty Bonds",
+   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
+   "status": "VERIFIED"
   },
   {
    "id": 60,
-   "category": "numbers",
-   "text": "As of October 9, 2026, about $32.4 trillion of the debt was held by the public and $7.9 trillion by government accounts.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-10-09",
-   "status": "VERIFIED",
-   "note": "debt_held_public_amt $32.448T; intragov_hold_amt $7.854T."
+   "category": "current",
+   "text": "One year of net interest in fiscal 2026 ($1.05 trillion) exceeded the entire national debt in 1981 ($998 billion).",
+   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2026-09-30",
+   "status": "DERIVED",
+   "note": "MTS Table 9 net interest $1,051.8B; Historical Debt Outstanding 1981-09-30 = $997.9B."
   },
   {
    "id": 61,
-   "category": "numbers",
-   "text": "In the 12 months to October 9, 2026, the national debt grew by about $2.4 trillion.",
-   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
-   "status": "DERIVED",
-   "note": "2025-10-09 = $37,883,930,412,462.39; 2026-10-09 = $40,301,480,531,899.65; difference $2.418T."
+   "category": "history",
+   "text": "From April 1942, the Fed held Treasury bill rates at 3/8 percent to keep World War II borrowing cheap.",
+   "source": "Federal Reserve History, The Treasury-Fed Accord",
+   "url": "https://www.federalreservehistory.org/essays/treasury-fed-accord",
+   "status": "VERIFIED"
   },
   {
    "id": 62,
-   "category": "numbers",
-   "text": "Treasury's Debt to the Penny dataset has daily national debt figures going back to April 1993.",
-   "source": "U.S. Treasury Fiscal Data, Understanding the National Debt",
-   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/",
+   "category": "history",
+   "text": "World War II War Stamps cost as little as 10 cents, so any citizen could lend Washington a dime.",
+   "source": "TreasuryDirect, The History of U.S. Savings Bonds (timeline)",
+   "url": "https://www.treasurydirect.gov/timeline.htm",
    "status": "VERIFIED"
   },
   {
    "id": 63,
-   "category": "numbers",
-   "text": "Debt held by the public is money owed to outsiders, such as investors, state governments, the Fed and foreign governments.",
-   "source": "The Concord Coalition, FAQ",
-   "url": "https://www.concordcoalition.org/faq/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "The last two trillions took about five months each: 147 days to reach $39 trillion and 154 days to reach $40 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "$38T on 2025-10-21; $39T on 2026-03-17 (147 days); $40T on 2026-08-18 (154 days)."
   },
   {
    "id": 64,
-   "category": "numbers",
-   "text": "Intragovernmental debt is what the government owes itself, mostly to trust funds like Social Security and Medicare.",
-   "source": "The Concord Coalition, FAQ",
-   "url": "https://www.concordcoalition.org/faq/",
-   "status": "VERIFIED"
+   "category": "history",
+   "text": "The national debt ended fiscal 1981 at $998 billion and a year later stood at $1.14 trillion, passing $1 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "VERIFIED",
+   "note": "1981-09-30 = $997.855 billion; 1982-09-30 = $1,142.034 billion."
   },
   {
    "id": 65,
-   "category": "numbers",
-   "text": "Treasury sells five kinds of marketable securities: bills, notes, bonds, inflation-protected securities and floating rate notes.",
-   "source": "TreasuryDirect, About Treasury Marketable Securities",
-   "url": "https://www.treasurydirect.gov/marketable-securities/",
+   "category": "history",
+   "text": "In 1943, the Hollywood Bond Cavalcade sent Lucille Ball, Judy Garland and Mickey Rooney on tour to sell war bonds.",
+   "source": "TreasuryDirect, The History of U.S. Savings Bonds (timeline)",
+   "url": "https://www.treasurydirect.gov/timeline.htm",
    "status": "VERIFIED"
   },
   {
    "id": 66,
-   "category": "numbers",
-   "text": "Treasury bills mature in as little as 4 weeks or as long as 52 weeks.",
-   "source": "TreasuryDirect, About Treasury Marketable Securities",
-   "url": "https://www.treasurydirect.gov/marketable-securities/",
-   "status": "VERIFIED"
+   "category": "current",
+   "text": "As of September 30, 2026, $7.1 trillion of the debt was in Treasury bills, which mature in a year or less.",
+   "source": "U.S. Treasury Fiscal Data, Monthly Statement of the Public Debt Table 1 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/debt/mspd/mspd_table_1?filter=record_date:eq:2026-09-30",
+   "status": "VERIFIED",
+   "note": "MSPD Table 1: Bills = $7,118,145 million. TreasuryDirect: bills have terms from 4 weeks to 52 weeks."
   },
   {
    "id": 67,
-   "category": "numbers",
-   "text": "Treasury notes come in 2, 3, 5, 7 and 10 year terms and pay interest every six months.",
-   "source": "TreasuryDirect, About Treasury Marketable Securities",
-   "url": "https://www.treasurydirect.gov/marketable-securities/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 68,
-   "category": "numbers",
-   "text": "Treasury bonds are offered in 20 and 30 year terms and pay interest every six months.",
-   "source": "TreasuryDirect, About Treasury Marketable Securities",
-   "url": "https://www.treasurydirect.gov/marketable-securities/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 69,
-   "category": "numbers",
-   "text": "Inflation-protected Treasury securities, called TIPS, adjust their principal with the Consumer Price Index.",
-   "source": "TreasuryDirect, About Treasury Marketable Securities",
-   "url": "https://www.treasurydirect.gov/marketable-securities/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 70,
-   "category": "numbers",
-   "text": "Treasury floating rate notes last two years and pay interest quarterly, tied to 13-week bill rates.",
-   "source": "TreasuryDirect, About Treasury Marketable Securities",
-   "url": "https://www.treasurydirect.gov/marketable-securities/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 71,
-   "category": "numbers",
-   "text": "Treasury runs more than 425 debt auctions every year to fund the government.",
-   "source": "TreasuryDirect, The History of the Debt",
-   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 72,
-   "category": "numbers",
-   "text": "As of September 30, 2026, Treasury notes were the largest slice of marketable debt, at about $16.3 trillion.",
-   "source": "U.S. Treasury Fiscal Data, Monthly Statement of the Public Debt Table 1 (September 2026)",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/debt/mspd/mspd_table_1?filter=record_date:eq:2026-09-30",
-   "status": "VERIFIED",
-   "note": "Notes total_mil_amt 16,281,507."
-  },
-  {
-   "id": 73,
-   "category": "numbers",
-   "text": "As of September 30, 2026, about $7.1 trillion of the debt was in short-term Treasury bills.",
-   "source": "U.S. Treasury Fiscal Data, Monthly Statement of the Public Debt Table 1 (September 2026)",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/debt/mspd/mspd_table_1?filter=record_date:eq:2026-09-30",
-   "status": "VERIFIED",
-   "note": "Bills total_mil_amt 7,118,145."
-  },
-  {
-   "id": 74,
-   "category": "numbers",
-   "text": "On September 30, 2026, the average interest rate on all interest-bearing federal debt was 3.53 percent.",
-   "source": "U.S. Treasury Fiscal Data, Average Interest Rates on Treasury Securities (September 2026)",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/avg_interest_rates?filter=record_date:eq:2026-09-30",
-   "status": "VERIFIED",
-   "note": "Total Interest-bearing Debt avg_interest_rate_amt = 3.531."
-  },
-  {
-   "id": 75,
-   "category": "numbers",
-   "text": "Washington spent $7.0 trillion in fiscal 2025 but collected only $5.2 trillion in revenue.",
-   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2025)",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2025-09-30",
-   "status": "VERIFIED",
-   "note": "Total outlays $7,009,973,667,049; total receipts $5,234,616,386,315 (fiscal year to date, September 2025)."
-  },
-  {
-   "id": 76,
-   "category": "numbers",
-   "text": "Social Security is the federal government's largest program, paying monthly benefits to over 71 million people in 2026.",
-   "source": "Congressional Research Service IF13256, Social Security: Selected Findings of the 2026 Annual Report (June 25, 2026)",
-   "url": "https://www.everycrsreport.com/reports/IF13256.html",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 77,
-   "category": "numbers",
-   "text": "In 2026, about 186 million workers are covered by Social Security.",
-   "source": "Congressional Research Service IF13256, Social Security: Selected Findings of the 2026 Annual Report (June 25, 2026)",
-   "url": "https://www.everycrsreport.com/reports/IF13256.html",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 78,
-   "category": "numbers",
-   "text": "Payroll taxes supplied 91.3 percent of Social Security's revenue in 2025.",
-   "source": "Congressional Research Service IF13256, Social Security: Selected Findings of the 2026 Annual Report (June 25, 2026)",
-   "url": "https://www.everycrsreport.com/reports/IF13256.html",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 79,
-   "category": "numbers",
-   "text": "Social Security's trust fund reserves peaked at $2.91 trillion in 2020.",
-   "source": "Congressional Research Service IF13256, Social Security: Selected Findings of the 2026 Annual Report (June 25, 2026)",
-   "url": "https://www.everycrsreport.com/reports/IF13256.html",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 80,
-   "category": "numbers",
-   "text": "The 2026 Trustees project Social Security's retirement fund runs dry in late 2032 and the combined funds in 2034.",
-   "source": "Congressional Research Service IF13256, Social Security: Selected Findings of the 2026 Annual Report (June 25, 2026)",
-   "url": "https://www.everycrsreport.com/reports/IF13256.html",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 81,
-   "category": "numbers",
-   "text": "If Social Security's combined funds are depleted in 2034, tax income would cover about 83 percent of scheduled benefits.",
-   "source": "Congressional Research Service IF13256, Social Security: Selected Findings of the 2026 Annual Report (June 25, 2026)",
-   "url": "https://www.everycrsreport.com/reports/IF13256.html",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 82,
-   "category": "numbers",
-   "text": "The 2026 Medicare Trustees Report projects the Hospital Insurance trust fund runs out in 2033, covering 89 percent of benefits.",
-   "source": "CMS, 2026 Annual Report of the Medicare Boards of Trustees",
-   "url": "https://www.cms.gov/oact/tr/2026",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 83,
-   "category": "numbers",
-   "text": "In 1960 five workers paid taxes for each Social Security beneficiary; by 2025 the ratio was sinking below three to one.",
-   "source": "The Concord Coalition, Thirty-three Years of Lessons Learned and What It Means for the Future",
-   "url": "https://www.concordcoalition.org/special-publications/thirty-three-years-of-lessons-learned-and-what-it-means-for-the-future/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 84,
-   "category": "numbers",
-   "text": "CBO's February 2026 baseline has debt held by the public reaching a record 120 percent of GDP by 2036.",
-   "source": "Committee for a Responsible Federal Budget, on CBO's February 2026 Budget and Economic Outlook",
-   "url": "https://www.crfb.org/blogs/cbo-releases-february-2026-budget-and-economic-outlook",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 85,
-   "category": "numbers",
-   "text": "CBO's February 2026 baseline has the annual deficit growing to $3.1 trillion by 2036.",
-   "source": "Committee for a Responsible Federal Budget, on CBO's February 2026 Budget and Economic Outlook",
-   "url": "https://www.crfb.org/blogs/cbo-releases-february-2026-budget-and-economic-outlook",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 86,
-   "category": "numbers",
-   "text": "CBO projects Social Security and health care spending will grow from 11.2 percent of GDP in 2025 to 12.5 percent in 2036.",
-   "source": "Committee for a Responsible Federal Budget, on CBO's February 2026 Budget and Economic Outlook",
-   "url": "https://www.crfb.org/blogs/cbo-releases-february-2026-budget-and-economic-outlook",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 87,
-   "category": "numbers",
-   "text": "Concord Action reports private investors held roughly 60 percent of Treasuries in September 2026, up from 37 percent in 2014.",
-   "source": "Concord Action, The New Buyers of U.S. Debt (Sept 30, 2026)",
-   "url": "https://www.concordaction.org/news/blogs/the-new-buyers-of-u-s-debt-why-treasury-ownership-matters-more-than-ever/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 88,
-   "category": "numbers",
-   "text": "Foreign governments held 34 percent of publicly held Treasuries in 2014 and about 17 percent by September 2026, Concord Action reports.",
-   "source": "Concord Action, The New Buyers of U.S. Debt (Sept 30, 2026)",
-   "url": "https://www.concordaction.org/news/blogs/the-new-buyers-of-u-s-debt-why-treasury-ownership-matters-more-than-ever/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 89,
-   "category": "numbers",
-   "text": "Hedge funds roughly doubled their Treasury exposure to about $4 trillion between 2023 and September 2025.",
-   "source": "Concord Action, The New Buyers of U.S. Debt (Sept 30, 2026)",
-   "url": "https://www.concordaction.org/news/blogs/the-new-buyers-of-u-s-debt-why-treasury-ownership-matters-more-than-ever/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 90,
-   "category": "numbers",
-   "text": "The Federal Reserve held about $4.8 trillion of federal debt at the end of June 2026, down from a $6.3 trillion peak in early 2022.",
-   "source": "FRED, Federal Reserve Bank of St. Louis: Federal Debt Held by Federal Reserve Banks",
-   "url": "https://fred.stlouisfed.org/data/FDHBFRBN.txt",
-   "status": "VERIFIED",
-   "note": "FRED FDHBFRBN: 2026 Q2 = 4,780.1 billion; max 6,254.966 billion in 2022 Q1 (end of period)."
-  },
-  {
-   "id": 91,
-   "category": "numbers",
-   "text": "Foreign and international investors held about $9.4 trillion of federal debt at the end of March 2026.",
-   "source": "FRED, Federal Reserve Bank of St. Louis: Federal Debt Held by Foreign and International Investors",
-   "url": "https://fred.stlouisfed.org/data/FDHBFIN.txt",
-   "status": "VERIFIED",
-   "note": "FRED FDHBFIN: 2026 Q1 = 9,355.0 billion (end of period)."
-  },
-  {
-   "id": 92,
-   "category": "numbers",
-   "text": "Gross federal debt equaled about 123 percent of GDP in the first quarter of 2026.",
-   "source": "FRED, Federal Reserve Bank of St. Louis: Total Public Debt as Percent of GDP",
-   "url": "https://fred.stlouisfed.org/data/GFDEGDQ188S.txt",
-   "status": "VERIFIED",
-   "note": "FRED GFDEGDQ188S: 2026 Q1 = 122.59 percent."
-  },
-  {
-   "id": 93,
-   "category": "numbers",
-   "text": "Mandatory spending, which needs no annual vote in Congress, makes up nearly two-thirds of federal spending.",
-   "source": "U.S. Treasury Fiscal Data, Federal Spending",
-   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/federal-spending/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 94,
-   "category": "numbers",
-   "text": "CBO estimated the federal deficit at about $2.0 trillion through the first 11 months of fiscal 2026.",
-   "source": "Concord Action, The New Fiscal Year Begins With $40 Trillion Debt (Oct 1, 2026)",
-   "url": "https://www.concordaction.org/news/press-releases/the-new-fiscal-year-begins-with-40-trillion-debt/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 95,
-   "category": "numbers",
-   "text": "The Committee for a Responsible Federal Budget estimates debt held by the public ended fiscal 2026 near 100 percent of GDP.",
-   "source": "Committee for a Responsible Federal Budget, FY 2026 deficit estimate (Oct 1, 2026)",
-   "url": "https://www.crfb.org/blogs/us-ran-2-trillion-deficit-last-year-we-estimate",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 96,
-   "category": "interest",
-   "text": "In fiscal 2025, net interest of $970 billion topped national defense spending of $917 billion.",
-   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2025)",
-   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2025-09-30",
-   "status": "VERIFIED",
-   "note": "Net Interest $970,358,886,994; National Defense $916,648,676,662."
-  },
-  {
-   "id": 97,
-   "category": "interest",
-   "text": "The Committee for a Responsible Federal Budget estimates fiscal 2026 interest costs hit a record $1.1 trillion.",
-   "source": "Committee for a Responsible Federal Budget, FY 2026 deficit estimate (Oct 1, 2026)",
-   "url": "https://www.crfb.org/blogs/us-ran-2-trillion-deficit-last-year-we-estimate",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 98,
-   "category": "interest",
-   "text": "In October 2026, Concord Action said net interest consumes over 20 percent of federal tax dollars.",
-   "source": "Concord Action, Another Fiscal Year, Another $2 Trillion Hole (Oct 8, 2026)",
-   "url": "https://www.concordaction.org/news/another-fiscal-year-another-2-trillion-hole/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 99,
-   "category": "interest",
-   "text": "Concord reported in 2025 that interest as a share of federal revenue more than doubled in a decade, from 7 to nearly 20 percent.",
-   "source": "The Concord Coalition, Thirty-three Years of Lessons Learned and What It Means for the Future",
-   "url": "https://www.concordcoalition.org/special-publications/thirty-three-years-of-lessons-learned-and-what-it-means-for-the-future/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 100,
-   "category": "interest",
-   "text": "CBO projects net interest will reach $2.1 trillion a year by 2036, up from $970 billion in 2025.",
-   "source": "Committee for a Responsible Federal Budget, on CBO's February 2026 Budget and Economic Outlook",
-   "url": "https://www.crfb.org/blogs/cbo-releases-february-2026-budget-and-economic-outlook",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 101,
-   "category": "interest",
-   "text": "On September 30, 2026, the 10-year Treasury yield rose above 5.30 percent, a 24-year high, Concord Action reports.",
-   "source": "Concord Action, The New Fiscal Year Begins With $40 Trillion Debt (Oct 1, 2026)",
-   "url": "https://www.concordaction.org/news/press-releases/the-new-fiscal-year-begins-with-40-trillion-debt/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 102,
-   "category": "interest",
-   "text": "If rates average 1.5 points above projections, CBO estimates deficits would grow by $6 trillion through 2036.",
-   "source": "Committee for a Responsible Federal Budget, on CBO's interest-rate analysis (Oct 8, 2026)",
-   "url": "https://www.crfb.org/blogs/cbo-finds-rising-rates-could-explode-debt",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 103,
-   "category": "interest",
-   "text": "Interest costs are now more than triple the $350 billion a year paid between 2018 and 2021, one budget watchdog estimates.",
-   "source": "Committee for a Responsible Federal Budget, FY 2026 deficit estimate (Oct 1, 2026)",
-   "url": "https://www.crfb.org/blogs/us-ran-2-trillion-deficit-last-year-we-estimate",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 104,
-   "category": "interest",
-   "text": "Kitty Kurth recalls Tsongas wanted less spent on interest so money remained for education and other priorities.",
-   "source": "The Concord Coalition, Facing the Future: The 1992 Tsongas Campaign and the Birth of The Concord Coalition (Jan 6, 2022)",
-   "url": "https://www.concordcoalition.org/facing-the-future/the-1992-tsongas-campaign-and-the-birth-of-the-concord-coalition/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 105,
-   "category": "budget-process",
-   "text": "The Budget and Accounting Act of 1921 required the President to submit an annual budget to Congress.",
-   "source": "U.S. House of Representatives, History, Art & Archives: Congressional Budget and Impoundment Control Act of 1974",
-   "url": "https://history.house.gov/Historical-Highlights/1951-2000/Congressional-Budget-and-Impoundment-Control-Act-of-1974/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 106,
-   "category": "budget-process",
-   "text": "The Budget Act signed July 12, 1974 created the House and Senate Budget Committees and the nonpartisan CBO.",
-   "source": "U.S. House of Representatives, History, Art & Archives: Congressional Budget and Impoundment Control Act of 1974",
-   "url": "https://history.house.gov/Historical-Highlights/1951-2000/Congressional-Budget-and-Impoundment-Control-Act-of-1974/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 107,
-   "category": "budget-process",
-   "text": "The 1974 Budget Act moved the start of the federal fiscal year from July 1 to October 1.",
-   "source": "U.S. House of Representatives, History, Art & Archives: Congressional Budget and Impoundment Control Act of 1974",
-   "url": "https://history.house.gov/Historical-Highlights/1951-2000/Congressional-Budget-and-Impoundment-Control-Act-of-1974/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 108,
-   "category": "budget-process",
-   "text": "The 1974 Budget Act also created reconciliation, a fast-track tool for passing budget legislation.",
-   "source": "U.S. House of Representatives, History, Art & Archives: Congressional Budget and Impoundment Control Act of 1974",
-   "url": "https://history.house.gov/Historical-Highlights/1951-2000/Congressional-Budget-and-Impoundment-Control-Act-of-1974/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 109,
-   "category": "budget-process",
-   "text": "A 1972 debt limit bill created the study committee that designed the 1974 congressional budget process.",
-   "source": "U.S. Senate Committee on the Budget, Committee History",
-   "url": "https://www.budget.senate.gov/about/committee-history",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 110,
-   "category": "budget-process",
-   "text": "In 1972, automatic Social Security cost-of-living increases passed as an amendment to a debt limit bill.",
-   "source": "The Concord Coalition, History and Future of the Social Security Trust Fund: Part II (Aug 23, 2023)",
-   "url": "https://www.concordcoalition.org/deep-dives/issue-brief/history-and-future-of-the-social-security-trust-fund-part-ii/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 111,
-   "category": "budget-process",
-   "text": "Gramm-Rudman-Hollings, signed December 12, 1985, set annual deficit targets that fell to zero by fiscal 1991.",
-   "source": "Congressional Research Service R41901, Statutory Budget Controls in Effect Between 1985 and 2002",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41901/R41901.4.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 112,
-   "category": "budget-process",
-   "text": "The 1985 deficit-target law rode along on a bill raising the debt limit to $2.079 trillion.",
-   "source": "Congressional Research Service R41901, Statutory Budget Controls in Effect Between 1985 and 2002",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41901/R41901.4.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 113,
-   "category": "budget-process",
-   "text": "In July 1986, the Supreme Court struck down Gramm-Rudman-Hollings' automatic cut mechanism in Bowsher v. Synar.",
-   "source": "Congressional Research Service R41901, Statutory Budget Controls in Effect Between 1985 and 2002",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41901/R41901.4.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 114,
-   "category": "budget-process",
-   "text": "The Budget Enforcement Act, signed November 5, 1990, introduced PAYGO rules and caps on discretionary spending.",
-   "source": "Congressional Research Service R41901, Statutory Budget Controls in Effect Between 1985 and 2002",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41901/R41901.4.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 115,
-   "category": "budget-process",
-   "text": "A fall 1990 budget summit at Andrews Air Force Base produced a five-year, $500 billion deficit reduction plan.",
-   "source": "Congressional Research Service R41901, Statutory Budget Controls in Effect Between 1985 and 2002",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41901/R41901.4.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 116,
-   "category": "budget-process",
-   "text": "The Statutory Pay-As-You-Go Act, signed February 12, 2010, is meant to keep new tax and mandatory spending laws budget neutral.",
-   "source": "Congressional Research Service R41157, The Statutory Pay-As-You-Go Act of 2010",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41157/R41157.9.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 117,
-   "category": "budget-process",
-   "text": "The 2010 statutory PAYGO law was attached to a bill raising the debt limit to $14.294 trillion.",
-   "source": "Congressional Research Service R41157, The Statutory Pay-As-You-Go Act of 2010",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41157/R41157.9.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 118,
-   "category": "budget-process",
-   "text": "The Budget Control Act, signed August 2, 2011, capped discretionary spending, which CBO estimated would save $917 billion.",
-   "source": "Congressional Research Service R41965, The Budget Control Act of 2011",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41965/R41965.4.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 119,
-   "category": "budget-process",
-   "text": "If the 2011 Joint Select Committee missed its $1.2 trillion deficit goal, automatic cuts called sequestration would follow.",
-   "source": "Congressional Research Service R41965, The Budget Control Act of 2011",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41965/R41965.4.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 120,
-   "category": "budget-process",
-   "text": "The Budget Act sets April 15 for adopting a budget resolution, but Congress has met that date only four times since FY1986.",
-   "source": "Congressional Research Service R47235, The Congressional Budget Process Timeline (July 29, 2025)",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R47235/R47235.6.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 121,
-   "category": "budget-process",
-   "text": "Congress adopted no budget resolution in 13 of the 50 fiscal years since the first one for fiscal 1976.",
-   "source": "Congressional Research Service R47235, The Congressional Budget Process Timeline (July 29, 2025)",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R47235/R47235.6.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 122,
-   "category": "budget-process",
-   "text": "A budget resolution is passed by the House and Senate but never signed by the President, and it is not a law.",
-   "source": "U.S. Senate Committee on the Budget, Committee History",
-   "url": "https://www.budget.senate.gov/about/committee-history",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 123,
-   "category": "budget-process",
-   "text": "Fiscal 1997 was the last time Congress enacted all of its regular spending bills by the October 1 start of the year.",
-   "source": "Congressional Research Service IN12324, Omnibus Appropriations: Overview of Recent Practice",
-   "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN12324/IN12324.2.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 124,
-   "category": "budget-process",
-   "text": "From fiscal 1997 through 2025, only 25 of 330 regular appropriations acts were enacted by October 1.",
-   "source": "Congressional Research Service R47235, The Congressional Budget Process Timeline (July 29, 2025)",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R47235/R47235.6.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 125,
-   "category": "budget-process",
-   "text": "House and Senate Appropriations each have 12 subcommittees, one for every regular spending bill.",
-   "source": "Congressional Research Service R47106, The Appropriations Process: A Brief Overview",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R47106/R47106.3.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 126,
-   "category": "budget-process",
-   "text": "A continuing resolution keeps agencies funded for a short time when regular spending bills are not done by October 1.",
-   "source": "Congressional Research Service R47235, The Congressional Budget Process Timeline (July 29, 2025)",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R47235/R47235.6.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 127,
-   "category": "budget-process",
-   "text": "By law the President's budget is due on the first Monday in February, eight months before the fiscal year starts.",
-   "source": "Congressional Research Service R47235, The Congressional Budget Process Timeline (July 29, 2025)",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R47235/R47235.6.pdf",
-   "status": "DERIVED",
-   "note": "Budget due first Monday in February; fiscal year begins October 1. 'Eight months' is approximate (about 8 months)."
-  },
-  {
-   "id": 128,
-   "category": "budget-process",
-   "text": "The longest government shutdown ran from October 1 to November 12, 2025, lasting 42 full days.",
-   "source": "Congressional Research Service R41759, Past Government Shutdowns: Key Resources (updated Sept 16, 2026)",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41759/R41759.45.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 129,
-   "category": "budget-process",
-   "text": "The previous record shutdown, which began in December 2018, lasted 34 full days.",
-   "source": "Congressional Research Service R41759, Past Government Shutdowns: Key Resources (updated Sept 16, 2026)",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41759/R41759.45.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 130,
-   "category": "budget-process",
-   "text": "The debt limit is $41.1 trillion, set by a $5.0 trillion increase in July 2025.",
-   "source": "Congressional Research Service IF10292, The Debt Limit (updated Sept 21, 2026)",
-   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.22.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 131,
-   "category": "budget-process",
-   "text": "Congress has approved 104 separate debt limit changes since the end of World War II.",
-   "source": "Congressional Research Service IF10292, The Debt Limit (updated Sept 21, 2026)",
-   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.22.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 132,
-   "category": "budget-process",
-   "text": "Congress has made 22 distinct changes to the debt limit since 2001.",
-   "source": "Congressional Research Service IF10292, The Debt Limit (updated Sept 21, 2026)",
-   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.22.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 133,
-   "category": "budget-process",
-   "text": "In July 1939, Congress set the first single debt limit covering nearly all public debt, at $45 billion.",
-   "source": "Congressional Research Service RL31967, The Debt Limit: History and Recent Increases",
-   "url": "https://www.congress.gov/crs_external_products/RL/PDF/RL31967/RL31967.139.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 134,
-   "category": "budget-process",
-   "text": "Debt subject to the debt limit is more than 99 percent of all federal debt.",
-   "source": "Congressional Research Service IF10292, The Debt Limit (updated Sept 21, 2026)",
-   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.22.pdf",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 135,
-   "category": "civics",
-   "text": "Article I of the Constitution gives Congress the power to borrow money on the credit of the United States.",
-   "source": "National Archives, The Constitution of the United States: A Transcription",
-   "url": "https://www.archives.gov/founding-docs/constitution-transcript",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 136,
-   "category": "civics",
-   "text": "The Constitution says no money may leave the Treasury except through appropriations made by law.",
-   "source": "National Archives, The Constitution of the United States: A Transcription",
-   "url": "https://www.archives.gov/founding-docs/constitution-transcript",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 137,
-   "category": "civics",
-   "text": "The Constitution requires a regular public statement of the government's receipts and expenditures.",
-   "source": "National Archives, The Constitution of the United States: A Transcription",
-   "url": "https://www.archives.gov/founding-docs/constitution-transcript",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 138,
-   "category": "civics",
-   "text": "The Constitution says all bills for raising revenue must originate in the House of Representatives.",
-   "source": "National Archives, The Constitution of the United States: A Transcription",
-   "url": "https://www.archives.gov/founding-docs/constitution-transcript",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 139,
-   "category": "civics",
-   "text": "Section 4 of the 14th Amendment says the validity of the public debt of the United States shall not be questioned.",
+   "category": "history",
+   "text": "The 14th Amendment, ratified July 9, 1868, declared debts incurred to aid the rebellion 'illegal and void.'",
    "source": "National Archives, Constitution Amendments 11-27",
    "url": "https://www.archives.gov/founding-docs/amendments-11-27",
    "status": "VERIFIED"
   },
   {
-   "id": 140,
-   "category": "civics",
-   "text": "The United States has never defaulted on its obligations, according to Treasury's Fiscal Data.",
-   "source": "U.S. Treasury Fiscal Data, Understanding the National Debt",
-   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/",
+   "id": 68,
+   "category": "current",
+   "text": "If rates run 1.5 points above CBO's February forecast through 2036, deficits would grow by $6 trillion, CBO estimates.",
+   "source": "Committee for a Responsible Federal Budget, on CBO's interest-rate analysis (Oct 8, 2026)",
+   "url": "https://www.crfb.org/blogs/cbo-finds-rising-rates-could-explode-debt",
    "status": "VERIFIED"
   },
   {
-   "id": 141,
-   "category": "civics",
-   "text": "The federal fiscal year runs from October 1 through September 30.",
-   "source": "The Concord Coalition, FAQ",
-   "url": "https://www.concordcoalition.org/faq/",
+   "id": 69,
+   "category": "history",
+   "text": "By the end of World War II, Savings Bonds made up nearly 18 percent of the total public debt.",
+   "source": "TreasuryDirect, The History of the Debt",
+   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
    "status": "VERIFIED"
   },
   {
-   "id": 142,
-   "category": "civics",
-   "text": "A deficit is one year's gap between spending and revenue, and the debt is the total of those past gaps.",
-   "source": "The Concord Coalition, FAQ",
-   "url": "https://www.concordcoalition.org/faq/",
+   "id": 70,
+   "category": "history",
+   "text": "From 1980 to 1990, the national debt more than tripled, from $908 billion to $3.2 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "1980-09-30 = $907.7 billion; 1990-09-28 = $3,233 billion; ratio 3.56."
+  },
+  {
+   "id": 71,
+   "category": "current",
+   "text": "China's Treasury holdings fell to $618 billion in July 2026, less than half the $1.317 trillion peak of November 2013.",
+   "source": "U.S. Treasury, Treasury International Capital Table 5: Major Foreign Holders of Treasury Securities (July 2026)",
+   "url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt",
+   "status": "DERIVED",
+   "note": "TIC Table 5: China $618.0B in July 2026. Treasury history file (mfhhis01): peak $1,316.7B in November 2013; 618.0 / 1,316.7 = 47 percent."
+  },
+  {
+   "id": 72,
+   "category": "history",
+   "text": "On October 16, 2013, Congress suspended the debt limit the night before Treasury's borrowing room was expected to run out.",
+   "source": "Congressional Research Service RL31967, The Debt Limit: History and Recent Increases",
+   "url": "https://www.congress.gov/crs_external_products/RL/PDF/RL31967/RL31967.139.pdf",
    "status": "VERIFIED"
   },
   {
-   "id": 143,
-   "category": "civics",
-   "text": "Discretionary spending is set in annual appropriations, while mandatory spending follows laws already on the books.",
-   "source": "U.S. Treasury Fiscal Data, Federal Spending",
-   "url": "https://fiscaldata.treasury.gov/americas-finance-guide/federal-spending/",
+   "id": 73,
+   "category": "current",
+   "text": "Only Social Security and Medicare cost more than net interest in fiscal 2026, by Treasury's spending categories.",
+   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2026-09-30",
+   "status": "DERIVED",
+   "note": "MTS Table 9 FY2026: Social Security $1,667B; Medicare $1,073B; Net Interest $1,052B; Health $1,026B; National Defense $965B."
+  },
+  {
+   "id": 74,
+   "category": "history",
+   "text": "The national debt more than doubled in five years, from $1.14 trillion in 1982 to $2.35 trillion in 1987.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "1982-09-30 = $1.142T; 1987-09-30 = $2.350T; ratio 2.06."
+  },
+  {
+   "id": 75,
+   "category": "history",
+   "text": "A March 4, 1951 Treasury-Fed Accord ended the wartime peg that had forced the Fed to keep buying government debt.",
+   "source": "Federal Reserve History, The Treasury-Fed Accord",
+   "url": "https://www.federalreservehistory.org/essays/treasury-fed-accord",
    "status": "VERIFIED"
   },
   {
-   "id": 144,
-   "category": "concord",
-   "text": "The Concord Coalition was founded in September 1992 to build a grassroots movement for fiscal responsibility.",
-   "source": "The Concord Coalition, Thirty-three Years of Lessons Learned and What It Means for the Future",
-   "url": "https://www.concordcoalition.org/special-publications/thirty-three-years-of-lessons-learned-and-what-it-means-for-the-future/",
-   "status": "VERIFIED"
+   "id": 76,
+   "category": "current",
+   "text": "The debt grew $2.5 trillion in fiscal 2026, more than the entire national debt at the end of fiscal 1987.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "2025-09-30 = $37.638T; 2026-09-30 = $40.172T; increase $2.534T. 1987-09-30 = $2.350T."
   },
   {
-   "id": 145,
-   "category": "concord",
-   "text": "Concord's founders were former Senators Paul Tsongas and Warren Rudman and former Commerce Secretary Peter G. Peterson.",
-   "source": "The Concord Coalition (archived site), About Us",
-   "url": "https://archive.concordcoalition.org/about-us/",
-   "status": "VERIFIED"
+   "id": 77,
+   "category": "history",
+   "text": "Surpluses from 1998 to 2001 cut debt held by the public by roughly $600 billion, from about $3.9 trillion to $3.3 trillion.",
+   "source": "FRED, Federal Reserve Bank of St. Louis: Federal Debt Held by the Public",
+   "url": "https://fred.stlouisfed.org/data/FYGFDPUN.txt",
+   "status": "DERIVED",
+   "note": "FRED FYGFDPUN: 1998 Q1 = $3.872T; 2001 Q2 = $3.274T (difference $598B). CRS IF10292 confirms debt held by the public declined between 1998 and 2001."
   },
   {
-   "id": 146,
-   "category": "concord",
-   "text": "Concord is named for the 1775 stand at Concord, Massachusetts, where farmers called Minutemen turned back British soldiers.",
-   "source": "The Concord Coalition (archived site), About Us",
-   "url": "https://archive.concordcoalition.org/about-us/",
-   "status": "VERIFIED"
+   "id": 78,
+   "category": "current",
+   "text": "On October 5, 2026, the 10-year Treasury yield closed at 5.31 percent, its highest close since 2002.",
+   "source": "U.S. Treasury, Daily Treasury Par Yield Curve Rates",
+   "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+   "status": "DERIVED",
+   "note": "2026 maximum 10-year par yield = 5.31 on 10/05/2026. Last close at or above 5.31 before that was 5.32 on 05/14/2002; annual maximums 2003 to 2025 were all lower (2007 5.26; 2023 4.98)."
   },
   {
-   "id": 147,
-   "category": "concord",
-   "text": "Paul Tsongas liked to point to Paul Revere, who got on his horse instead of ringing his bell from home.",
-   "source": "The Concord Coalition, Facing the Future: The 1992 Tsongas Campaign and the Birth of The Concord Coalition (Jan 6, 2022)",
-   "url": "https://www.concordcoalition.org/facing-the-future/the-1992-tsongas-campaign-and-the-birth-of-the-concord-coalition/",
+   "id": 79,
+   "category": "history",
+   "text": "After the 2013 debt-limit deal, the national debt jumped $328 billion in one day and crossed $17 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "2013-10-16 = $16.747T; 2013-10-17 = $17.076T; increase $328.2B."
+  },
+  {
+   "id": 80,
+   "category": "history",
+   "text": "In 2000, the White House said debt held by the public could be repaid by 2012. In 2026 it tops $32 trillion.",
+   "source": "White House archives, Statement by the President: National Debt Clock (Sept 7, 2000)",
+   "url": "https://clintonwhitehouse4.archives.gov/textonly/library/hot_releases/September_7_2000_3.html",
+   "status": "DERIVED",
+   "note": "White House statement: continued fiscal discipline would keep the country on a path to repay the debt held by the public by 2012. Debt to the Penny, 2026-10-14: debt held by the public = $32.48 trillion."
+  },
+  {
+   "id": 81,
+   "category": "current",
+   "text": "As of October 2026, about $7.8 trillion of the debt is owed to government trust funds and accounts, led by Social Security.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
    "status": "VERIFIED",
-   "note": "Quote is from Concord national field director Phil Smith recalling Tsongas."
+   "note": "Debt to the Penny 2026-10-14: intragovernmental holdings $7.846T. Fiscal Data guide: the Social Security Administration is the largest investor in Treasury securities."
   },
   {
-   "id": 148,
-   "category": "concord",
-   "text": "Concord's first staffer, Kitty Kurth, helped set up a field network in all 50 states within six weeks.",
-   "source": "The Concord Coalition, Facing the Future: The 1992 Tsongas Campaign and the Birth of The Concord Coalition (Jan 6, 2022)",
-   "url": "https://www.concordcoalition.org/facing-the-future/the-1992-tsongas-campaign-and-the-birth-of-the-concord-coalition/",
+   "id": 82,
+   "category": "history",
+   "text": "On August 2, 2011, the day a debt-limit deal was signed, the national debt rose $238 billion in a single day.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "2011-08-01 = $14.342T; 2011-08-02 = $14.581T; increase $238.3B. CRS RL31967: Budget Control Act signed August 2, 2011."
+  },
+  {
+   "id": 83,
+   "category": "current",
+   "text": "Net interest in fiscal 2026 came to about $7,800 for every U.S. household.",
+   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2026-09-30",
+   "status": "DERIVED",
+   "note": "$1,051.8B divided by 134.79 million households = $7,803."
+  },
+  {
+   "id": 84,
+   "category": "history",
+   "text": "World War II cost about $323 billion, and the Treasury borrowed roughly $211 billion of it.",
+   "source": "TreasuryDirect, The History of the Debt",
+   "url": "https://www.treasurydirect.gov/government/historical-debt-outstanding/",
    "status": "VERIFIED"
   },
   {
-   "id": 149,
-   "category": "concord",
-   "text": "Paul Tsongas won the 1992 New Hampshire primary, then helped launch The Concord Coalition that same year.",
-   "source": "The Concord Coalition, Facing the Future: The 1992 Tsongas Campaign and the Birth of The Concord Coalition (Jan 6, 2022)",
-   "url": "https://www.concordcoalition.org/facing-the-future/the-1992-tsongas-campaign-and-the-birth-of-the-concord-coalition/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 150,
-   "category": "concord",
-   "text": "Concord's mission is to educate, engage and empower citizens with credible, nonpartisan information about federal debt.",
-   "source": "The Concord Coalition, Who We Are",
-   "url": "https://www.concordcoalition.org/who-we-are/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 151,
-   "category": "concord",
-   "text": "Concord organizes citizens to act on the debt without regard to party affiliation.",
-   "source": "The Concord Coalition (archived site), About Us",
-   "url": "https://archive.concordcoalition.org/about-us/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 152,
-   "category": "concord",
-   "text": "The Concord Coalition is a 501(c)(3) nonprofit, and Concord Action is a separate 501(c)(4) advocacy organization.",
-   "source": "Concord Action, Who We Are",
-   "url": "https://www.concordaction.org/who-we-are/",
+   "id": 85,
+   "category": "history",
+   "text": "Four days after the 2011 debt-limit deal, S&P cut the U.S. from AAA to AA+, the first downgrade of its kind.",
+   "source": "PBS NewsHour, S&P downgrades US credit rating from AAA for first time (Aug 5, 2011)",
+   "url": "https://www.pbs.org/newshour/economy/sp-downgrades-us-credit-rating-from-aaa-for-first-time",
    "status": "VERIFIED",
-   "note": "Stated in the footer banners of concordcoalition.org and concordaction.org."
+   "note": "S&P downgrade August 5, 2011; Budget Control Act signed August 2, 2011 (CRS RL31967)."
   },
   {
-   "id": 153,
-   "category": "concord",
-   "text": "Dr. Carolyn Bourdeaux is executive director of both The Concord Coalition and Concord Action.",
-   "source": "Concord Action, Who We Are",
-   "url": "https://www.concordaction.org/who-we-are/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 154,
-   "category": "concord",
-   "text": "Before joining Concord, Dr. Bourdeaux served in Congress from Georgia in 2021 and 2022.",
-   "source": "The Concord Coalition, Who We Are",
-   "url": "https://www.concordcoalition.org/who-we-are/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 155,
-   "category": "concord",
-   "text": "Dr. Bourdeaux once directed Georgia's Senate Budget and Evaluation Office during the Great Recession.",
-   "source": "The Concord Coalition, Who We Are",
-   "url": "https://www.concordcoalition.org/who-we-are/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 156,
-   "category": "concord",
-   "text": "Concord's board is co-chaired by former Senators John Danforth and Bob Kerrey.",
-   "source": "The Concord Coalition, Who We Are",
-   "url": "https://www.concordcoalition.org/who-we-are/",
+   "id": 86,
+   "category": "current",
+   "text": "Treasury's daily debt records begin on April 1, 1993, when the national debt stood at $4.23 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
    "status": "VERIFIED",
-   "note": "Who We Are lists Danforth and Kerrey as Co-Chairs; archived About Us calls them former Senators."
+   "note": "First Debt to the Penny record: 1993-04-01 = $4,225,873,987,843.44."
   },
   {
-   "id": 157,
-   "category": "concord",
-   "text": "In Concord's Principles & Priorities, groups of five to ten step into Congress's shoes to see how hard balancing the budget is.",
-   "source": "The Concord Coalition, Principles & Priorities",
-   "url": "https://www.concordcoalition.org/resources/principles-priorities/",
+   "id": 87,
+   "category": "history",
+   "text": "World War I bond drives used 11,000 donated billboards and streetcar ads in 3,200 cities.",
+   "source": "Federal Reserve History, Liberty Bonds",
+   "url": "https://www.federalreservehistory.org/essays/liberty-bonds",
    "status": "VERIFIED"
   },
   {
-   "id": 158,
-   "category": "concord",
-   "text": "Concord's Principles & Priorities exercise can run for as few as 8 people or as many as 200.",
-   "source": "The Concord Coalition, Principles & Priorities",
-   "url": "https://www.concordcoalition.org/resources/principles-priorities/",
+   "id": 88,
+   "category": "history",
+   "text": "After the June 3, 2023 debt-limit law, the national debt jumped $359 billion by the next business day, June 5.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "2023-06-02 = $31.467T; 2023-06-05 = $31.826T; increase $358.6B. Fiscal Responsibility Act (P.L. 118-5) enacted June 3, 2023."
+  },
+  {
+   "id": 89,
+   "category": "current",
+   "text": "Fiscal 2026 ended with spending of $7.40 trillion against revenue of $5.40 trillion, a gap of about 27 cents per dollar spent.",
+   "source": "U.S. Treasury Fiscal Data, Monthly Treasury Statement Table 9 (September 2026)",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_date:eq:2026-09-30",
+   "status": "DERIVED",
+   "note": "Outlays $7,395.8B; receipts $5,403.3B; deficit $1,992.5B = 26.9 percent of outlays."
+  },
+  {
+   "id": 90,
+   "category": "history",
+   "text": "In spring 2020, the debt added a trillion dollars in just 28 days, the fastest pace in Treasury's daily data since 1993.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "First record at or above $24T is 2020-04-07; first at or above $25T is 2020-05-05 (28 days). Daily data begin 1993-04-01; no other trillion took fewer than 35 days."
+  },
+  {
+   "id": 91,
+   "category": "current",
+   "text": "CBO projects the federal debt subject to the limit will reach $63.8 trillion by the end of fiscal 2036.",
+   "source": "Congressional Research Service IF10292, The Debt Limit (updated Sept 21, 2026)",
+   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.22.pdf",
    "status": "VERIFIED"
   },
   {
-   "id": 159,
-   "category": "concord",
-   "text": "In Concord's Penny Game, one penny stands for 1 percent of federal spending, about $70 billion in fiscal 2025.",
-   "source": "The Concord Coalition, The Penny Game",
-   "url": "https://www.concordcoalition.org/resources/the-penny-game/",
+   "id": 92,
+   "category": "history",
+   "text": "From fiscal 2000 to fiscal 2026, the national debt grew about sevenfold, from $5.7 trillion to $40.2 trillion.",
+   "source": "U.S. Treasury Fiscal Data, Historical Debt Outstanding",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_outstanding",
+   "status": "DERIVED",
+   "note": "2000-09-30 = $5.674T; 2026-09-30 = $40.172T; ratio 7.1."
+  },
+  {
+   "id": 93,
+   "category": "history",
+   "text": "Congress has changed the debt limit 104 times since World War II, including 22 times since 2001.",
+   "source": "Congressional Research Service IF10292, The Debt Limit (updated Sept 21, 2026)",
+   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.22.pdf",
    "status": "VERIFIED"
   },
   {
-   "id": 160,
-   "category": "concord",
-   "text": "To show the deficit, Concord's Penny Game covers 25 of 100 pennies in red tape to mean borrowed money.",
-   "source": "The Concord Coalition, The Penny Game",
-   "url": "https://www.concordcoalition.org/resources/the-penny-game/",
+   "id": 94,
+   "category": "current",
+   "text": "Total federal debt is about 122 percent of GDP, larger than a full year of U.S. economic output.",
+   "source": "Peter G. Peterson Foundation, With $40 Trillion in Debt, Is the U.S. Headed for More Credit Downgrades?",
+   "url": "https://www.pgpf.org/article/with-40-trillion-in-debt-is-the-u-s-headed-for-more-credit-downgrades/",
    "status": "VERIFIED"
   },
   {
-   "id": 161,
-   "category": "concord",
-   "text": "Concord's Chart Talk presentation walks through what is driving the national debt and why it matters.",
-   "source": "The Concord Coalition, Budget Exercises",
-   "url": "https://www.concordcoalition.org/budgetexercises/",
+   "id": 95,
+   "category": "history",
+   "text": "After the July 2025 law raised the debt limit by $5 trillion, the national debt jumped $366 billion in four days.",
+   "source": "U.S. Treasury Fiscal Data, Debt to the Penny",
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+   "status": "DERIVED",
+   "note": "2025-07-03 = $36.216T; 2025-07-07 = $36.582T; increase $366.4B. CRS IF10292: P.L. 119-21 raised the limit by $5.0 trillion to $41.1 trillion; signed July 4, 2025."
+  },
+  {
+   "id": 96,
+   "category": "current",
+   "text": "Interest costs now run more than triple the roughly $350 billion a year paid from 2018 to 2021.",
+   "source": "Committee for a Responsible Federal Budget, FY 2026 deficit estimate (Oct 1, 2026)",
+   "url": "https://www.crfb.org/blogs/us-ran-2-trillion-deficit-last-year-we-estimate",
    "status": "VERIFIED"
   },
   {
-   "id": 162,
-   "category": "concord",
-   "text": "Concord's weekly radio show and podcast, Facing the Future, is hosted by Robert Bixby.",
-   "source": "The Concord Coalition, Who We Are",
-   "url": "https://www.concordcoalition.org/who-we-are/",
+   "id": 97,
+   "category": "history",
+   "text": "On November 2, 2015, Congress suspended the debt limit one day before Treasury said it would run out of options.",
+   "source": "Congressional Research Service RL31967, The Debt Limit: History and Recent Increases",
+   "url": "https://www.congress.gov/crs_external_products/RL/PDF/RL31967/RL31967.139.pdf",
    "status": "VERIFIED",
-   "note": "Who We Are says Bixby hosts the weekly podcast; Concord's Jan 6, 2022 post is written in his voice as host."
-  },
-  {
-   "id": 163,
-   "category": "concord",
-   "text": "Robert Bixby joined Concord in 1992 and became its executive director in 1999.",
-   "source": "The Concord Coalition, Who We Are",
-   "url": "https://www.concordcoalition.org/who-we-are/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 164,
-   "category": "concord",
-   "text": "Concord's Fiscal Wake-Up Tour was featured in the documentary film I.O.U.S.A.",
-   "source": "The Concord Coalition, Who We Are",
-   "url": "https://www.concordcoalition.org/who-we-are/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 165,
-   "category": "concord",
-   "text": "Concord's September 2026 North Carolina Debt Clock Tour was set to visit NC State, Duke and UNC Chapel Hill.",
-   "source": "The Concord Coalition, Concord Coalition Brings $40 Trillion Debt Warning to Raleigh (Sept 18, 2026)",
-   "url": "https://www.concordcoalition.org/deep-dives/concord-coalition-brings-40-trillion-debt-warning-to-raleigh/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 166,
-   "category": "concord",
-   "text": "Fiscal Lookouts are Concord's volunteer super advocates who meet members of Congress and organize local events.",
-   "source": "Concord Action, Volunteer",
-   "url": "https://www.concordaction.org/volunteer/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 167,
-   "category": "concord",
-   "text": "The 2027 National Citizens Debt Summit is March 2 to 4, 2027, at the Hilton Washington D.C. Capitol Hill.",
-   "source": "Concord Action, 2027 National Citizens Debt Summit",
-   "url": "https://www.concordaction.org/debtsummit/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 168,
-   "category": "concord",
-   "text": "Summit attendees will meet with their member of Congress and key Washington decision-makers.",
-   "source": "Concord Action, 2027 National Citizens Debt Summit",
-   "url": "https://www.concordaction.org/debtsummit/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 169,
-   "category": "concord",
-   "text": "Concord Action's top advocates gathered in Washington for a Debt Summit on June 3, 2026.",
-   "source": "Concord Action, Events",
-   "url": "https://www.concordaction.org/events/",
-   "status": "VERIFIED",
-   "note": "Events page title: 2026 Concord Citizen Volunteer Debt Summit. Volunteer page calls it the inaugural Debt Summit."
-  },
-  {
-   "id": 170,
-   "category": "concord",
-   "text": "Concord Action says it has grown by over 200,000 citizen activists in the past year, as of October 2026.",
-   "source": "Concord Action, Another Fiscal Year, Another $2 Trillion Hole (Oct 8, 2026)",
-   "url": "https://www.concordaction.org/news/another-fiscal-year-another-2-trillion-hole/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 171,
-   "category": "concord",
-   "text": "An August 2026 Concord Action town hall had experts from Cato and Brookings debate Social Security's future.",
-   "source": "Concord Action, Events",
-   "url": "https://www.concordaction.org/events/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 172,
-   "category": "concord",
-   "text": "The 1994 Kerrey-Danforth Commission had 30 of its 32 members agree on seven findings about the nation's finances.",
-   "source": "The Concord Coalition, Kerrey-Danforth Commission Findings Still Need Solutions Thirty Years Later",
-   "url": "https://www.concordcoalition.org/deep-dives/issue-brief/kerrey-danforth-commission-findings-still-need-solutions-thirty-years-later/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 173,
-   "category": "concord",
-   "text": "Concord co-founder Warren Rudman was also a Senate sponsor of the 1985 Gramm-Rudman-Hollings deficit law.",
-   "source": "Congressional Research Service R41901, Statutory Budget Controls in Effect Between 1985 and 2002",
-   "url": "https://www.congress.gov/crs_external_products/R/PDF/R41901/R41901.4.pdf",
-   "status": "VERIFIED",
-   "note": "CRS R41901 names Senators Gramm, Rudman and Hollings as sponsors; Rudman's role as Concord co-founder is from https://archive.concordcoalition.org/about-us/."
-  },
-  {
-   "id": 174,
-   "category": "concord",
-   "text": "Concord notes the federal budget has no line item labeled waste, fraud, and abuse.",
-   "source": "The Concord Coalition, Thirty-three Years of Lessons Learned and What It Means for the Future",
-   "url": "https://www.concordcoalition.org/special-publications/thirty-three-years-of-lessons-learned-and-what-it-means-for-the-future/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 175,
-   "category": "concord",
-   "text": "For its 30th anniversary in 2022, Concord planned to take its budget exercise to 30 college campuses.",
-   "source": "The Concord Coalition, Facing the Future: The 1992 Tsongas Campaign and the Birth of The Concord Coalition (Jan 6, 2022)",
-   "url": "https://www.concordcoalition.org/facing-the-future/the-1992-tsongas-campaign-and-the-birth-of-the-concord-coalition/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 176,
-   "category": "concord",
-   "text": "Concord calls CBO's projections the closest thing to a common set of facts for policy debates.",
-   "source": "The Concord Coalition, Thirty-three Years of Lessons Learned and What It Means for the Future",
-   "url": "https://www.concordcoalition.org/special-publications/thirty-three-years-of-lessons-learned-and-what-it-means-for-the-future/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 177,
-   "category": "concord",
-   "text": "Concord Action backs the bipartisan 3% Resolution, which aims to cut the deficit in half.",
-   "source": "Concord Action, Cut the Debt Campaign",
-   "url": "https://www.concordaction.org/cutthedebt/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 178,
-   "category": "concord",
-   "text": "Concord Action's No Budget, No Pay campaign says Congress should go unpaid if it misses a budget.",
-   "source": "Concord Action, Cut the Debt Campaign",
-   "url": "https://www.concordaction.org/cutthedebt/",
-   "status": "VERIFIED"
-  },
-  {
-   "id": 179,
-   "category": "concord",
-   "text": "Since Concord's founding in 1992, real economic growth has topped 5 percent only once and averaged 2.6 percent a year.",
-   "source": "The Concord Coalition, Thirty-three Years of Lessons Learned and What It Means for the Future",
-   "url": "https://www.concordcoalition.org/special-publications/thirty-three-years-of-lessons-learned-and-what-it-means-for-the-future/",
-   "status": "VERIFIED"
+   "note": "CRS RL31967: Secretary Lew said extraordinary measures would be exhausted no later than November 3, 2015; the suspension was signed November 2."
   }
  ]
 }
