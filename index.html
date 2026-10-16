@@ -630,6 +630,8 @@ html.snip-down #debt { color: var(--mint); }
   box-shadow: 0 24px 50px -16px rgba(0, 0, 0, .8), 0 0 0 2px color-mix(in oklab, var(--ivory) 35%, transparent);
   opacity: 0; transform: translateY(16px) rotate(-2.5deg); transition: opacity .35s, transform .55s var(--ease-out); }
 .hero.snip-msg-on .snip-msg { opacity: 1; transform: rotate(-2.5deg); }
+/* the message lives inside .hero-mark (z 2), under .ctas (z 3): lift the mark while the message shows */
+.hero.snip-msg-on .hero-mark { z-index: 6; }
 @media (prefers-reduced-motion: reduce) { .snip-msg { transition: none; } }
 html.still .snip-msg { transition: none; }
 /* nav: the undated Direction 1 lockup at every width, from load */
